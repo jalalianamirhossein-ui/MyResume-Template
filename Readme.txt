@@ -1,6 +1,6 @@
-Thanks for downloading this template!
+Thanks for see this!
 
-Template Name: iPortfolio
-Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Template Name: Meetaj
+Template URL: https://meetaj.ir
+Author: Amirhussein Jalalian
+License: https://meetaj.ir
