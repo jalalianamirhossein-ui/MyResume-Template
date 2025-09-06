@@ -155,6 +155,7 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
+        <link rel="preload" as="image" href="assets/img/hero-bg.jpg" imagesrcset="assets/img/hero-bg.jpg" />
         <img
           src="assets/img/hero-bg.jpg"
           alt="Hero Background"
@@ -199,6 +200,7 @@
             <div class="col-lg-4">
               <img
                 src="assets/img/my-profile-img-2.jpg"
+                loading="lazy"
                 class="img-fluid"
                 alt="Amir Hossein Jalalian"
               />
@@ -920,6 +922,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/app-1.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="MikroTik RouterOS Configuration"
                   />
@@ -950,6 +953,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/product-1.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Windows Server Infrastructure"
                   />
@@ -980,6 +984,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/branding-1.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Cisco Network Design"
                   />
@@ -1010,6 +1015,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/books-1.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Linux Server Administration"
                   />
@@ -1040,6 +1046,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/app-2.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="VPN Tunnel Implementation"
                   />
@@ -1070,6 +1077,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/product-2.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="SQL Server Clustering"
                   />
@@ -1100,6 +1108,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/branding-2.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="VMware vSphere Deployment"
                   />
@@ -1130,6 +1139,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/books-2.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Monitoring with Zabbix"
                   />
@@ -1160,6 +1170,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/app-3.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Docker Containerization"
                   />
@@ -1190,6 +1201,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/product-3.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Backup & Recovery System"
                   />
@@ -1220,6 +1232,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/branding-3.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Load Balancing Configuration"
                   />
@@ -1250,6 +1263,7 @@
                 <div class="portfolio-content h-100">
                   <img
                     src="assets/img/portfolio/books-3.jpg"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Security Implementation"
                   />
@@ -1494,6 +1508,7 @@
                   </p>
                   <img
                     src="assets/img/testimonials/testimonials-1.jpg"
+                    loading="lazy"
                     class="testimonial-img"
                     alt="IT Director"
                   />
@@ -1517,6 +1532,7 @@
                   </p>
                   <img
                     src="assets/img/testimonials/testimonials-2.jpg"
+                    loading="lazy"
                     class="testimonial-img"
                     alt="Project Manager"
                   />
@@ -1540,6 +1556,7 @@
                   </p>
                   <img
                     src="assets/img/testimonials/testimonials-3.jpg"
+                    loading="lazy"
                     class="testimonial-img"
                     alt="System Administrator"
                   />
@@ -1562,6 +1579,7 @@
                   </p>
                   <img
                     src="assets/img/testimonials/testimonials-4.jpg"
+                    loading="lazy"
                     class="testimonial-img"
                     alt="Network Engineer"
                   />
@@ -1584,6 +1602,7 @@
                   </p>
                   <img
                     src="assets/img/testimonials/testimonials-5.jpg"
+                    loading="lazy"
                     class="testimonial-img"
                     alt="DevOps Lead"
                   />
@@ -1803,20 +1822,20 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/vendor/php-email-form/validate.js" defer></script>
+    <script src="assets/vendor/aos/aos.js" defer></script>
+    <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
 
     <!-- Language switching is handled by i18n.js -->
 
