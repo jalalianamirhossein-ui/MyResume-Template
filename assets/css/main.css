@@ -230,28 +230,6 @@ h6 {
   left: 0;
 }
 
-.header .header-toggle {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  transition: background-color 0.3s;
-}
-
-.header .header-toggle:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1505,9 +1483,6 @@ section,
 }
 
 /* 8) خرده‌اصلاح موبایل: دکمه منو همیشه جلو باشد */
-.header .header-toggle {
-  z-index: 10000;
-}
 @media (max-width: 1199px) {
   .header {
     border-right: none;
@@ -1531,9 +1506,21 @@ section,
   color: var(--contrast-color);
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
+
+.menu-toggle:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  transform: scale(1.05);
+}
+
 .menu-toggle:active {
   transform: scale(0.98);
+}
+
+.menu-toggle i {
+  line-height: 1;
 }
 
 /* overlay when menu is open (mobile) */

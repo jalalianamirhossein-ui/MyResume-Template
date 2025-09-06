@@ -5,26 +5,80 @@
 (function () {
   "use strict";
 
-  const headerToggleBtn = document.querySelector(".header-toggle");
-  function headerToggle() {
-    const header = document.querySelector("#header");
+  const headerToggleBtn = document.querySelector("#menu-toggle");
+  const header = document.querySelector("#header");
+  
+  // ایجاد overlay برای موبایل
+  let overlay = document.getElementById("menu-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "menu-overlay";
+    document.body.appendChild(overlay);
+  }
+
+  function openMenu() {
     if (header) {
-      header.classList.toggle("header-show");
-    }
-    if (headerToggleBtn) {
-      headerToggleBtn.classList.toggle("bi-list");
-      headerToggleBtn.classList.toggle("bi-x");
+      header.classList.add("header-show");
+      overlay.classList.add("active");
+      if (headerToggleBtn) {
+        headerToggleBtn.setAttribute("aria-expanded", "true");
+        const icon = headerToggleBtn.querySelector("i");
+        if (icon) {
+          icon.classList.remove("bi-list");
+          icon.classList.add("bi-x");
+        }
+      }
+      document.body.style.overflow = "hidden";
     }
   }
-  if (headerToggleBtn) headerToggleBtn.addEventListener("click", headerToggle);
 
+  function closeMenu() {
+    if (header) {
+      header.classList.remove("header-show");
+      overlay.classList.remove("active");
+      if (headerToggleBtn) {
+        headerToggleBtn.setAttribute("aria-expanded", "false");
+        const icon = headerToggleBtn.querySelector("i");
+        if (icon) {
+          icon.classList.add("bi-list");
+          icon.classList.remove("bi-x");
+        }
+      }
+      document.body.style.overflow = "";
+    }
+  }
+
+  function headerToggle() {
+    if (header && header.classList.contains("header-show")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  // Event listeners
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener("click", headerToggle);
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", closeMenu);
+  }
+
+  // بستن منو بعد از کلیک روی لینک‌های منو در موبایل
   document.querySelectorAll("#navmenu a").forEach((navmenu) => {
     navmenu.addEventListener("click", () => {
-      const header = document.querySelector("#header");
-      if (header && header.classList.contains("header-show")) {
-        headerToggle();
+      if (window.innerWidth < 1200 && header && header.classList.contains("header-show")) {
+        closeMenu();
       }
     });
+  });
+
+  // بستن منو وقتی سایز صفحه تغییر می‌کند
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1200 && header && header.classList.contains("header-show")) {
+      closeMenu();
+    }
   });
 
   const preloader = document.querySelector("#preloader");

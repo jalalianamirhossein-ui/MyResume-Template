@@ -4,12 +4,19 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Meet Aj</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta content="Professional portfolio of Amir Jalalian - Network Expert, DevOps Engineer, and IT Infrastructure Specialist. Experienced in Cisco, MikroTik, VMware, Linux administration, and system optimization." name="description" />
+    <meta content="Network Expert, DevOps Engineer, IT Infrastructure, Cisco, MikroTik, VMware, Linux, System Administration, Tehran Iran" name="keywords" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0050a0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -42,7 +49,7 @@
 
   <body class="index-page">
     <header id="header" class="header dark-background d-flex flex-column">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
+      <!-- Menu toggle moved to proper button below -->
 
       <div class="profile-img">
         <img
@@ -147,7 +154,9 @@
     <button
       id="menu-toggle"
       class="menu-toggle d-xl-none"
-      aria-label="Open menu"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="header"
     >
       <i class="bi bi-list"></i>
     </button>
@@ -155,7 +164,7 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <link rel="preload" as="image" href="assets/img/hero-bg.jpg" imagesrcset="assets/img/hero-bg.jpg" />
+        <link rel="preload" as="image" href="assets/img/hero-bg.jpg" />
         <img
           src="assets/img/hero-bg.jpg"
           alt="Hero Background"
@@ -900,10 +909,11 @@
               data-aos-delay="100"
             >
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Mikrotik</li>
-              <li data-filter=".filter-product">Microsoft</li>
-              <li data-filter=".filter-branding">Cisco</li>
-              <li data-filter=".filter-books">Linux</li>
+              <li data-filter=".filter-microsoft">Microsoft</li>
+              <li data-filter=".filter-linux">Linux</li>
+              <li data-filter=".filter-mikroTik">MikroTik</li>
+              <li data-filter=".filter-vmware">Vmware</li>
+              <li data-filter=".filter-others">Others</li>
             </ul>
             <!-- End Portfolio Filters -->
 
@@ -913,11 +923,11 @@
               data-aos-delay="200"
             >
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/app-1.jpg"
+                    src="assets/img/portfolio/linux-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="MikroTik RouterOS Configuration"
@@ -926,7 +936,7 @@
                     <h4>MikroTik RouterOS Configuration</h4>
                     <p>Advanced firewall and routing setup</p>
                     <a
-                      href="assets/img/portfolio/app-1.jpg"
+                      href="assets/img/portfolio/linux-1.png"
                       title="App 1"
                       data-gallery="portfolio-gallery-app"
                       class="glightbox preview-link"
@@ -944,11 +954,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/product-1.jpg"
+                    src="assets/img/portfolio/windows-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Windows Server Infrastructure"
@@ -957,7 +967,7 @@
                     <h4>Windows Server Infrastructure</h4>
                     <p>Active Directory and DNS implementation</p>
                     <a
-                      href="assets/img/portfolio/product-1.jpg"
+                      href="assets/img/portfolio/windows-1.png"
                       title="Product 1"
                       data-gallery="portfolio-gallery-product"
                       class="glightbox preview-link"
@@ -975,11 +985,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikroTik"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/branding-1.jpg"
+                    src="assets/img/portfolio/mikrotik-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Cisco Network Design"
@@ -988,7 +998,7 @@
                     <h4>Cisco Network Design</h4>
                     <p>Enterprise switching and VLAN configuration</p>
                     <a
-                      href="assets/img/portfolio/branding-1.jpg"
+                      href="assets/img/portfolio/mikrotik-1.png"
                       title="Branding 1"
                       data-gallery="portfolio-gallery-branding"
                       class="glightbox preview-link"
@@ -1006,11 +1016,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikroTik"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/books-1.jpg"
+                    src="assets/img/portfolio/mikrotik-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Linux Server Administration"
@@ -1019,7 +1029,7 @@
                     <h4>Linux Server Administration</h4>
                     <p>Ubuntu and CentOS server management</p>
                     <a
-                      href="assets/img/portfolio/books-1.jpg"
+                      href="assets/img/portfolio/mikrotik-2.png"
                       title="Linux Server Administration"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
@@ -1037,11 +1047,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/app-2.jpg"
+                    src="assets/img/portfolio/linux-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="VPN Tunnel Implementation"
@@ -1050,7 +1060,7 @@
                     <h4>VPN Tunnel Implementation</h4>
                     <p>Site-to-site secure connections</p>
                     <a
-                      href="assets/img/portfolio/app-2.jpg"
+                      href="assets/img/portfolio/linux-2.png"
                       title="App 2"
                       data-gallery="portfolio-gallery-app"
                       class="glightbox preview-link"
@@ -1068,11 +1078,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/product-2.jpg"
+                    src="assets/img/portfolio/windows-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="SQL Server Clustering"
@@ -1081,7 +1091,7 @@
                     <h4>SQL Server Clustering</h4>
                     <p>High availability database setup</p>
                     <a
-                      href="assets/img/portfolio/product-2.jpg"
+                      href="assets/img/portfolio/windows-2.png"
                       title="Product 2"
                       data-gallery="portfolio-gallery-product"
                       class="glightbox preview-link"
@@ -1099,11 +1109,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/branding-2.jpg"
+                    src="assets/img/portfolio/windows-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="VMware vSphere Deployment"
@@ -1112,7 +1122,7 @@
                     <h4>VMware vSphere Deployment</h4>
                     <p>Virtualization infrastructure design</p>
                     <a
-                      href="assets/img/portfolio/branding-2.jpg"
+                      href="assets/img/portfolio/windows-3.png"
                       title="VMware vSphere Deployment"
                       data-gallery="portfolio-gallery-branding"
                       class="glightbox preview-link"
@@ -1130,11 +1140,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikroTik"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/books-2.jpg"
+                    src="assets/img/portfolio/mikrotik-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Monitoring with Zabbix"
@@ -1143,7 +1153,7 @@
                     <h4>Monitoring with Zabbix</h4>
                     <p>Network and system monitoring setup</p>
                     <a
-                      href="assets/img/portfolio/books-2.jpg"
+                      href="assets/img/portfolio/mikrotik-3.png"
                       title="Monitoring with Zabbix"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
@@ -1161,11 +1171,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/app-3.jpg"
+                    src="assets/img/portfolio/linux-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Docker Containerization"
@@ -1174,7 +1184,7 @@
                     <h4>Docker Containerization</h4>
                     <p>Application deployment and management</p>
                     <a
-                      href="assets/img/portfolio/app-3.jpg"
+                      href="assets/img/portfolio/linux-3.png"
                       title="App 3"
                       data-gallery="portfolio-gallery-app"
                       class="glightbox preview-link"
@@ -1192,11 +1202,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/product-3.jpg"
+                    src="assets/img/portfolio/linux-4.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Backup & Recovery System"
@@ -1205,7 +1215,7 @@
                     <h4>Backup & Recovery System</h4>
                     <p>Veeam backup implementation</p>
                     <a
-                      href="assets/img/portfolio/product-3.jpg"
+                      href="assets/img/portfolio/linux-4.png"
                       title="Product 3"
                       data-gallery="portfolio-gallery-product"
                       class="glightbox preview-link"
@@ -1223,11 +1233,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/branding-3.jpg"
+                    src="assets/img/portfolio/other-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Load Balancing Configuration"
@@ -1236,7 +1246,7 @@
                     <h4>Load Balancing Configuration</h4>
                     <p>Multi-connection internet optimization</p>
                     <a
-                      href="assets/img/portfolio/branding-3.jpg"
+                      href="assets/img/portfolio/other-2.png"
                       title="Branding 2"
                       data-gallery="portfolio-gallery-branding"
                       class="glightbox preview-link"
@@ -1254,11 +1264,11 @@
               <!-- End Portfolio Item -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vmware"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/books-3.jpg"
+                    src="assets/img/portfolio/vmware-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Security Implementation"
@@ -1267,7 +1277,7 @@
                     <h4>Security Implementation</h4>
                     <p>Kaspersky endpoint security deployment</p>
                     <a
-                      href="assets/img/portfolio/books-3.jpg"
+                      href="assets/img/portfolio/vmware-1.png"
                       title="Security Implementation"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
@@ -1283,6 +1293,186 @@
                 </div>
               </div>
               <!-- End Portfolio Item -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vmware"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/vmware-2.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/vmware-2.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/linux-5.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/linux-5.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/other-1.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/other-1.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->                
+                             <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikroTik"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/mikrotik-4.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/mikrotik-4.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->                
+                             <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/other-3.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/other-3.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->              
+                                            <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/other-4.png"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Security Implementation"
+                  />
+                  <div class="portfolio-info">
+                    <h4>Security Implementation</h4>
+                    <p>Kaspersky endpoint security deployment</p>
+                    <a
+                      href="assets/img/portfolio/other-4.png"
+                      title="Security Implementation"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      title="More Details"
+                      class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->                      
             </div>
             <!-- End Portfolio Container -->
           </div>
@@ -1833,51 +2023,22 @@
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/i18n.js" defer></script>
 
+    <!-- PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered with scope: ', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('SW registration failed: ', error);
+            });
+        });
+      }
+    </script>
+
     <!-- Language switching is handled by i18n.js -->
 
-    <script>
-      (function () {
-        const header = document.getElementById("header");
-        const btn = document.getElementById("menu-toggle");
-        if (!header || !btn) return;
-
-        // make/attach overlay once
-        let overlay = document.getElementById("menu-overlay");
-        if (!overlay) {
-          overlay = document.createElement("div");
-          overlay.id = "menu-overlay";
-          document.body.appendChild(overlay);
-        }
-
-        const openMenu = () => {
-          header.classList.add("header-show");
-          overlay.classList.add("active");
-        };
-        const closeMenu = () => {
-          header.classList.remove("header-show");
-          overlay.classList.remove("active");
-        };
-        const toggle = () =>
-          header.classList.contains("header-show") ? closeMenu() : openMenu();
-
-        btn.addEventListener("click", toggle);
-        overlay.addEventListener("click", closeMenu);
-
-        // بستن منو بعد از کلیک روی آیتم‌های منو در موبایل
-        document.querySelectorAll("#navmenu a").forEach((a) => {
-          a.addEventListener("click", () => {
-            if (window.innerWidth < 1200) closeMenu();
-          });
-        });
-
-        // اگر سایز از موبایل به دسکتاپ تغییر کرد، وضعیت رو ریست کن
-        window.addEventListener("resize", () => {
-          if (window.innerWidth >= 1200) {
-            overlay.classList.remove("active");
-            header.classList.remove("header-show");
-          }
-        });
-      })();
-    </script>
   </body>
 </html>
