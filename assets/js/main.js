@@ -138,44 +138,64 @@
     const glightbox = GLightbox({ selector: ".glightbox" });
   }
 
-  document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
-    let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
-    let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
-    let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
+  function initPortfolio() {
+    document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
+      let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+      let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+      let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
 
-    let initIsotope;
-    const container = isotopeItem.querySelector(".isotope-container");
-    if (container && window.imagesLoaded && window.Isotope) {
-      imagesLoaded(container, function () {
-        initIsotope = new Isotope(container, {
-          itemSelector: ".isotope-item",
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort,
+      let initIsotope;
+      const container = isotopeItem.querySelector(".isotope-container");
+      
+      if (container && window.imagesLoaded && window.Isotope) {
+        // اطمینان از آماده بودن تصاویر
+        imagesLoaded(container, function () {
+          initIsotope = new Isotope(container, {
+            itemSelector: ".isotope-item",
+            layoutMode: layout,
+            filter: filter,
+            sortBy: sort,
+            transitionDuration: '0.6s'
+          });
+
+          // بعد از اینیشیال Isotope، AOS را ریفرش کن
+          if (typeof aosInit === "function") {
+            setTimeout(aosInit, 100);
+          }
         });
-      });
-    }
 
-    isotopeItem
-      .querySelectorAll(".isotope-filters li")
-      .forEach(function (filters) {
-        filters.addEventListener(
-          "click",
-          function () {
-            const activeFilter = isotopeItem.querySelector(".isotope-filters .filter-active");
-            if (activeFilter) {
-              activeFilter.classList.remove("filter-active");
-            }
-            this.classList.add("filter-active");
-            if (initIsotope) {
-              initIsotope.arrange({ filter: this.getAttribute("data-filter") });
-            }
-            if (typeof aosInit === "function") aosInit();
-          },
-          false
-        );
-      });
-  });
+        // Event listeners برای فیلترها
+        isotopeItem
+          .querySelectorAll(".isotope-filters li")
+          .forEach(function (filters) {
+            filters.addEventListener(
+              "click",
+              function () {
+                const activeFilter = isotopeItem.querySelector(".isotope-filters .filter-active");
+                if (activeFilter) {
+                  activeFilter.classList.remove("filter-active");
+                }
+                this.classList.add("filter-active");
+                if (initIsotope) {
+                  initIsotope.arrange({ filter: this.getAttribute("data-filter") });
+                  // بعد از فیلتر کردن هم AOS را ریفرش کن
+                  setTimeout(function() {
+                    if (typeof aosInit === "function") aosInit();
+                  }, 200);
+                }
+              },
+              false
+            );
+          });
+      } else {
+        // اگر Isotope یا imagesLoaded لود نشده، دوباره تلاش کن
+        setTimeout(initPortfolio, 100);
+      }
+    });
+  }
+
+  // Portfolio را بعد از load کامل DOM اجرا کن
+  window.addEventListener('load', initPortfolio);
 
   function initSwiper() {
     if (window.Swiper) {
