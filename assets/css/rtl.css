@@ -1,0 +1,54 @@
+/* RTL Overrides */
+
+/* Force header to the right on RTL */
+html[dir="rtl"] .header {
+  right: 0 !important;
+  left: auto !important;
+  inset-inline-end: 0;
+  inset-inline-start: auto;
+  border-inline-start: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-inline-end: none;
+}
+
+/* Mobile off-canvas */
+@media (max-width: 1199px) {
+  html[dir="rtl"] .header {
+    right: -100% !important;
+    left: auto !important;
+  }
+  html[dir="rtl"] .header.header-show {
+    right: 0 !important;
+    left: auto !important;
+  }
+}
+
+/* Adjust main/footer margins when header visible */
+@media (min-width: 1200px) {
+  html[dir="rtl"] .header ~ main,
+  html[dir="rtl"] .header ~ #footer {
+    margin-right: 300px !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Details */
+html[dir="rtl"] .navmenu ul {
+  text-align: right;
+}
+html[dir="rtl"] .header .logo img {
+  margin-inline-start: 8px;
+  margin-inline-end: 0;
+}
+html[dir="rtl"] .header .header-toggle {
+  inset-inline-start: 15px;
+  inset-inline-end: auto;
+}
+
+/* i18n-rtl-navicon-spacing */
+html[dir="rtl"] #navmenu a .navicon {
+  margin-left: 10px;
+}
+html[dir="rtl"] .about .content ul strong {
+  margin-left: 10px;
+}
