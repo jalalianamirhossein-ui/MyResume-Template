@@ -1,5 +1,212 @@
 /* RTL Overrides */
 
+/* Persian Fonts for RTL */
+html[dir="rtl"] {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .navmenu a {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .hero h2 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 700;
+}
+
+html[dir="rtl"] .section-title h2 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .about .content h2 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .resume .resume-title {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .services .service-item h4 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .testimonials .testimonial-item h3,
+html[dir="rtl"] .testimonials .testimonial-item h4 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+  text-align: center;
+}
+
+html[dir="rtl"] .contact .info-item h3 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .contact .info-item i {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+html[dir="rtl"] .services .service-item .icon {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .services .service-item .title {
+  font-family: var(--persian-heading-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .services .service-item .description {
+  font-family: var(--persian-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .info-wrap {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .info-item h3 {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .info-item p {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .php-email-form label {
+  font-family: var(--persian-font) !important;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .contact .php-email-form button {
+  font-family: var(--persian-font) !important;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .footer .copyright {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .stats .stats-item strong {
+  font-family: var(--persian-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .portfolio .portfolio-filters li {
+  font-family: var(--persian-font) !important;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .portfolio .portfolio-info h4 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .skills .progress .skill span {
+  font-family: var(--persian-font) !important;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .about .content ul strong {
+  font-family: var(--persian-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .about .content ul span {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .about .content p {
+  font-family: var(--persian-font) !important;
+  line-height: 1.8;
+}
+
+html[dir="rtl"] .about .content .bio-quote em {
+  font-family: var(--persian-font) !important;
+  font-style: italic;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .resume .resume-item h4 {
+  font-family: var(--persian-heading-font) !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .resume .resume-item h5 {
+  font-family: var(--persian-font) !important;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .resume .resume-item p {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .resume .resume-item ul li {
+  font-family: var(--persian-font) !important;
+  line-height: 1.7;
+}
+
+html[dir="rtl"] .testimonials .testimonial-item p {
+  font-family: var(--persian-font) !important;
+  line-height: 1.8;
+  text-align: center;
+  direction: rtl;
+}
+
+/* RTL testimonials swiper direction */
+html[dir="rtl"] .testimonials .swiper {
+  direction: ltr;
+}
+
+html[dir="rtl"] .testimonials .swiper-wrapper {
+  direction: ltr;
+}
+
+html[dir="rtl"] .testimonials .swiper-slide {
+  direction: ltr;
+}
+
+html[dir="rtl"] .services .service-item p {
+  font-family: var(--persian-font) !important;
+  line-height: 1.7;
+}
+
+html[dir="rtl"] .contact .php-email-form input,
+html[dir="rtl"] .contact .php-email-form textarea {
+  font-family: var(--persian-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .php-email-form input::placeholder,
+html[dir="rtl"] .contact .php-email-form textarea::placeholder {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact .php-email-form .loading,
+html[dir="rtl"] .contact .php-email-form .sent-message {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .contact .php-email-form label {
+  font-family: var(--persian-font) !important;
+  text-align: right;
+}
+
 /* Force header to the right on RTL */
 html[dir="rtl"] .header {
   right: 0 !important;
@@ -51,4 +258,169 @@ html[dir="rtl"] #navmenu a .navicon {
 }
 html[dir="rtl"] .about .content ul strong {
   margin-left: 10px;
+}
+
+/* Mobile-specific RTL fixes */
+@media (max-width: 768px) {
+  /* RTL mobile menu toggle positioning */
+  html[dir="rtl"] .menu-toggle {
+    left: 15px !important;
+    right: auto !important;
+  }
+
+  /* RTL mobile language toggle positioning */
+  html[dir="rtl"] #lang-toggle {
+    left: 60px !important;
+    right: auto !important;
+  }
+
+  /* RTL mobile header positioning */
+  html[dir="rtl"] .header {
+    border-right: 1px solid rgba(15, 23, 42, 0.06);
+    border-left: none;
+  }
+
+  /* RTL mobile overlay positioning */
+  html[dir="rtl"] #menu-overlay {
+    right: 0;
+    left: auto;
+  }
+
+  /* RTL mobile navigation text alignment */
+  html[dir="rtl"] .navmenu a {
+    text-align: right;
+    padding: 15px 10px 15px 20px;
+  }
+
+  /* RTL mobile social links */
+  html[dir="rtl"] .header .social-links {
+    text-align: center;
+  }
+
+  /* RTL mobile hero section */
+  html[dir="rtl"] .hero .container {
+    text-align: center;
+  }
+
+  /* RTL mobile section titles */
+  html[dir="rtl"] .section-title h2:after {
+    right: 0;
+    left: auto;
+  }
+
+  /* RTL mobile contact form */
+  html[dir="rtl"] .contact .php-email-form {
+    text-align: right;
+  }
+
+  /* RTL mobile portfolio filters */
+  html[dir="rtl"] .portfolio .portfolio-filters {
+    text-align: center;
+  }
+
+  /* RTL mobile testimonials */
+  html[dir="rtl"] .testimonials .testimonial-item {
+    text-align: center;
+  }
+
+  /* RTL mobile services */
+  html[dir="rtl"] .services .service-item {
+    text-align: right;
+  }
+
+  /* RTL mobile skills */
+  html[dir="rtl"] .skills .progress .skill .val {
+    float: left;
+  }
+
+  /* RTL mobile resume */
+  html[dir="rtl"] .resume .resume-item {
+    padding: 0 20px 20px 0;
+    border-right: 2px solid var(--accent-color);
+    border-left: none;
+  }
+
+  html[dir="rtl"] .resume .resume-item::before {
+    right: -9px;
+    left: auto;
+  }
+
+  /* RTL mobile stats */
+  html[dir="rtl"] .stats .stats-item {
+    text-align: center;
+  }
+
+  /* RTL mobile about section */
+  html[dir="rtl"] .about .content ul li {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .about .content ul i {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+/* Hero Section RTL - Side by Side Design (RTL) */
+html[dir="rtl"] .hero-wrapper {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-title {
+  font-family: var(--persian-heading-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-subtitle {
+  font-family: var(--persian-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-description p {
+  font-family: var(--persian-font) !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-actions {
+  margin-top: 2.5rem;
+}
+
+html[dir="rtl"] .hero-actions .btn {
+  font-family: var(--persian-font) !important;
+}
+
+/* Hero Responsive RTL */
+@media (max-width: 991px) {
+  html[dir="rtl"] .hero-wrapper {
+    flex-direction: column;
+  }
+
+  html[dir="rtl"] .hero-content {
+    text-align: center;
+    order: 2;
+  }
+
+  html[dir="rtl"] .hero-profile-section {
+    order: 1;
+  }
+
+  html[dir="rtl"] .hero-title {
+    text-align: center;
+  }
+
+  html[dir="rtl"] .hero-subtitle {
+    text-align: center;
+  }
+
+  html[dir="rtl"] .hero-description p {
+    text-align: center;
+  }
+
+  html[dir="rtl"] .hero-actions {
+    justify-content: center;
+  }
 }

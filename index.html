@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
     <title>Meet Aj</title>
     <meta
-      content="Professional portfolio of Amir Jalalian - Network Expert, DevOps Engineer, and IT Infrastructure Specialist. Experienced in Cisco, MikroTik, VMware, Linux administration, and system optimization."
+      content="Professional portfolio of AmirHossein Jalalian - Network Expert, DevOps Engineer, and IT Infrastructure Specialist. Experienced in Cisco, MikroTik, VMware, Linux administration, and system optimization."
       name="description"
     />
     <meta
@@ -22,20 +25,20 @@
     <meta name="theme-color" content="#0050a0" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Meet AJ" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-    <!-- Fonts -->
+    <!-- Fonts - Optimized -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Vazirmatn:wght@400;500;600;700&family=Estedad:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
+    <!-- Vendor CSS Files - Optimized -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -51,9 +54,55 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-    <link id="rtl-style" href="assets/css/rtl.css" rel="stylesheet" disabled />
+    <!-- Main CSS File - Optimized -->
+    <link href="assets/css/main.css?v=999" rel="stylesheet" />
+    <link
+      id="rtl-style"
+      href="assets/css/rtl.css?v=999"
+      rel="stylesheet"
+      disabled
+    />
+
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .header {
+        background: linear-gradient(135deg, #0ea5e9, #1e40af);
+      }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1e40af;
+      }
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: #374151;
+      }
+      .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-primary {
+        background: #0ea5e9;
+        color: white;
+      }
+      .btn-outline-light {
+        border: 2px solid white;
+        color: white;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -64,97 +113,165 @@
         <img
           src="assets/img/my-profile-img.jpg"
           loading="lazy"
-          alt="Amir Jalalian Profile Picture"
+          alt="AmirHossein Jalalian Profile Picture"
           class="img-fluid rounded-circle"
         />
       </div>
 
-      <a
-        href="#hero"
-        class="logo d-flex align-items-center justify-content-center"
+      <div
+        class="logo-section d-flex align-items-center justify-content-between"
       >
-        <img src="assets/img/logo.png" alt="Aj-Network" loading="lazy" />
-        <h1 class="sitename">Meet AJ</h1>
-      </a>
+        <a href="#hero" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="Aj-Network" loading="lazy" />
+          <h1 class="sitename">Meet AJ</h1>
+        </a>
+        <div class="language-switcher">
+          <button
+            id="lang-toggle"
+            class="lang-toggle-btn"
+            type="button"
+            aria-label="تغییر زبان / Switch language"
+            title="کلیک کنید تا زبان را تغییر دهید / Click to switch language"
+          >
+            <div class="lang-content">
+              <span class="lang-text">FA</span>
+              <div class="lang-flag">🇮🇷</div>
+            </div>
+          </button>
+        </div>
+      </div>
 
       <div class="social-links text-center">
-        <a
-          href="https://twitter.com"
-          class="twitter"
-          target="_blank"
-          rel="noopener"
-          aria-label="Twitter"
-          ><i class="bi bi-twitter-x"></i
-        ></a>
-        <a
-          href="https://facebook.com"
-          class="facebook"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a
-          href="https://instagram.com"
-          class="instagram"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a href="tel:+989197276219" class="google-plus" aria-label="Phone"
-          ><i class="bi bi-telephone"></i
-        ></a>
-        <a
-          href="https://linkedin.com"
-          class="linkedin"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-          ><i class="bi bi-linkedin"></i
-        ></a>
+        <!-- ردیف اول: مهم‌ترین‌ها -->
+        <div class="social-row social-row-main">
+          <a
+            href="https://linkedin.com/in/amirhussein-jalalian-050702188/"
+            class="linkedin"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/aj-mercury"
+            class="github"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://wa.me/989197276219"
+            class="whatsapp"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+          <a
+            href="https://t.me/Aj_mercury"
+            class="telegram"
+            target="_blank"
+            rel="noopener"
+            aria-label="Telegram"
+            ><i class="bi bi-telegram"></i
+          ></a>
+        </div>
+
+        <!-- ردیف دوم: بقیه -->
+        <div class="social-row social-row-secondary">
+          <a
+            href="https://twitter.com/RealAjMercury"
+            class="twitter"
+            target="_blank"
+            rel="noopener"
+            aria-label="X (Twitter)"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://stackoverflow.com/users/amir-jalalian"
+            class="stackoverflow"
+            target="_blank"
+            rel="noopener"
+            aria-label="Stack Overflow"
+            ><i class="bi bi-stack-overflow"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/amir.jalalian.37"
+            class="facebook"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/aj.mercury"
+            class="instagram"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="tel:+989197276219" class="google-plus" aria-label="Phone"
+            ><i class="bi bi-telephone"></i
+          ></a>
+        </div>
       </div>
-      <button
-        id="lang-toggle"
-        class="btn btn-sm btn-outline-secondary ms-3"
-        type="button"
-        aria-label="Switch language"
-      >
-        FA
-      </button>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li>
             <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
+              ><i class="bi bi-house navicon"></i
+              ><span data-en="Home" data-fa="صفحه اصلی">Home</span></a
             >
           </li>
           <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+            <a href="#about"
+              ><i class="bi bi-person navicon"></i
+              ><span data-en="About" data-fa="درباره من">About</span></a
+            >
           </li>
           <li>
             <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+              ><i class="bi bi-file-earmark-text navicon"></i
+              ><span data-en="Resume" data-fa="رزومه کاری">Resume</span></a
             >
           </li>
           <li>
             <a href="#portfolio"
-              ><i class="bi bi-images navicon"></i> Portfolio</a
+              ><i class="bi bi-images navicon"></i
+              ><span data-en="Portfolio" data-fa="نمونه کارها"
+                >Portfolio</span
+              ></a
             >
           </li>
           <li>
             <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+              ><i class="bi bi-hdd-stack navicon"></i
+              ><span data-en="Services" data-fa="خدمات">Services</span></a
             >
           </li>
           <li>
             <a href="#testimonials"
-              ><i class="bi bi-menu-button navicon"></i> Testimonials</a
+              ><i class="bi bi-menu-button navicon"></i
+              ><span data-en="Testimonials" data-fa="نظرات"
+                >Testimonials</span
+              ></a
             >
           </li>
           <li>
             <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i> Contact</a
+              ><i class="bi bi-envelope navicon"></i
+              ><span data-en="Contact" data-fa="تماس با من">Contact</span></a
             >
           </li>
         </ul>
@@ -182,15 +299,67 @@
         />
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2>Amir Jalalian</h2>
-          <p>
-            I'm
-            <span
-              class="typed"
-              data-typed-items="Network Expert, Devops-Engineer, Freelancer, Systems Specialist, VMware Administrator"
-              >System administrator</span
+          <div class="hero-wrapper">
+            <!-- Profile Image -->
+            <div
+              class="hero-profile-section"
+              data-aos="fade-right"
+              data-aos-delay="200"
             >
-          </p>
+              <div class="hero-profile-img">
+                <img
+                  src="assets/img/my-profile-img.jpg"
+                  loading="lazy"
+                  alt="AmirHossein Jalalian Profile Picture"
+                  class="img-fluid hero-img"
+                />
+                <div class="hero-img-border"></div>
+                <div class="hero-img-shadow"></div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div
+              class="hero-content-section"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <div class="hero-content">
+                <h1
+                  class="hero-title"
+                  data-en="AmirHossein Jalalian"
+                  data-fa="امیرحسین جلالیان"
+                >
+                  AmirHossein Jalalian
+                </h1>
+                <p class="hero-subtitle">
+                  <span data-en="I'm" data-fa="من">I'm</span>
+                  <span
+                    class="typed"
+                    data-typed-items="Network Expert, DevOps Engineer, Freelancer, Systems Specialist, VMware Administrator"
+                    data-typed-items-fa="کارشناس شبکه, مهندس دواپس, فریلنسر, متخصص سیستم‌ها, مدیر VMware"
+                    >System Administrator</span
+                  >
+                </p>
+                <div class="hero-actions">
+                  <a
+                    href="#contact"
+                    class="btn btn-primary"
+                    data-en="Get In Touch"
+                    data-fa="ارتباط با من"
+                    >Get In Touch</a
+                  >
+                  <a
+                    href="#portfolio"
+                    class="btn btn-outline-light"
+                    data-en="View Portfolio"
+                    data-fa="مشاهده نمونه کارها"
+                    >View Portfolio</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- /Hero Section -->
@@ -200,12 +369,23 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2 data-en="About" data-fa="درباره من">About</h2>
-          <p>
+          <p
+            data-en="I am Amir Hossein Jalalian, a specialist in computer networks and IT infrastructure with solid experience in system administration, network design, and troubleshooting. My focus is on creating reliable and secure IT solutions that empower organizations to perform at their best."
+            data-fa="من امیرحسین جلالیان هستم، متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات با تجربه غنی در مدیریت سیستم، طراحی شبکه و عیب‌یابی. تمرکزم بر ایجاد راهکارهای قابل اعتماد و امن است که عملکرد سازمان‌ها را بهینه می‌کند."
+          >
             I am Amir Hossein Jalalian, a specialist in computer networks and IT
             infrastructure with solid experience in system administration,
             network design, and troubleshooting. My focus is on creating
             reliable and secure IT solutions that empower organizations to
             perform at their best.
+          </p>
+          <p
+            data-en="Specialist in computer networks and IT infrastructure with solid experience in system administration, network design, and troubleshooting."
+            data-fa="متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات با تجربه غنی در مدیریت سیستم، طراحی شبکه و عیب‌یابی."
+          >
+            Specialist in computer networks and IT infrastructure with solid
+            experience in system administration, network design, and
+            troubleshooting.
           </p>
         </div>
         <!-- End Section Title -->
@@ -221,8 +401,17 @@
               />
             </div>
             <div class="col-lg-8 content">
-              <h2>Computer Networks &amp; IT Infrastructure Specialist</h2>
-              <p class="fst-italic py-3">
+              <h2
+                data-en="Computer Networks & IT Infrastructure Specialist"
+                data-fa="متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات"
+              >
+                Computer Networks &amp; IT Infrastructure Specialist
+              </h2>
+              <p
+                class="fst-italic py-3"
+                data-en="My expertise covers Microsoft Windows Server, Cisco, MikroTik, virtualization, and other IT-infrastructure technologies. With a results-oriented mindset, I approach every project with responsibility, precision, and teamwork."
+                data-fa="تجربه من شامل Windows Server، سیسکو، میکروتیک، مجازی‌سازی و سایر فناوری‌های زیرساختی است. با رویکرد نتیجه‌محور، هر پروژه را با مسئولیت‌پذیری، دقت و کار تیمی پیش می‌برم."
+              >
                 My expertise covers Microsoft Windows Server, Cisco, MikroTik,
                 virtualization, and other IT-infrastructure technologies. With a
                 results-oriented mindset, I approach every project with
@@ -234,15 +423,27 @@
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Birthday:</strong> <span>19 July 1999</span>
+                      <strong data-en="Birthday:" data-fa="تاریخ تولد:"
+                        >Birthday:</strong
+                      >
+                      <span data-en="19 July 1999" data-fa="۲۸ تیر ۱۳۷۸"
+                        >19 July 1999</span
+                      >
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Phone:</strong> <span>+989197276219</span>
+                      <strong data-en="Phone:" data-fa="شماره تماس:"
+                        >Phone:</strong
+                      >
+                      <span data-en="+989197276219" data-fa="09197276219"
+                        >+989197276219</span
+                      >
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>
+                      <strong data-en="Email:" data-fa="پست الکترونیکی:"
+                        >Email:</strong
+                      >
                       <span>Jalalian.amirhossein@gmail.com</span>
                     </li>
                   </ul>
@@ -251,32 +452,55 @@
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Location:</strong> <span>Tehran, Iran</span>
+                      <strong data-en="Location:" data-fa="محل سکونت:"
+                        >Location:</strong
+                      >
+                      <span data-en="Tehran, Iran" data-fa="تهران، ایران"
+                        >Tehran, Iran</span
+                      >
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong>
-                      <span>Bachelor of IT Engineering</span>
+                      <strong data-en="Degree:" data-fa="مدرک تحصیلی:"
+                        >Degree:</strong
+                      >
+                      <span
+                        data-en="Bachelor of IT Engineering"
+                        data-fa="کارشناسی مهندسی فناوری اطلاعات"
+                        >Bachelor of IT Engineering</span
+                      >
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Status:</strong>
-                      <span>Available for Collaboration</span>
+                      <strong data-en="Status:" data-fa="وضعیت کاری:"
+                        >Status:</strong
+                      >
+                      <span
+                        data-en="Available for Collaboration"
+                        data-fa="آماده همکاری"
+                        >Available for Collaboration</span
+                      >
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <p class="py-3">
+              <p
+                class="py-3"
+                data-en="I value integrity, discipline, patience, and accountability. I believe that respect for one's craft and adherence to core values are the true foundation of long-term success in the IT field."
+                data-fa="به صداقت، انضباط، صبر و مسئولیت‌پذیری اهمیت می‌دهم. باور دارم احترام به حرفه و پایبندی به ارزش‌های بنیادی، پایه موفقیت بلندمدت در حوزه فناوری اطلاعات است."
+              >
                 I value integrity, discipline, patience, and accountability. I
-                believe that respect for one’s craft and adherence to core
+                believe that respect for one's craft and adherence to core
                 values are the true foundation of long-term success in the IT
                 field.
               </p>
               <p class="bio-quote">
                 <em
-                  >“Success is born of sustained effort, continuous learning,
-                  and faith in the journey.”</em
+                  data-en='"Success is born of sustained effort, continuous learning, and faith in the journey."'
+                  data-fa="«موفقیت زاده تلاش مستمر، یادگیری مداوم و ایمان به مسیر است.»"
+                  >"Success is born of sustained effort, continuous learning,
+                  and faith in the journey."</em
                 >
               </p>
             </div>
@@ -294,12 +518,17 @@
                 <i class="bi bi-emoji-smile"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="232"
+                  data-purecounter-end="49"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong>Happy Clients</strong> <span>consequuntur quae</span>
+                  <strong data-en="Happy Clients" data-fa="مشتریان راضی"
+                    >Happy Clients</strong
+                  >
+                  <span data-en="consequuntur quae" data-fa="مشتریان راضی"
+                    >consequuntur quae</span
+                  >
                 </p>
               </div>
             </div>
@@ -310,13 +539,19 @@
                 <i class="bi bi-journal-richtext"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="521"
+                  data-purecounter-end="31"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong>Projects</strong>
-                  <span>adipisci atque cum quia aut</span>
+                  <strong data-en="Projects" data-fa="پروژه‌ها"
+                    >Projects</strong
+                  >
+                  <span
+                    data-en="adipisci atque cum quia aut"
+                    data-fa="پروژه‌های موفق"
+                    >adipisci atque cum quia aut</span
+                  >
                 </p>
               </div>
             </div>
@@ -327,13 +562,19 @@
                 <i class="bi bi-headset"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="1453"
+                  data-purecounter-end="4160"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong>Hours Of Support</strong>
-                  <span>aut commodi quaerat</span>
+                  <strong data-en="Hours Of Support" data-fa="ساعت پشتیبانی"
+                    >Hours Of Support</strong
+                  >
+                  <span
+                    data-en="aut commodi quaerat"
+                    data-fa="ساعت پشتیبانی ارائه شده"
+                    >aut commodi quaerat</span
+                  >
                 </p>
               </div>
             </div>
@@ -344,13 +585,17 @@
                 <i class="bi bi-people"></i>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="32"
+                  data-purecounter-end="12"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong>Hard Workers</strong>
-                  <span>rerum asperiores dolor</span>
+                  <strong data-en="Hard Workers" data-fa="همکاران سخت‌کوش"
+                    >Hard Workers</strong
+                  >
+                  <span data-en="rerum asperiores dolor" data-fa="تیم متخصص"
+                    >rerum asperiores dolor</span
+                  >
                 </p>
               </div>
             </div>
@@ -918,12 +1163,41 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-microsoft">Microsoft</li>
-              <li data-filter=".filter-linux">Linux</li>
-              <li data-filter=".filter-mikrotik">MikroTik</li>
-              <li data-filter=".filter-vmware">Vmware</li>
-              <li data-filter=".filter-others">Others</li>
+              <li
+                data-filter="*"
+                class="filter-active"
+                data-en="All"
+                data-fa="همه"
+              >
+                All
+              </li>
+              <li
+                data-filter=".filter-microsoft"
+                data-en="Microsoft"
+                data-fa="مایکروسافت"
+              >
+                Microsoft
+              </li>
+              <li data-filter=".filter-linux" data-en="Linux" data-fa="لینوکس">
+                Linux
+              </li>
+              <li
+                data-filter=".filter-mikrotik"
+                data-en="MikroTik"
+                data-fa="میکروتیک"
+              >
+                MikroTik
+              </li>
+              <li
+                data-filter=".filter-vmware"
+                data-en="Vmware"
+                data-fa="وی‌ام‌ویر"
+              >
+                Vmware
+              </li>
+              <li data-filter=".filter-others" data-en="Others" data-fa="سایر">
+                Others
+              </li>
             </ul>
             <!-- End Portfolio Filters -->
 
@@ -1281,14 +1555,14 @@
                     src="assets/img/portfolio/vmware-1.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="VMware vSphere Management"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>VMware vSphere Management</h4>
+                    <p>Virtualization platform administration</p>
                     <a
                       href="assets/img/portfolio/vmware-1.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1311,14 +1585,14 @@
                     src="assets/img/portfolio/vmware-2.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Network Monitoring Setup"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Network Monitoring Setup</h4>
+                    <p>Advanced monitoring and alerting system</p>
                     <a
                       href="assets/img/portfolio/vmware-2.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1341,14 +1615,14 @@
                     src="assets/img/portfolio/linux-5.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Database Clustering"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Database Clustering</h4>
+                    <p>High availability database configuration</p>
                     <a
                       href="assets/img/portfolio/linux-5.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1371,14 +1645,14 @@
                     src="assets/img/portfolio/other-1.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Cloud Infrastructure"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Cloud Infrastructure</h4>
+                    <p>Multi-cloud deployment and management</p>
                     <a
                       href="assets/img/portfolio/other-1.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1401,14 +1675,14 @@
                     src="assets/img/portfolio/mikrotik-4.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Network Security"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Network Security</h4>
+                    <p>Firewall and security policy implementation</p>
                     <a
                       href="assets/img/portfolio/mikrotik-4.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1431,14 +1705,14 @@
                     src="assets/img/portfolio/other-3.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Automation Solutions"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Automation Solutions</h4>
+                    <p>Workflow automation and scripting</p>
                     <a
                       href="assets/img/portfolio/other-3.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-book"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1461,14 +1735,14 @@
                     src="assets/img/portfolio/windows-4.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Windows Server Management"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Windows Server Management</h4>
+                    <p>Active Directory and enterprise services</p>
                     <a
                       href="assets/img/portfolio/windows-4.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-microsoft"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1491,14 +1765,14 @@
                     src="assets/img/portfolio/mikrotik-5.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Router Configuration"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Router Configuration</h4>
+                    <p>Advanced routing and traffic management</p>
                     <a
                       href="assets/img/portfolio/mikrotik-5.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-mikrotik"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1521,14 +1795,14 @@
                     src="assets/img/portfolio/vmware-3.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Virtualization Infrastructure"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Virtualization Infrastructure</h4>
+                    <p>Enterprise virtualization solutions</p>
                     <a
                       href="assets/img/portfolio/vmware-3.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-vmware"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1551,14 +1825,14 @@
                     src="assets/img/portfolio/linux-6.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Linux Administration"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Linux Administration</h4>
+                    <p>Server management and optimization</p>
                     <a
                       href="assets/img/portfolio/linux-6.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-linux"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1581,14 +1855,14 @@
                     src="assets/img/portfolio/windows-5.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Enterprise Services"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Enterprise Services</h4>
+                    <p>DNS, DFS, WSUS and enterprise solutions</p>
                     <a
                       href="assets/img/portfolio/windows-5.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-microsoft"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1611,14 +1885,14 @@
                     src="assets/img/portfolio/mikrotik-6.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="Network Optimization"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>Network Optimization</h4>
+                    <p>Performance tuning and traffic shaping</p>
                     <a
                       href="assets/img/portfolio/mikrotik-6.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-mikrotik"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1641,14 +1915,14 @@
                     src="assets/img/portfolio/windows-6.png"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Security Implementation"
+                    alt="System Integration"
                   />
                   <div class="portfolio-info">
-                    <h4>Security Implementation</h4>
-                    <p>Kaspersky endpoint security deployment</p>
+                    <h4>System Integration</h4>
+                    <p>Enterprise system integration and migration</p>
                     <a
                       href="assets/img/portfolio/windows-6.png"
-                      title="Security Implementation"
+                      title="Portfolio Item"
                       data-gallery="portfolio-gallery-microsoft"
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
@@ -1693,15 +1967,23 @@
               data-aos-delay="100"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-briefcase"></i>
+                <i class="bi bi-diagram-3"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Network Design & Implementation</a
+                    ><span
+                      data-en="Network Design & Implementation"
+                      data-fa="طراحی و پیاده‌سازی شبکه"
+                      >Network Design & Implementation</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="Complete network infrastructure design, implementation, and optimization using Cisco and MikroTik equipment for enterprise environments."
+                  data-fa="طراحی کامل زیرساخت شبکه، پیاده‌سازی و بهینه‌سازی با استفاده از تجهیزات سیسکو و میکروتیک برای محیط‌های سازمانی."
+                >
                   Complete network infrastructure design, implementation, and
                   optimization using Cisco and MikroTik equipment for enterprise
                   environments.
@@ -1716,15 +1998,23 @@
               data-aos-delay="200"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
+                <i class="bi bi-server"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >System Administration</a
+                    ><span
+                      data-en="System Administration"
+                      data-fa="مدیریت سیستم"
+                      >System Administration</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="Windows Server management, Active Directory, DNS, and Linux server administration for optimal system performance and security."
+                  data-fa="مدیریت Windows Server، Active Directory، DNS و مدیریت سرورهای لینوکس برای عملکرد بهینه و امنیت سیستم."
+                >
                   Windows Server management, Active Directory, DNS, and Linux
                   server administration for optimal system performance and
                   security.
@@ -1739,15 +2029,23 @@
               data-aos-delay="300"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
+                <i class="bi bi-gear-wide-connected"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >DevOps & Automation</a
+                    ><span
+                      data-en="DevOps & Automation"
+                      data-fa="دواپس و اتوماسیون"
+                      >DevOps & Automation</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="Docker containerization, CI/CD pipeline setup, and automation scripts to streamline deployment and infrastructure management."
+                  data-fa="کانتینریزاسیون Docker، راه‌اندازی خط لوله CI/CD و اسکریپت‌های اتوماسیون برای تسهیل استقرار و مدیریت زیرساخت."
+                >
                   Docker containerization, CI/CD pipeline setup, and automation
                   scripts to streamline deployment and infrastructure
                   management.
@@ -1762,15 +2060,23 @@
               data-aos-delay="400"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-binoculars"></i>
+                <i class="bi bi-shield-check"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Monitoring & Security</a
+                    ><span
+                      data-en="Monitoring & Security"
+                      data-fa="مانیتورینگ و امنیت"
+                      >Monitoring & Security</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="Comprehensive monitoring solutions with Zabbix, security implementation, and backup strategies to ensure system reliability."
+                  data-fa="راهکارهای جامع مانیتورینگ با Zabbix، پیاده‌سازی امنیت و استراتژی‌های پشتیبان‌گیری برای اطمینان از قابلیت اطمینان سیستم."
+                >
                   Comprehensive monitoring solutions with Zabbix, security
                   implementation, and backup strategies to ensure system
                   reliability.
@@ -1785,15 +2091,23 @@
               data-aos-delay="500"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-brightness-high"></i>
+                <i class="bi bi-cloud"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Virtualization Solutions</a
+                    ><span
+                      data-en="Virtualization Solutions"
+                      data-fa="راهکارهای مجازی‌سازی"
+                      >Virtualization Solutions</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="VMware vSphere deployment, KVM virtualization, and cloud migration services for scalable and efficient infrastructure."
+                  data-fa="استقرار VMware vSphere، مجازی‌سازی KVM و خدمات مهاجرت به ابر برای زیرساخت مقیاس‌پذیر و کارآمد."
+                >
                   VMware vSphere deployment, KVM virtualization, and cloud
                   migration services for scalable and efficient infrastructure.
                 </p>
@@ -1807,15 +2121,21 @@
               data-aos-delay="600"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-calendar4-week"></i>
+                <i class="bi bi-person-workspace"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Technical Consulting</a
+                    ><span data-en="Technical Consulting" data-fa="مشاوره فنی"
+                      >Technical Consulting</span
+                    ></a
                   >
                 </h4>
-                <p class="description">
+                <p
+                  class="description"
+                  data-en="Expert consultation on IT infrastructure planning, technology selection, and implementation strategies for business growth."
+                  data-fa="مشاوره تخصصی در برنامه‌ریزی زیرساخت IT، انتخاب فناوری و استراتژی‌های پیاده‌سازی برای رشد کسب‌وکار."
+                >
                   Expert consultation on IT infrastructure planning, technology
                   selection, and implementation strategies for business growth.
                 </p>
@@ -1831,7 +2151,7 @@
       <section id="testimonials" class="testimonials section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2 data-en="Testimonials" data-fa="نظرات مشتریان">Testimonials</h2>
+          <h2 data-en="Testimonials" data-fa="نظرات">Testimonials</h2>
           <p
             data-en="What clients and colleagues say about my work and professional approach."
             data-fa="نظرات مشتریان و همکاران درباره کار و رویکرد حرفه‌ای من."
@@ -1875,6 +2195,11 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
+                      data-en="Amir's expertise in network infrastructure and system
+                      administration has been invaluable to our organization.
+                      His attention to detail and problem-solving skills are
+                      exceptional."
+                      data-fa="تخصص امیر در زیرساخت شبکه و مدیریت سیستم برای سازمان ما بسیار ارزشمند بوده است. توجه دقیق او به جزئیات و مهارت‌های حل مسئله فوق‌العاده است."
                       >Amir's expertise in network infrastructure and system
                       administration has been invaluable to our organization.
                       His attention to detail and problem-solving skills are
@@ -1888,8 +2213,12 @@
                     class="testimonial-img"
                     alt="IT Director"
                   />
-                  <h3>IT Director</h3>
-                  <h4>Newsha Drinks Co.</h4>
+                  <h3 data-en="IT Director" data-fa="مدیر فناوری اطلاعات">
+                    IT Director
+                  </h3>
+                  <h4 data-en="Newsha Drinks Co." data-fa="شرکت نوشیدنی نوشا">
+                    Newsha Drinks Co.
+                  </h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1899,6 +2228,11 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
+                      data-en="Working with Amir on our virtualization project was a
+                      great experience. His technical knowledge and ability to
+                      explain complex concepts clearly made the implementation
+                      smooth and successful."
+                      data-fa="همکاری با امیر در پروژه مجازی‌سازی تجربه فوق‌العاده‌ای بود. دانش فنی عمیق او و توانایی در توضیح مفاهیم پیچیده، پیاده‌سازی را روان و موفق کرد."
                       >Working with Amir on our virtualization project was a
                       great experience. His technical knowledge and ability to
                       explain complex concepts clearly made the implementation
@@ -1912,8 +2246,12 @@
                     class="testimonial-img"
                     alt="Project Manager"
                   />
-                  <h3>Project Manager</h3>
-                  <h4>Technology Solutions</h4>
+                  <h3 data-en="Project Manager" data-fa="مدیر پروژه">
+                    Project Manager
+                  </h3>
+                  <h4 data-en="Technology Solutions" data-fa="راهکارهای فناوری">
+                    Technology Solutions
+                  </h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1923,6 +2261,11 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
+                      data-en="Amir's monitoring and security implementations have
+                      significantly improved our system reliability. His
+                      proactive approach to IT infrastructure management is
+                      commendable."
+                      data-fa="پیاده‌سازی سیستم‌های نظارت و امنیت امیر، قابلیت اطمینان سیستم ما را به طور چشمگیری بهبود داده است. رویکرد پیشگیرانه او در مدیریت زیرساخت فناوری اطلاعات بسیار قابل تحسین است."
                       >Amir's monitoring and security implementations have
                       significantly improved our system reliability. His
                       proactive approach to IT infrastructure management is
@@ -1936,8 +2279,12 @@
                     class="testimonial-img"
                     alt="System Administrator"
                   />
-                  <h3>System Administrator</h3>
-                  <h4>Enterprise Client</h4>
+                  <h3 data-en="System Administrator" data-fa="مدیر سیستم">
+                    System Administrator
+                  </h3>
+                  <h4 data-en="Enterprise Client" data-fa="مشتری سازمانی">
+                    Enterprise Client
+                  </h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1947,6 +2294,10 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
+                      data-en="The network optimization and load balancing solutions
+                      implemented by Amir have greatly enhanced our internet
+                      connectivity and overall system performance."
+                      data-fa="راهکارهای بهینه‌سازی شبکه و تعادل بار پیاده‌سازی شده توسط امیر، اتصال اینترنت و عملکرد کلی سیستم ما را به طور چشمگیری بهبود داده است."
                       >The network optimization and load balancing solutions
                       implemented by Amir have greatly enhanced our internet
                       connectivity and overall system performance.</span
@@ -1959,8 +2310,12 @@
                     class="testimonial-img"
                     alt="Network Engineer"
                   />
-                  <h3>Network Engineer</h3>
-                  <h4>Infrastructure Team</h4>
+                  <h3 data-en="Network Engineer" data-fa="مهندس شبکه">
+                    Network Engineer
+                  </h3>
+                  <h4 data-en="Infrastructure Team" data-fa="تیم زیرساخت">
+                    Infrastructure Team
+                  </h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1970,6 +2325,10 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
+                      data-en="Amir's expertise in DevOps and automation has streamlined
+                      our deployment processes. His technical documentation and
+                      knowledge transfer are excellent."
+                      data-fa="تخصص امیر در DevOps و اتوماسیون، فرآیندهای استقرار ما را به طور قابل توجهی روان کرده است. مستندات فنی و انتقال دانش او بسیار عالی است."
                       >Amir's expertise in DevOps and automation has streamlined
                       our deployment processes. His technical documentation and
                       knowledge transfer are excellent.</span
@@ -1982,8 +2341,12 @@
                     class="testimonial-img"
                     alt="DevOps Lead"
                   />
-                  <h3>DevOps Lead</h3>
-                  <h4>Development Team</h4>
+                  <h3 data-en="DevOps Lead" data-fa="سرپرست DevOps">
+                    DevOps Lead
+                  </h3>
+                  <h4 data-en="Development Team" data-fa="تیم توسعه">
+                    Development Team
+                  </h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -2013,6 +2376,7 @@
           <div class="row gy-4">
             <div class="col-lg-5">
               <div class="info-wrap">
+                <!-- آدرس -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2020,12 +2384,15 @@
                 >
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h3>Address</h3>
-                    <p>Tehran , Iran</p>
+                    <h3 data-en="Address" data-fa="آدرس">Address</h3>
+                    <p data-en="Tehran, Iran" data-fa="تهران، ایران">
+                      Tehran, Iran
+                    </p>
                   </div>
                 </div>
                 <!-- End Info Item -->
 
+                <!-- تلفن -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2033,12 +2400,64 @@
                 >
                   <i class="bi bi-telephone flex-shrink-0"></i>
                   <div>
-                    <h3>Call Us</h3>
-                    <p>+98 9197276219</p>
+                    <h3 data-en="Phone" data-fa="تلفن">Phone</h3>
+                    <p>
+                      <a
+                        href="tel:+989197276219"
+                        data-en="+98 9197276219"
+                        data-fa="09197276219"
+                        >+98 9197276219</a
+                      >
+                    </p>
                   </div>
                 </div>
                 <!-- End Info Item -->
 
+                <!-- واتساپ -->
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="350"
+                >
+                  <i class="bi bi-whatsapp flex-shrink-0"></i>
+                  <div>
+                    <h3 data-en="WhatsApp" data-fa="واتساپ">WhatsApp</h3>
+                    <p>
+                      <a
+                        href="https://wa.me/989197276219"
+                        target="_blank"
+                        rel="noopener"
+                        data-en="+98 9197276219"
+                        data-fa="09197276219"
+                        >+98 9197276219</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <!-- تلگرام -->
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="375"
+                >
+                  <i class="bi bi-telegram flex-shrink-0"></i>
+                  <div>
+                    <h3 data-en="Telegram" data-fa="تلگرام">Telegram</h3>
+                    <p>
+                      <a
+                        href="https://t.me/Aj_mercury"
+                        target="_blank"
+                        rel="noopener"
+                        >@Aj_mercury</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <!-- ایمیل -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2046,8 +2465,12 @@
                 >
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
-                    <h3>Email Us</h3>
-                    <p>jalalian.amirhossein@gmail.com</p>
+                    <h3 data-en="Email" data-fa="ایمیل">Email</h3>
+                    <p>
+                      <a href="mailto:jalalian.amirhossein@gmail.com"
+                        >jalalian.amirhossein@gmail.com</a
+                      >
+                    </p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -2148,9 +2571,19 @@
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
+                    <div
+                      class="loading"
+                      data-en="Loading"
+                      data-fa="در حال ارسال"
+                    >
+                      Loading
+                    </div>
                     <div class="error-message"></div>
-                    <div class="sent-message">
+                    <div
+                      class="sent-message"
+                      data-en="Your message has been sent. Thank you!"
+                      data-fa="پیام شما ارسال شد. متشکرم!"
+                    >
                       Your message has been sent. Thank you!
                     </div>
 
@@ -2176,7 +2609,13 @@
       <div class="container">
         <div class="copyright text-center">
           <p>
-            © <span>2025</span> <strong class="px-1">Amir Jalalian</strong>
+            © <span>2025</span>
+            <strong
+              class="px-1"
+              data-en="AmirHossein Jalalian"
+              data-fa="امیرحسین جلالیان"
+              >AmirHossein Jalalian</strong
+            >
             <span data-en="All Rights Reserved" data-fa="تمام حقوق محفوظ است"
               >All Rights Reserved</span
             >
@@ -2224,9 +2663,46 @@
     ></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/i18n.js" defer></script>
+    <!-- Main JS File - Optimized -->
+    <script src="assets/js/main.js?v=999" defer></script>
+    <script src="assets/js/i18n.js?v=999" defer></script>
+
+    <!-- Performance optimization -->
+    <script>
+      // Preload critical resources
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(() => {
+          // Preload images that will be needed soon
+          const criticalImages = [
+            "assets/img/my-profile-img.jpg",
+            "assets/img/logo.png",
+          ];
+          criticalImages.forEach((src) => {
+            const link = document.createElement("link");
+            link.rel = "preload";
+            link.as = "image";
+            link.href = src;
+            document.head.appendChild(link);
+          });
+        });
+      }
+
+      // Optimize scroll performance
+      let ticking = false;
+      function updateScroll() {
+        // Scroll-based animations
+        ticking = false;
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateScroll);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener("scroll", requestTick, { passive: true });
+    </script>
 
     <!-- PWA Service Worker -->
     <script>

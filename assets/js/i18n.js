@@ -17,7 +17,7 @@
         contact: "Contact",
       },
       hero: {
-        name: "Amir Jalalian",
+        name: "AmirHossein Jalalian",
         iam: "I'm",
         roles:
           "Network Expert, DevOps Engineer, Freelancer, Systems Specialist, VMware Administrator",
@@ -158,7 +158,7 @@
         contact: "تماس با من",
       },
       hero: {
-        name: "امیر جلالیان",
+        name: "امیرحسین جلالیان",
         iam: "من",
         roles:
           "کارشناس شبکه، مهندس دواپس، فریلنسر، متخصص سیستم‌ها، مدیر VMware",
@@ -316,10 +316,22 @@
   function reinitTyped(lang) {
     const el = document.querySelector("#hero .typed");
     if (!el) return;
-    const roles = (get(DICT[lang], "hero.roles") || "")
-      .split(",")
-      .map((s) => s.trim())
-      .filter((s) => s.length > 0);
+
+    // Check for data-typed-items-fa attribute first
+    let roles;
+    if (lang === "fa" && el.hasAttribute("data-typed-items-fa")) {
+      roles = el
+        .getAttribute("data-typed-items-fa")
+        .split(",")
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+    } else {
+      roles = (get(DICT[lang], "hero.roles") || "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+    }
+
     if (window.Typed) {
       if (el._typed && el._typed.destroy) {
         try {
@@ -353,14 +365,50 @@
     __busy = true;
     const isFA = lang === "fa";
     try {
-      document.documentElement.lang = lang;
-      document.documentElement.dir = isFA ? "rtl" : "ltr";
-      ensureRTL().disabled = !isFA;
+      // Add transition animation to button
       const btn = $("#lang-toggle");
-      if (btn) btn.textContent = isFA ? "English" : "فارسی";
+      const content = btn?.querySelector(".lang-content");
+      const textEl = btn?.querySelector(".lang-text");
+      const flagEl = btn?.querySelector(".lang-flag");
+
+      if (content && textEl && flagEl) {
+        // Start transition animation
+        content.classList.add("transitioning-out");
+
+        setTimeout(() => {
+          // Update content
+          textEl.textContent = isFA ? "EN" : "FA";
+          flagEl.textContent = isFA ? "🇺🇸" : "🇮🇷";
+
+          // Apply language changes
+          document.documentElement.lang = lang;
+          document.documentElement.dir = isFA ? "rtl" : "ltr";
+          ensureRTL().disabled = !isFA;
+
+          // End transition animation
+          content.classList.remove("transitioning-out");
+          content.classList.add("transitioning-in");
+
+          setTimeout(() => {
+            content.classList.remove("transitioning-in");
+          }, 200);
+        }, 100);
+      } else {
+        // Fallback for old button structure
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isFA ? "rtl" : "ltr";
+        ensureRTL().disabled = !isFA;
+        if (btn) btn.textContent = isFA ? "English" : "فارسی";
+      }
+
       applyDict(lang);
       reinitTyped(lang);
       localStorage.setItem("lang", lang);
+
+      // Mark as used
+      if (!localStorage.getItem("lang_used")) {
+        localStorage.setItem("lang_used", "true");
+      }
     } catch (e) {
       console.warn("Error setting language:", e);
     } finally {
@@ -377,6 +425,8 @@
     btn.parentNode.replaceChild(clone, btn);
     btn = clone;
     btn.__i18nBound = true;
+
+    // Enhanced click handler with visual feedback
     btn.addEventListener(
       "click",
       function (e) {
@@ -384,11 +434,72 @@
         const now = Date.now();
         if (now - __last < 250) return;
         __last = now;
+
+        // Add click animation
+        btn.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          btn.style.transform = "";
+        }, 100);
+
         const next = document.documentElement.lang === "fa" ? "en" : "fa";
         setLang(next);
       },
       { capture: true, passive: false }
     );
+
+    // Simple hover effects
+    btn.addEventListener("mouseenter", function () {
+      btn.style.transform = "translateY(-1px)";
+    });
+
+    btn.addEventListener("mouseleave", function () {
+      btn.style.transform = "";
+    });
+
+    // Add touch support for mobile
+    if ("ontouchstart" in window) {
+      btn.addEventListener(
+        "touchstart",
+        function (e) {
+          e.preventDefault();
+          btn.style.transform = "scale(0.95)";
+        },
+        { passive: false }
+      );
+
+      btn.addEventListener(
+        "touchend",
+        function (e) {
+          e.preventDefault();
+          btn.style.transform = "";
+          const now = Date.now();
+          if (now - __last < 250) return;
+          __last = now;
+          const next = document.documentElement.lang === "fa" ? "en" : "fa";
+          setLang(next);
+        },
+        { passive: false }
+      );
+    }
+
+    // Add keyboard support
+    btn.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+
+    // Add focus management
+    btn.addEventListener("focus", function () {
+      btn.style.outline = "3px solid rgba(0, 80, 160, 0.5)";
+      btn.style.outlineOffset = "2px";
+    });
+
+    btn.addEventListener("blur", function () {
+      btn.style.outline = "";
+      btn.style.outlineOffset = "";
+    });
   }
 
   function init() {
@@ -396,6 +507,21 @@
     const saved =
       localStorage.getItem("lang") ||
       (navigator.language.startsWith("fa") ? "fa" : "en");
+
+    // Initialize button with proper structure if needed
+    const btn = $("#lang-toggle");
+    if (btn && !btn.querySelector(".lang-content")) {
+      // Convert old button structure to new one
+      const isFA = saved === "fa";
+      btn.innerHTML = `
+        <div class="lang-content">
+          <span class="lang-text">${isFA ? "EN" : "FA"}</span>
+          <div class="lang-flag">${isFA ? "🇺🇸" : "🇮🇷"}</div>
+        </div>
+        <div class="lang-glow"></div>
+      `;
+    }
+
     setLang(saved);
     stripAndBind();
   }
