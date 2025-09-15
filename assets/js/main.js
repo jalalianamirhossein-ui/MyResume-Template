@@ -1,6 +1,21 @@
 /**
- * Template main JS (patched)
- * - Removed Typed.js auto-init to avoid duplication with i18n.js
+ * ===============================================
+ * MEET AJ PORTFOLIO - MAIN JAVASCRIPT
+ * ===============================================
+ * 
+ * Main JavaScript functionality for the portfolio website
+ * Handles navigation, mobile menu, and UI interactions
+ * 
+ * Features:
+ * - Mobile navigation toggle
+ * - Smooth scrolling
+ * - Menu overlay management
+ * - Accessibility improvements
+ * 
+ * Note: Typed.js initialization moved to i18n.js
+ * to avoid conflicts with language switching
+ * 
+ * ===============================================
  */
 (function () {
   "use strict";

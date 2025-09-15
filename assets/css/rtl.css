@@ -1,4 +1,20 @@
-/* RTL Overrides */
+/**
+ * ===============================================
+ * MEET AJ PORTFOLIO - RTL SUPPORT
+ * ===============================================
+ * 
+ * Right-to-Left (RTL) styles for Persian/Farsi language support
+ * Overrides main styles to provide proper RTL layout and typography
+ * 
+ * Features:
+ * - Persian font family integration
+ * - RTL text alignment
+ * - Proper icon positioning
+ * - Mobile-responsive RTL layout
+ * - Form and navigation RTL support
+ * 
+ * ===============================================
+ */
 
 /* Persian Fonts for RTL */
 html[dir="rtl"] {
@@ -116,12 +132,6 @@ html[dir="rtl"] .contact .info-item p {
   text-align: right;
 }
 
-html[dir="rtl"] .contact .php-email-form label {
-  font-family: var(--persian-font) !important;
-  font-weight: 500;
-  text-align: right;
-}
-
 html[dir="rtl"] .contact .php-email-form input,
 html[dir="rtl"] .contact .php-email-form textarea {
   text-align: right;
@@ -196,11 +206,6 @@ html[dir="rtl"] .about .content ul span {
   font-family: var(--persian-font) !important;
 }
 
-html[dir="rtl"] .about .content p {
-  font-family: var(--persian-font) !important;
-  line-height: 1.8;
-}
-
 html[dir="rtl"] .about .content .bio-quote em {
   font-family: var(--persian-font) !important;
   font-style: italic;
@@ -226,24 +231,17 @@ html[dir="rtl"] .resume .resume-item ul li {
   line-height: 1.7;
 }
 
-html[dir="rtl"] .testimonials .testimonial-item p {
-  font-family: var(--persian-font) !important;
-  line-height: 1.8;
-  text-align: center;
+/* RTL testimonials swiper direction */
+html[dir="rtl"] .testimonials .swiper {
   direction: rtl;
 }
 
-/* RTL testimonials swiper direction */
-html[dir="rtl"] .testimonials .swiper {
-  direction: ltr;
-}
-
 html[dir="rtl"] .testimonials .swiper-wrapper {
-  direction: ltr;
+  direction: rtl;
 }
 
 html[dir="rtl"] .testimonials .swiper-slide {
-  direction: ltr;
+  direction: rtl;
 }
 
 html[dir="rtl"] .services .service-item p {
@@ -265,11 +263,6 @@ html[dir="rtl"] .contact .php-email-form textarea::placeholder {
 html[dir="rtl"] .contact .php-email-form .loading,
 html[dir="rtl"] .contact .php-email-form .sent-message {
   font-family: var(--persian-font) !important;
-}
-
-html[dir="rtl"] .contact .php-email-form label {
-  font-family: var(--persian-font) !important;
-  text-align: right;
 }
 
 /* Force header to the right on RTL */
@@ -406,7 +399,7 @@ html[dir="rtl"] .about .content ul strong {
   /* RTL mobile resume */
   html[dir="rtl"] .resume .resume-item {
     padding: 0 25px 25px 0;
-    border-right: 3px solid var(--accent-color);
+    border-right: 3px solid var(--primary);
     border-left: none;
     border-radius: 8px 0 0 8px;
   }
@@ -432,7 +425,7 @@ html[dir="rtl"] .about .content ul strong {
   }
 }
 
-/* Hero Section RTL - Side by Side Design (RTL) */
+/* Hero Section RTL - Modern Design */
 html[dir="rtl"] .hero-wrapper {
   flex-direction: row-reverse;
 }
@@ -441,27 +434,76 @@ html[dir="rtl"] .hero-content {
   text-align: right;
 }
 
+/* RTL Badge */
+html[dir="rtl"] .hero-badge {
+  text-align: right;
+}
+
+html[dir="rtl"] .badge-text {
+  font-family: var(--persian-font) !important;
+}
+
+/* RTL Title */
 html[dir="rtl"] .hero-title {
   font-family: var(--persian-heading-font) !important;
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .title-line-1,
+html[dir="rtl"] .title-line-2 {
+  text-align: right;
+  direction: rtl;
+}
+
+/* RTL Subtitle */
+html[dir="rtl"] .hero-subtitle-wrapper {
   text-align: right;
 }
 
 html[dir="rtl"] .hero-subtitle {
   font-family: var(--persian-font) !important;
   text-align: right;
+  direction: rtl;
 }
 
-html[dir="rtl"] .hero-description p {
+html[dir="rtl"] .subtitle-prefix {
   font-family: var(--persian-font) !important;
-  text-align: right;
 }
 
+html[dir="rtl"] .hero-subtitle .typed {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .hero-subtitle .typed::after {
+  margin-left: 0;
+  margin-right: 2px;
+}
+
+/* RTL Actions */
 html[dir="rtl"] .hero-actions {
   margin-top: 2.5rem;
+  justify-content: flex-start;
 }
 
-html[dir="rtl"] .hero-actions .btn {
+html[dir="rtl"] .hero-actions .btn-modern {
   font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .btn-text {
+  font-family: var(--persian-font) !important;
+}
+
+html[dir="rtl"] .btn-icon {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .hero-actions .btn-modern:hover .btn-icon {
+  transform: scaleX(-1) translateX(-4px);
+}
+
+html[dir="rtl"] .hero-actions .btn-modern:hover .btn-text {
+  transform: translateX(2px);
 }
 
 /* Hero Responsive RTL */
@@ -479,16 +521,28 @@ html[dir="rtl"] .hero-actions .btn {
     order: 1;
   }
 
+  html[dir="rtl"] .hero-badge {
+    text-align: center;
+  }
+
   html[dir="rtl"] .hero-title {
+    text-align: center;
+    direction: rtl;
+  }
+
+  html[dir="rtl"] .title-line-1,
+  html[dir="rtl"] .title-line-2 {
+    text-align: center;
+    direction: rtl;
+  }
+
+  html[dir="rtl"] .hero-subtitle-wrapper {
     text-align: center;
   }
 
   html[dir="rtl"] .hero-subtitle {
     text-align: center;
-  }
-
-  html[dir="rtl"] .hero-description p {
-    text-align: center;
+    direction: rtl;
   }
 
   html[dir="rtl"] .hero-actions {
@@ -506,247 +560,46 @@ html[dir="rtl"] .about .content ul li a::after {
   right: 0;
 }
 
-/*--------------------------------------------------------------
-# Article Page RTL Support
---------------------------------------------------------------*/
-html[dir="rtl"] .article-page .article-category {
-  margin-right: 0;
-  margin-left: 15px;
+/* Quote Section RTL - Center alignment for Persian */
+html[dir="rtl"] .quote-section {
+  text-align: center;
 }
 
-html[dir="rtl"] .article-page .article-author {
-  flex-direction: row-reverse;
+html[dir="rtl"] .quote-card {
+  text-align: center;
 }
 
-html[dir="rtl"] .article-page .author-info {
-  text-align: right;
+html[dir="rtl"] .quote-card i {
+  text-align: center;
+  display: block;
 }
 
-html[dir="rtl"] .article-page .article-section h2 {
-  text-align: right;
+html[dir="rtl"] .inspirational-quote {
+  text-align: center;
 }
 
-html[dir="rtl"] .article-page .article-section h3 {
-  text-align: right;
+html[dir="rtl"] .inspirational-quote p {
+  font-family: var(--persian-font) !important;
+  text-align: center !important;
+  direction: rtl !important;
+  line-height: 1.8;
 }
 
-html[dir="rtl"] .article-page .article-section h4 {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .article-section p {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .article-section ul,
-html[dir="rtl"] .article-page .article-section ol {
-  padding-right: 30px;
-  padding-left: 0;
-}
-
-html[dir="rtl"] .article-page .toc {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .highlight-box ul {
-  padding-right: 20px;
-  padding-left: 0;
-}
-
-html[dir="rtl"] .article-page .info-box ul {
-  padding-right: 20px;
-  padding-left: 0;
-}
-
-html[dir="rtl"] .article-page .security-checklist ul {
-  padding-right: 20px;
-  padding-left: 0;
-}
-
-html[dir="rtl"] .article-page .author-card {
-  flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .article-page .author-details {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .author-social {
-  justify-content: flex-end;
-}
-
-html[dir="rtl"] .article-page .related-content {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .related-content h3 {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .related-content p {
-  text-align: right;
-}
-
-html[dir="rtl"] .article-page .related-content .read-more {
-  text-align: right;
-}
-
-/* RTL support for article page header and menu */
-html[dir="rtl"] .article-page .header {
-  left: auto !important;
-  right: 0 !important;
-  inset-inline-start: auto;
-  inset-inline-end: 0;
-  border-inline-start: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
-  border-inline-end: none;
-}
-
-/* Mobile off-canvas for article page */
-@media (max-width: 1199px) {
-  html[dir="rtl"] .article-page .header {
-    right: -100% !important;
-    left: auto !important;
-  }
-  html[dir="rtl"] .article-page .header.header-show {
-    right: 0 !important;
-    left: auto !important;
-  }
-}
-
-/* Adjust main/footer margins for article page */
-@media (min-width: 1200px) {
-  html[dir="rtl"] .article-page .header ~ main,
-  html[dir="rtl"] .article-page .header ~ #footer {
-    margin-right: 300px !important;
-    margin-left: 0 !important;
-  }
-}
-
-/* Article page mobile buttons */
-html[dir="rtl"] .article-page .menu-toggle {
-  left: auto !important;
-  right: 20px !important;
-}
-
-html[dir="rtl"] .article-page .language-switcher {
-  right: auto !important;
-  left: 20px !important;
-}
-
-/* Additional RTL support for all sections */
-html[dir="rtl"] .hero-content {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .hero-content h1,
-html[dir="rtl"] .hero-content h2,
-html[dir="rtl"] .hero-content p {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .section-title {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .section-title h2 {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .about .content {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .about .content p {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .resume .resume-item {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .resume .resume-item h4,
-html[dir="rtl"] .resume .resume-item h5 {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .services .service-item {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .services .service-item h4,
-html[dir="rtl"] .services .service-item p {
-  text-align: right !important;
-}
-
+/* Testimonials Section RTL - Center alignment for Persian */
 html[dir="rtl"] .testimonials .testimonial-item {
-  text-align: right !important;
+  text-align: center !important;
+}
+
+html[dir="rtl"] .testimonials .testimonial-item p {
+  text-align: center !important;
+  direction: rtl !important;
 }
 
 html[dir="rtl"] .testimonials .testimonial-item h3,
-html[dir="rtl"] .testimonials .testimonial-item h4,
-html[dir="rtl"] .testimonials .testimonial-item p {
-  text-align: right !important;
+html[dir="rtl"] .testimonials .testimonial-item h4 {
+  text-align: center !important;
 }
 
-html[dir="rtl"] .contact .info {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .contact .info h4,
-html[dir="rtl"] .contact .info p {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .contact .php-email-form {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .contact .php-email-form label,
-html[dir="rtl"] .contact .php-email-form input,
-html[dir="rtl"] .contact .php-email-form textarea {
-  text-align: right !important;
-}
-
-/* Additional RTL support for article page content */
-html[dir="rtl"] .article-page .article-header {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .article-meta {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .article-title {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .article-excerpt {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .article-body {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .article-body p,
-html[dir="rtl"] .article-page .article-body div,
-html[dir="rtl"] .article-page .article-body span {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .tools-grid {
-  direction: rtl !important;
-}
-
-html[dir="rtl"] .article-page .metrics-grid {
-  direction: rtl !important;
-}
-
-html[dir="rtl"] .article-page .related-articles {
-  text-align: right !important;
-}
-
-html[dir="rtl"] .article-page .related-articles h2 {
-  text-align: right !important;
+html[dir="rtl"] .testimonials .testimonial-item .testimonial-img {
+  margin: 0 auto 20px auto !important;
 }

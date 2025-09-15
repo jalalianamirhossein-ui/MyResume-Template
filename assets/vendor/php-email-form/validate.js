@@ -1,8 +1,22 @@
 /**
-* PHP Email Form Validation - v3.9
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
+ * ===============================================
+ * PHP EMAIL FORM VALIDATION - v3.9
+ * ===============================================
+ * 
+ * Client-side validation for contact forms
+ * Handles form submission, validation, and user feedback
+ * 
+ * Features:
+ * - Real-time form validation
+ * - AJAX form submission
+ * - reCAPTCHA support
+ * - User feedback messages
+ * - Error handling
+ * 
+ * Author: BootstrapMade.com
+ * URL: https://bootstrapmade.com/php-email-form/
+ * ===============================================
+ */
 (function () {
   "use strict";
 

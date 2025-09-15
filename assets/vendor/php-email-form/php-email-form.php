@@ -1,8 +1,22 @@
 <?php
 /**
- * PHP Email Form - Version 1.0
- * Simple PHP Email Form
- * https://bootstrapmade.com/php-email-form/
+ * ===============================================
+ * PHP EMAIL FORM - Version 1.0
+ * ===============================================
+ * 
+ * Simple and secure PHP email form handler
+ * Processes contact form submissions and sends emails
+ * 
+ * Features:
+ * - Secure email processing
+ * - SMTP support
+ * - AJAX compatibility
+ * - Input validation
+ * - Error handling
+ * 
+ * Author: BootstrapMade.com
+ * URL: https://bootstrapmade.com/php-email-form/
+ * ===============================================
  */
 
 class PHP_Email_Form

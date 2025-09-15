@@ -1,4 +1,21 @@
-/*! i18n.js v7 – stable switcher with full dictionary */
+/**
+ * ===============================================
+ * MEET AJ PORTFOLIO - INTERNATIONALIZATION (i18n)
+ * ===============================================
+ *
+ * Language switching functionality for English and Persian/Farsi
+ * Handles text translation, RTL support, and Typed.js integration
+ *
+ * Features:
+ * - English/Persian language switching
+ * - RTL (Right-to-Left) support
+ * - Typed.js animation with language-specific content
+ * - Smooth transitions between languages
+ * - Persistent language preference
+ *
+ * Version: 7.0 - Stable
+ * ===============================================
+ */
 (function () {
   if (window.__i18nInit) return;
   window.__i18nInit = true;
@@ -337,7 +354,7 @@
         try {
           el._typed.destroy();
         } catch (e) {
-          console.warn("Error destroying Typed instance:", e);
+          // Error destroying Typed instance - handled silently
         }
       }
       if (roles.length > 0) {
@@ -351,7 +368,7 @@
           });
           el._typed = t;
         } catch (e) {
-          console.warn("Error initializing Typed:", e);
+          // Error initializing Typed - fallback to first role
           el.textContent = roles[0] || el.textContent;
         }
       }
@@ -371,14 +388,15 @@
       const textEl = btn?.querySelector(".lang-text");
       const flagEl = btn?.querySelector(".lang-flag");
 
-      if (content && textEl && flagEl) {
+      if (content && textEl) {
         // Start transition animation
         content.classList.add("transitioning-out");
 
         setTimeout(() => {
-          // Update content
-          textEl.textContent = isFA ? "EN" : "FA";
-          flagEl.textContent = isFA ? "🇺🇸" : "🇮🇷";
+          // Update content: show target language (opposite of current)
+          textEl.textContent = isFA
+            ? textEl.getAttribute("data-fa")
+            : textEl.getAttribute("data-en");
 
           // Apply language changes
           document.documentElement.lang = lang;
@@ -398,7 +416,6 @@
         document.documentElement.lang = lang;
         document.documentElement.dir = isFA ? "rtl" : "ltr";
         ensureRTL().disabled = !isFA;
-        if (btn) btn.textContent = isFA ? "English" : "فارسی";
       }
 
       applyDict(lang);
@@ -410,12 +427,33 @@
         localStorage.setItem("lang_used", "true");
       }
     } catch (e) {
-      console.warn("Error setting language:", e);
+      // Error setting language - handled silently
     } finally {
       setTimeout(() => {
         __busy = false;
       }, 300);
     }
+  }
+
+  // Language transition with page refresh and fade from top
+  function startLanguageTransition(currentLang, nextLang) {
+    const html = document.documentElement;
+
+    // Start fade out animation
+    html.classList.add("language-transition", "fade-out");
+
+    setTimeout(() => {
+      // Change language
+      setLang(nextLang);
+
+      // Change direction attribute
+      const isMovingToRTL = nextLang === "fa";
+      html.dir = isMovingToRTL ? "rtl" : "ltr";
+      html.lang = nextLang;
+
+      // Refresh page
+      window.location.reload();
+    }, 400);
   }
 
   function stripAndBind() {
@@ -441,8 +479,11 @@
           btn.style.transform = "";
         }, 100);
 
-        const next = document.documentElement.lang === "fa" ? "en" : "fa";
-        setLang(next);
+        const currentLang = document.documentElement.lang;
+        const next = currentLang === "fa" ? "en" : "fa";
+
+        // Start language transition animation
+        startLanguageTransition(currentLang, next);
       },
       { capture: true, passive: false }
     );
@@ -475,8 +516,12 @@
           const now = Date.now();
           if (now - __last < 250) return;
           __last = now;
-          const next = document.documentElement.lang === "fa" ? "en" : "fa";
-          setLang(next);
+
+          const currentLang = document.documentElement.lang;
+          const next = currentLang === "fa" ? "en" : "fa";
+
+          // Start language transition animation
+          startLanguageTransition(currentLang, next);
         },
         { passive: false }
       );
@@ -515,8 +560,9 @@
       const isFA = saved === "fa";
       btn.innerHTML = `
         <div class="lang-content">
-          <span class="lang-text">${isFA ? "EN" : "FA"}</span>
-          <div class="lang-flag">${isFA ? "🇺🇸" : "🇮🇷"}</div>
+          <span class="lang-text" data-en="English" data-fa="فارسی">${
+            isFA ? "English" : "فارسی"
+          }</span>
         </div>
         <div class="lang-glow"></div>
       `;

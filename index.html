@@ -2,7 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- ===============================================
-    ==================== META TAGS ====================
+    MEET AJ PORTFOLIO - MAIN HTML DOCUMENT
+    ===============================================
+    
+    Professional portfolio website for AmirHossein Jalalian
+    Network Expert, DevOps Engineer & IT Infrastructure Specialist
+    
+    Features:
+    - Progressive Web App (PWA) ready
+    - Multi-language support (English/Persian)
+    - Responsive design
+    - Modern Apple Design System
+    - SEO optimized
+    
+    =============================================== -->
+
+    <!-- ===============================================
+    META TAGS & SEO CONFIGURATION
     =============================================== -->
     <meta charset="utf-8" />
     <meta
@@ -22,13 +38,13 @@
     />
 
     <!-- ===============================================
-    ==================== FAVICONS =====================
+    FAVICONS & APP ICONS
     =============================================== -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- ===============================================
-    ==================== PWA CONFIG ====================
+    PROGRESSIVE WEB APP (PWA) CONFIGURATION
     =============================================== -->
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#0050a0" />
@@ -40,7 +56,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
 
     <!-- ===============================================
-    ==================== FONTS =========================
+    GOOGLE FONTS & TYPOGRAPHY
     =============================================== -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
@@ -50,8 +66,9 @@
     />
 
     <!-- ===============================================
-    ==================== VENDOR CSS ====================
+    STYLESHEETS & CSS FRAMEWORKS
     =============================================== -->
+
     <!-- Bootstrap CSS Framework -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
@@ -176,8 +193,9 @@
             title="کلیک کنید تا زبان را تغییر دهید / Click to switch language"
           >
             <div class="lang-content">
-              <span class="lang-text">FA</span>
-              <div class="lang-flag">🇮🇷</div>
+              <span class="lang-text" data-en="فارسی" data-fa="English"
+                >English</span
+              >
             </div>
           </button>
         </div>
@@ -378,7 +396,7 @@
             >
               <div class="hero-profile-img">
                 <img
-                  src="assets/img/my-profile-img.jpg"
+                  src="assets/img/my-profile-img-2.jpg"
                   loading="lazy"
                   alt="AmirHossein Jalalian Profile Picture"
                   class="img-fluid hero-img"
@@ -395,37 +413,72 @@
               data-aos-delay="300"
             >
               <div class="hero-content">
+                <!-- Modern Badge -->
+                <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
+                  <span
+                    class="badge-text"
+                    data-en="Available for Work"
+                    data-fa="آماده برای همکاری"
+                    >Available for Work</span
+                  >
+                  <div class="badge-dot"></div>
+                </div>
+
+                <!-- Main Title with Modern Typography -->
                 <h1
                   class="hero-title"
                   data-en="AmirHossein Jalalian"
                   data-fa="امیرحسین جلالیان"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
                 >
-                  AmirHossein Jalalian
+                  <span class="title-line-1">AmirHossein</span>
+                  <span class="title-line-2">Jalalian</span>
                 </h1>
-                <p class="hero-subtitle">
-                  <span data-en="I'm a" data-fa="من">I'm a</span>
-                  <span
-                    class="typed"
-                    data-typed-items="Network Expert, DevOps Engineer, Freelancer, Systems Specialist, VMware Administrator"
-                    data-typed-items-fa="کارشناس شبکه هستم, مهندس DevOps هستم, فریلنسر هستم, متخصص سیستم های رایانه ای هستم, طراح سیتم های مجازی سازی هستم"
-                    >System Administrator</span
-                  >
-                </p>
-                <div class="hero-actions">
+
+                <!-- Subtitle with Enhanced Typography -->
+                <div
+                  class="hero-subtitle-wrapper"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <p class="hero-subtitle">
+                    <span class="subtitle-prefix" data-en="I'm a" data-fa="من"
+                      >I'm a</span
+                    >
+                    <span
+                      class="typed"
+                      data-typed-items="Network Expert, DevOps Engineer, Freelancer, Systems Specialist, VMware Administrator"
+                      data-typed-items-fa="کارشناس شبکه هستم, مهندس DevOps هستم, فریلنسر هستم, متخصص سیستم های رایانه ای هستم, طراح سیتم های مجازی سازی هستم"
+                      >System Administrator</span
+                    >
+                  </p>
+                </div>
+
+                <!-- Modern Action Buttons -->
+                <div
+                  class="hero-actions"
+                  data-aos="fade-up"
+                  data-aos-delay="1000"
+                >
                   <a
                     href="#contact"
-                    class="btn btn-primary"
+                    class="btn btn-primary btn-modern"
                     data-en="Get In Touch"
                     data-fa="ارتباط با من"
-                    >Get In Touch</a
                   >
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-icon">→</span>
+                  </a>
                   <a
                     href="#portfolio"
-                    class="btn btn-outline-light"
+                    class="btn btn-outline-light btn-modern"
                     data-en="Articles"
                     data-fa="مقالات"
-                    >Articles</a
                   >
+                    <span class="btn-text">Articles</span>
+                    <span class="btn-icon">→</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -440,7 +493,9 @@
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2 data-en="About" data-fa="درباره من">About</h2>
+          <h2 data-en="Get to Know Me" data-fa="بهتر منو بشناس">
+            Get to Know Me
+          </h2>
           <p
             data-en="I am Amir Hossein Jalalian, a specialist in computer networks and IT infrastructure with solid experience in system administration, network design, and troubleshooting. My focus is on creating reliable and secure IT solutions that empower organizations to perform at their best."
             data-fa="من امیرحسین جلالیان هستم، متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات با تجربه غنی در مدیریت سیستم، طراحی شبکه و عیب‌یابی. تمرکزم بر ایجاد راهکارهای قابل اعتماد و امن است که عملکرد سازمان‌ها را بهینه می‌کند."
@@ -466,133 +521,218 @@
         ==================== ABOUT CONTENT ===================
         =============================================== -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <!-- Profile Image -->
-            <div class="col-lg-4">
-              <img
-                src="assets/img/my-profile-img-2.jpg"
-                loading="lazy"
-                class="img-fluid"
-                alt="Amir Hossein Jalalian"
-              />
-            </div>
+          <div class="about-wrapper">
+            <!-- Content Section -->
+            <div class="content-section">
+              <!-- Header -->
+              <div class="about-header">
+                <h2 class="about-title">
+                  <span
+                    class="title-main"
+                    data-en="Computer Networks & IT Infrastructure Specialist"
+                    data-fa="متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات"
+                  >
+                    Computer Networks &amp; IT Infrastructure Specialist
+                  </span>
+                  <span class="title-accent">IT Professional</span>
+                </h2>
+                <p
+                  class="about-subtitle"
+                  data-en="Passionate about creating robust network solutions and optimizing IT infrastructure for modern businesses."
+                  data-fa="علاقه‌مند به ایجاد راه‌حل‌های شبکه قوی و بهینه‌سازی زیرساخت فناوری اطلاعات برای کسب‌وکارهای مدرن."
+                >
+                  Passionate about creating robust network solutions and
+                  optimizing IT infrastructure for modern businesses.
+                </p>
+              </div>
 
-            <!-- About Content -->
-            <div class="col-lg-8 content">
-              <h2
-                data-en="Computer Networks & IT Infrastructure Specialist"
-                data-fa="متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات"
-              >
-                Computer Networks &amp; IT Infrastructure Specialist
-              </h2>
-              <p
-                class="fst-italic py-3"
-                data-en="My expertise covers Microsoft Windows Server, Cisco, MikroTik, virtualization, and other IT-infrastructure technologies. With a results-oriented mindset, I approach every project with responsibility, precision, and teamwork."
-                data-fa="تجربه من شامل Windows Server، سیسکو، میکروتیک، مجازی‌سازی و سایر فناوری‌های زیرساختی است. با رویکرد نتیجه‌محور، هر پروژه را با مسئولیت‌پذیری، دقت و کار تیمی پیش می‌برم."
-              >
-                My expertise covers Microsoft Windows Server, Cisco, MikroTik,
-                virtualization, and other IT-infrastructure technologies. With a
-                results-oriented mindset, I approach every project with
-                responsibility, precision, and teamwork.
-              </p>
-
-              <!-- Personal Information -->
-              <div class="row">
-                <!-- Left Column - Personal Details -->
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Birthday:" data-fa="تاریخ تولد:"
-                        >Birthday:</strong
-                      >
-                      <span data-en="19 July 1999" data-fa="۲۸ تیر ۱۳۷۸"
-                        >19 July 1999</span
-                      >
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Phone:" data-fa="شماره تماس:"
-                        >Phone:</strong
-                      >
-                      <a
-                        href="tel:+989197276219"
-                        data-en="+989197276219"
-                        data-fa="09197276219"
-                        >+989197276219</a
-                      >
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Email:" data-fa="پست الکترونیکی:"
-                        >Email:</strong
-                      >
-                      <a href="mailto:Jalalian.amirhossein@gmail.com"
-                        >Jalalian.amirhossein@gmail.com</a
-                      >
-                    </li>
-                  </ul>
+              <!-- Info Cards Grid -->
+              <div class="info-grid">
+                <!-- Personal Info Card -->
+                <div class="info-card personal-info">
+                  <div class="card-header">
+                    <i class="bi bi-person-circle"></i>
+                    <h3 data-en="Personal Info" data-fa="اطلاعات شخصی">
+                      Personal Info
+                    </h3>
+                  </div>
+                  <div class="card-content">
+                    <div class="info-item">
+                      <i class="bi bi-calendar-event"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Birthday"
+                          data-fa="تاریخ تولد"
+                          >Birthday</span
+                        >
+                        <span
+                          class="info-value"
+                          data-en="19 July 1999"
+                          data-fa="۲۸ تیر ۱۳۷۸"
+                          >19 July 1999</span
+                        >
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Location"
+                          data-fa="محل سکونت"
+                          >Location</span
+                        >
+                        <span
+                          class="info-value"
+                          data-en="Tehran, Iran"
+                          data-fa="تهران، ایران"
+                          >Tehran, Iran</span
+                        >
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-mortarboard"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Degree"
+                          data-fa="مدرک تحصیلی"
+                          >Degree</span
+                        >
+                        <span
+                          class="info-value"
+                          data-en="Bachelor of IT Engineering"
+                          data-fa="کارشناسی مهندسی فناوری اطلاعات"
+                          >Bachelor of IT Engineering</span
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Right Column - Professional Details -->
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Location:" data-fa="محل سکونت:"
-                        >Location:</strong
-                      >
-                      <span data-en="Tehran, Iran" data-fa="تهران، ایران"
-                        >Tehran, Iran</span
-                      >
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Degree:" data-fa="مدرک تحصیلی:"
-                        >Degree:</strong
-                      >
-                      <span
-                        data-en="Bachelor of IT Engineering"
-                        data-fa="کارشناسی مهندسی فناوری اطلاعات"
-                        >Bachelor of IT Engineering</span
-                      >
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong data-en="Status:" data-fa="وضعیت کاری:"
-                        >Status:</strong
-                      >
-                      <span
-                        data-en="Available for Collaboration"
-                        data-fa="آماده همکاری"
-                        >Available for Collaboration</span
-                      >
-                    </li>
-                  </ul>
+                <!-- Contact Info Card -->
+                <div class="info-card contact-info">
+                  <div class="card-header">
+                    <i class="bi bi-telephone"></i>
+                    <h3 data-en="Contact Info" data-fa="اطلاعات تماس">
+                      Contact Info
+                    </h3>
+                  </div>
+                  <div class="card-content">
+                    <div class="info-item">
+                      <i class="bi bi-phone"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Phone"
+                          data-fa="شماره تماس"
+                          >Phone</span
+                        >
+                        <a
+                          href="tel:+989197276219"
+                          class="info-value contact-link"
+                          data-en="+989197276219"
+                          data-fa="09197276219"
+                          >+989197276219</a
+                        >
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-envelope"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Email"
+                          data-fa="پست الکترونیکی"
+                          >Email</span
+                        >
+                        <a
+                          href="mailto:Jalalian.amirhossein@gmail.com"
+                          class="info-value contact-link"
+                          >Jalalian.amirhossein@gmail.com</a
+                        >
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-briefcase"></i>
+                      <div class="info-details">
+                        <span
+                          class="info-label"
+                          data-en="Status"
+                          data-fa="وضعیت کاری"
+                          >Status</span
+                        >
+                        <span
+                          class="info-value status-available"
+                          data-en="Available for Collaboration"
+                          data-fa="آماده همکاری"
+                          >Available for Collaboration</span
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- Professional Philosophy -->
-              <p
-                class="py-3"
-                data-en="I value integrity, discipline, patience, and accountability. I believe that respect for one's craft and adherence to core values are the true foundation of long-term success in the IT field."
-                data-fa="به صداقت، انضباط، صبر و مسئولیت‌پذیری اهمیت می‌دهم. باور دارم احترام به حرفه و پایبندی به ارزش‌های بنیادی، پایه موفقیت بلندمدت در حوزه فناوری اطلاعات است."
-              >
-                I value integrity, discipline, patience, and accountability. I
-                believe that respect for one's craft and adherence to core
-                values are the true foundation of long-term success in the IT
-                field.
-              </p>
+              <!-- Description Section -->
+              <div class="description-section">
+                <div class="description-card">
+                  <h3
+                    class="description-title"
+                    data-en="About Me"
+                    data-fa="درباره من"
+                  >
+                    About Me
+                  </h3>
+                  <p
+                    class="description-text"
+                    data-en="My expertise covers Microsoft Windows Server, Cisco, MikroTik, virtualization, and other IT-infrastructure technologies. With a results-oriented mindset, I approach every project with responsibility, precision, and teamwork."
+                    data-fa="تجربه من شامل Windows Server، سیسکو، میکروتیک، مجازی‌سازی و سایر فناوری‌های زیرساختی است. با رویکرد نتیجه‌محور، هر پروژه را با مسئولیت‌پذیری، دقت و کار تیمی پیش می‌برم."
+                  >
+                    My expertise covers Microsoft Windows Server, Cisco,
+                    MikroTik, virtualization, and other IT-infrastructure
+                    technologies. With a results-oriented mindset, I approach
+                    every project with responsibility, precision, and teamwork.
+                  </p>
+                </div>
 
-              <!-- Inspirational Quote -->
-              <p class="bio-quote">
-                <em
-                  data-en='"Success is born of sustained effort, continuous learning, and faith in the journey."'
-                  data-fa="«موفقیت زاده تلاش مستمر، یادگیری مداوم و ایمان به مسیر است.»"
-                  >"Success is born of sustained effort, continuous learning,
-                  and faith in the journey."</em
-                >
-              </p>
+                <div class="philosophy-card">
+                  <h3
+                    class="philosophy-title"
+                    data-en="My Philosophy"
+                    data-fa="فلسفه من"
+                  >
+                    My Philosophy
+                  </h3>
+                  <p
+                    class="philosophy-text"
+                    data-en="I value integrity, discipline, patience, and accountability. I believe that respect for one's craft and adherence to core values are the true foundation of long-term success in the IT field."
+                    data-fa="به صداقت، انضباط، صبر و مسئولیت‌پذیری اهمیت می‌دهم. باور دارم احترام به حرفه و پایبندی به ارزش‌های بنیادی، پایه موفقیت بلندمدت در حوزه فناوری اطلاعات است."
+                  >
+                    I value integrity, discipline, patience, and accountability.
+                    I believe that respect for one's craft and adherence to core
+                    values are the true foundation of long-term success in the
+                    IT field.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Quote Section -->
+              <div class="quote-section">
+                <div class="quote-card">
+                  <i class="bi bi-quote"></i>
+                  <blockquote class="inspirational-quote">
+                    <p
+                      data-en="Success is born of sustained effort, continuous learning, and faith in the journey."
+                      data-fa="موفقیت زاده تلاش مستمر، یادگیری مداوم و ایمان به مسیر است."
+                    >
+                      "Success is born of sustained effort, continuous learning,
+                      and faith in the journey."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -618,11 +758,8 @@
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong data-en="Happy Clients" data-fa="مشتریان راضی"
-                    >Happy Clients</strong
-                  >
-                  <span data-en="consequuntur quae" data-fa="مشتریان راضی"
-                    >consequuntur quae</span
+                  <span data-en="Satisfied customers" data-fa="مشتریان راضی"
+                    >Satisfied customers</span
                   >
                 </p>
               </div>
@@ -640,13 +777,8 @@
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong data-en="Projects" data-fa="پروژه‌ها"
-                    >Projects</strong
-                  >
-                  <span
-                    data-en="adipisci atque cum quia aut"
-                    data-fa="پروژه‌های موفق"
-                    >adipisci atque cum quia aut</span
+                  <span data-en="Successful projects" data-fa="پروژه‌های موفق"
+                    >Successful projects</span
                   >
                 </p>
               </div>
@@ -664,13 +796,10 @@
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong data-en="Hours Of Support" data-fa="ساعت پشتیبانی"
-                    >Hours Of Support</strong
-                  >
                   <span
-                    data-en="aut commodi quaerat"
+                    data-en="Support hours provided"
                     data-fa="ساعت پشتیبانی ارائه شده"
-                    >aut commodi quaerat</span
+                    >Support hours provided</span
                   >
                 </p>
               </div>
@@ -688,11 +817,8 @@
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong data-en="Hard Workers" data-fa="همکاران سخت‌کوش"
-                    >Hard Workers</strong
-                  >
-                  <span data-en="rerum asperiores dolor" data-fa="تیم متخصص"
-                    >rerum asperiores dolor</span
+                  <span data-en="Expert team" data-fa="تیم متخصص"
+                    >Expert team</span
                   >
                 </p>
               </div>
@@ -703,7 +829,6 @@
         <!-- End Stats Container -->
       </section>
       <!-- /Stats Section -->
-      <!-- Stats Section -->
 
       <!-- ===============================================
       ==================== SKILLS SECTION ====================
@@ -734,14 +859,14 @@
             =============================================== -->
             <div class="col-lg-6">
               <div class="progress">
-                <span class="skill"
-                  ><span
+                <span class="skill">
+                  <span
                     data-en="Network Design (Cisco, MikroTik)"
                     data-fa="طراحی شبکه (سیسکو، میکروتیک)"
                     >Network Design (Cisco, MikroTik)</span
                   >
-                  <i class="val">100%</i></span
-                >
+                  <i class="val">100%</i>
+                </span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -751,14 +876,14 @@
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"
-                  ><span
+                <span class="skill">
+                  <span
                     data-en="Firewall & Security Rules (MikroTik, Cisco)"
                     data-fa="فایروال و قوانین امنیتی (میکروتیک، سیسکو)"
                     >Firewall & Security Rules (MikroTik, Cisco)</span
                   >
-                  <i class="val">92%</i></span
-                >
+                  <i class="val">92%</i>
+                </span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -768,14 +893,14 @@
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"
-                  ><span
+                <span class="skill">
+                  <span
                     data-en="Linux Administration (Ubuntu, CentOS)"
                     data-fa="مدیریت لینوکس (اوبونتو، سنت‌اواس)"
                     >Linux Administration (Ubuntu, CentOS)</span
                   >
-                  <i class="val">90%</i></span
-                >
+                  <i class="val">90%</i>
+                </span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -785,14 +910,14 @@
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"
-                  ><span
+                <span class="skill">
+                  <span
                     data-en="Microsoft Services (AD, DNS, DFS, WDS, WSUS, NTP)"
                     data-fa="خدمات مایکروسافت (AD، DNS، DFS، WDS، WSUS، NTP)"
                     >Microsoft Services (AD, DNS, DFS, WDS, WSUS, NTP)</span
                   >
-                  <i class="val">88%</i></span
-                >
+                  <i class="val">88%</i>
+                </span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -802,14 +927,14 @@
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"
-                  ><span
+                <span class="skill">
+                  <span
                     data-en="Virtualization (VMware vSphere, KVM)"
                     data-fa="مجازی‌سازی (VMware vSphere، KVM)"
                     >Virtualization (VMware vSphere, KVM)</span
                   >
-                  <i class="val">77%</i></span
-                >
+                  <i class="val">77%</i>
+                </span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -1137,7 +1262,7 @@
               </div>
 
               <div class="resume-item">
-                <h4 data-en="LPIC-2" data-fa="LPIC-2">LPIC-2</h4>
+                <h4 data-en="LPIC-1" data-fa="LPIC-1">LPIC-2</h4>
                 <h5>2023</h5>
                 <p>
                   <em
@@ -1155,7 +1280,7 @@
               </div>
 
               <div class="resume-item">
-                <h4 data-en="LPIC-1" data-fa="LPIC-1">LPIC-1</h4>
+                <h4 data-en="LPIC-2" data-fa="LPIC-2">LPIC-1</h4>
                 <h5>2023</h5>
                 <p>
                   <em
@@ -1722,22 +1847,25 @@
                     <h4>MikroTik RouterOS Configuration</h4>
                     <p>Advanced firewall and routing setup</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-1.png"
-                      title="App 1"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-1.png"
+                        title="App 1"
+                        data-gallery="portfolio-gallery-app"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1763,22 +1891,25 @@
                     <h4>Windows Server Infrastructure</h4>
                     <p>Active Directory and DNS implementation</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-1.png"
-                      title="Product 1"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-1.png"
+                        title="Product 1"
+                        data-gallery="portfolio-gallery-product"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1804,22 +1935,25 @@
                     <h4>Cisco Network Design</h4>
                     <p>Enterprise switching and VLAN configuration</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-1.png"
-                      title="Branding 1"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-1.png"
+                        title="Branding 1"
+                        data-gallery="portfolio-gallery-branding"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1845,22 +1979,25 @@
                     <h4>Linux Server Administration</h4>
                     <p>Ubuntu and CentOS server management</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-2.png"
-                      title="Linux Server Administration"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-2.png"
+                        title="Linux Server Administration"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1886,22 +2023,25 @@
                     <h4>VPN Tunnel Implementation</h4>
                     <p>Site-to-site secure connections</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-2.png"
-                      title="App 2"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-2.png"
+                        title="App 2"
+                        data-gallery="portfolio-gallery-app"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1927,22 +2067,25 @@
                     <h4>SQL Server Clustering</h4>
                     <p>High availability database setup</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-2.png"
-                      title="Product 2"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-2.png"
+                        title="Product 2"
+                        data-gallery="portfolio-gallery-product"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1968,22 +2111,25 @@
                     <h4>VMware vSphere Deployment</h4>
                     <p>Virtualization infrastructure design</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-3.png"
-                      title="microsoft vSphere Deployment"
-                      data-gallery="portfolio-gallery-microsoft"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-3.png"
+                        title="microsoft vSphere Deployment"
+                        data-gallery="portfolio-gallery-microsoft"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2009,22 +2155,25 @@
                     <h4>Monitoring with Zabbix</h4>
                     <p>Network and system monitoring setup</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-3.png"
-                      title="Monitoring with Zabbix"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-3.png"
+                        title="Monitoring with Zabbix"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2050,22 +2199,25 @@
                     <h4>Docker Containerization</h4>
                     <p>Application deployment and management</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-3.png"
-                      title="App 3"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-3.png"
+                        title="App 3"
+                        data-gallery="portfolio-gallery-app"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2091,22 +2243,25 @@
                     <h4>Backup & Recovery System</h4>
                     <p>Veeam backup implementation</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-4.png"
-                      title="Backup & Recovery System"
-                      data-gallery="portfolio-gallery-linux"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-4.png"
+                        title="Backup & Recovery System"
+                        data-gallery="portfolio-gallery-linux"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2132,22 +2287,25 @@
                     <h4>Load Balancing Configuration</h4>
                     <p>Multi-connection internet optimization</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/other-2.png"
-                      title="Branding 2"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/other-2.png"
+                        title="Branding 2"
+                        data-gallery="portfolio-gallery-branding"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2173,22 +2331,25 @@
                     <h4>VMware vSphere Management</h4>
                     <p>Virtualization platform administration</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/vmware-1.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/vmware-1.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2214,22 +2375,25 @@
                     <h4>Network Monitoring Setup</h4>
                     <p>Advanced monitoring and alerting system</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/vmware-2.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/vmware-2.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2255,22 +2419,25 @@
                     <h4>Database Clustering</h4>
                     <p>High availability database configuration</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-5.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-5.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2296,22 +2463,25 @@
                     <h4>Cloud Infrastructure</h4>
                     <p>Multi-cloud deployment and management</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/other-1.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/other-1.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2337,22 +2507,25 @@
                     <h4>Network Security</h4>
                     <p>Firewall and security policy implementation</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-4.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-4.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2378,22 +2551,25 @@
                     <h4>Automation Solutions</h4>
                     <p>Workflow automation and scripting</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/other-3.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/other-3.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-book"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2419,22 +2595,25 @@
                     <h4>Windows Server Management</h4>
                     <p>Active Directory and enterprise services</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-4.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-microsoft"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-4.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-microsoft"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2460,22 +2639,25 @@
                     <h4>Router Configuration</h4>
                     <p>Advanced routing and traffic management</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-5.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-mikrotik"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-5.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-mikrotik"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2501,22 +2683,25 @@
                     <h4>Virtualization Infrastructure</h4>
                     <p>Enterprise virtualization solutions</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/vmware-3.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-vmware"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/vmware-3.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-vmware"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2542,22 +2727,25 @@
                     <h4>Linux Administration</h4>
                     <p>Server management and optimization</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/linux-6.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-linux"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/linux-6.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-linux"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2583,22 +2771,25 @@
                     <h4>Enterprise Services</h4>
                     <p>DNS, DFS, WSUS and enterprise solutions</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-5.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-microsoft"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-5.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-microsoft"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2624,22 +2815,25 @@
                     <h4>Network Optimization</h4>
                     <p>Performance tuning and traffic shaping</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/mikrotik-6.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-mikrotik"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/mikrotik-6.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-mikrotik"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2665,22 +2859,25 @@
                     <h4>System Integration</h4>
                     <p>Enterprise system integration and migration</p>
 
-                    <!-- Preview Link -->
-                    <a
-                      href="assets/img/portfolio/windows-6.png"
-                      title="Portfolio Item"
-                      data-gallery="portfolio-gallery-microsoft"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <!-- Portfolio Links Container -->
+                    <div class="portfolio-links">
+                      <!-- Preview Link -->
+                      <a
+                        href="assets/img/portfolio/windows-6.png"
+                        title="Portfolio Item"
+                        data-gallery="portfolio-gallery-microsoft"
+                        class="glightbox preview-link"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
 
-                    <!-- Details Link -->
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      <!-- Details Link -->
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        class="details-link"
+                        ><i class="bi bi-link-45deg"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2728,7 +2925,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span
                       data-en="Network Design & Implementation"
                       data-fa="طراحی و پیاده‌سازی شبکه"
@@ -2760,7 +2957,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span
                       data-en="System Administration"
                       data-fa="مدیریت سیستم"
@@ -2792,7 +2989,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span
                       data-en="DevOps & Automation"
                       data-fa="دواپس و اتوماسیون"
@@ -2824,7 +3021,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span
                       data-en="Monitoring & Security"
                       data-fa="مانیتورینگ و امنیت"
@@ -2856,7 +3053,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span
                       data-en="Virtualization Solutions"
                       data-fa="راهکارهای مجازی‌سازی"
@@ -2887,7 +3084,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
+                  <a href="#services" class="stretched-link"
                     ><span data-en="Technical Consulting" data-fa="مشاوره فنی"
                       >Technical Consulting</span
                     ></a
@@ -3266,14 +3463,17 @@
                 <!-- End Info Item -->
 
                 <!-- Google Maps -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1145.5099796149461!2d51.40510627035861!3d35.701826831163324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e010c2bbc0853%3A0xd7ec3a4d591a3242!2sReza%20Computer%20Center!5e0!3m2!1sen!2sde!4v1756209223815!5m2!1sen!2sde"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 270px"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <div class="map-container">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1145.5099796149461!2d51.40510627035861!3d35.701826831163324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e010c2bbc0853%3A0xd7ec3a4d591a3242!2sReza%20Computer%20Center!5e0!3m2!1sen!2sde!4v1756209223815!5m2!1sen!2sde"
+                    frameborder="0"
+                    style="border: 0; width: 100%; height: 300px"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="موقعیت مکانی - تهران، ایران"
+                  ></iframe>
+                </div>
               </div>
             </div>
             <!-- End Contact Info -->
@@ -3440,13 +3640,14 @@
     ></a>
 
     <!-- ===============================================
-    ==================== PRELOADER =======================
+    PAGE PRELOADER
     =============================================== -->
     <div id="preloader"></div>
 
     <!-- ===============================================
-    ==================== VENDOR JAVASCRIPT ===============
+    JAVASCRIPT LIBRARIES & SCRIPTS
     =============================================== -->
+
     <!-- Bootstrap JavaScript Bundle -->
     <script
       src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
@@ -3493,8 +3694,9 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
     <!-- ===============================================
-    ==================== MAIN JAVASCRIPT =================
+    CUSTOM JAVASCRIPT MODULES
     =============================================== -->
+
     <!-- Main Application JavaScript -->
     <script src="assets/js/main.js?v=999" defer></script>
 
@@ -3502,9 +3704,14 @@
     <script src="assets/js/i18n.js?v=999" defer></script>
 
     <!-- ===============================================
-    ==================== PERFORMANCE OPTIMIZATION ========
+    SERVICE WORKER REGISTRATION
     =============================================== -->
+
     <script>
+      // ===============================================
+      // PERFORMANCE OPTIMIZATION & SERVICE WORKER
+      // ===============================================
+
       // Preload critical resources for better performance
       if ("requestIdleCallback" in window) {
         requestIdleCallback(() => {
@@ -3540,28 +3747,28 @@
       window.addEventListener("scroll", requestTick, { passive: true });
     </script>
 
-    <!-- ===============================================
-    ==================== PWA SERVICE WORKER ================
-    =============================================== -->
     <script>
-      // Register Service Worker for PWA functionality
+      // ===============================================
+      // SERVICE WORKER REGISTRATION FOR PWA
+      // ===============================================
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
           navigator.serviceWorker
-            .register("/sw.js")
+            .register("sw.js")
             .then(function (registration) {
-              console.log("SW registered with scope: ", registration.scope);
+              // Service Worker registered successfully
+              console.log("PWA Service Worker registered");
             })
             .catch(function (error) {
-              console.log("SW registration failed: ", error);
+              // Service Worker registration failed silently
+              console.warn("PWA Service Worker registration failed:", error);
             });
         });
       }
     </script>
-
-    <!-- ===============================================
-    ==================== END OF DOCUMENT ==================
-    =============================================== -->
-    <!-- Language switching functionality is handled by i18n.js -->
   </body>
 </html>
+
+<!-- ===============================================
+END OF MEET AJ PORTFOLIO HTML DOCUMENT
+=============================================== -->

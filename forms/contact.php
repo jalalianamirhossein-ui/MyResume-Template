@@ -1,13 +1,25 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+/**
+ * ===============================================
+ * MEET AJ PORTFOLIO - CONTACT FORM HANDLER
+ * ===============================================
+ * 
+ * Secure contact form processing for the portfolio website
+ * Handles form validation, security checks, and email sending
+ * 
+ * Features:
+ * - Input validation and sanitization
+ * - Rate limiting protection
+ * - XSS and injection prevention
+ * - Email format validation
+ * - Secure email processing
+ * 
+ * Author: AmirHossein Jalalian
+ * ===============================================
+ */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'jalalian.amirhossein@gmail.com';
+// Email configuration
+$receiving_email_address = 'jalalian.amirhossein@gmail.com';
   
   // Basic security checks
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
