@@ -1477,24 +1477,24 @@ html[dir="rtl"] .skills .progress .skill .val {
 /* Simple and clean percentage display */
 
 .skills .progress:hover .progress-bar-wrap {
-  border-color: var(--accent);
-  box-shadow: 0 2px 8px var(--shadow-accent);
+  border-color: var(--apple-blue);
+  box-shadow: 0 2px 8px var(--shadow-gray);
 }
 
 /* Perfect Color Harmony Progress Bars */
 .skills .col-lg-6:first-child .progress-bar {
   background: linear-gradient(
     135deg,
-    var(--primary),
-    /* Primary Base */ var(--primary-400),
-    /* Lighter Primary */ var(--primary),
-    /* Primary Base */ var(--primary-600) /* Darker Primary */
+    var(--apple-gray),
+    /* Apple Gray Base */ #a8b8c5,
+    /* Lighter Apple Gray */ var(--apple-gray),
+    /* Apple Gray Base */ #6b7b8a /* Darker Apple Gray */
   );
   background-size: 300% 100%;
   animation: coolGrayFlow 4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px var(--shadow-primary);
+  box-shadow: inset 0 1px 3px rgba(107, 123, 138, 0.3);
 }
 
 .skills .col-lg-6:first-child .progress-bar::before {
@@ -1516,16 +1516,16 @@ html[dir="rtl"] .skills .progress .skill .val {
 .skills .col-lg-6:last-child .progress-bar {
   background: linear-gradient(
     135deg,
-    var(--accent),
-    /* Accent Base */ var(--accent-400),
-    /* Lighter Accent */ var(--accent),
-    /* Accent Base */ var(--accent-600) /* Darker Accent */
+    var(--apple-green),
+    /* Apple Green Base */ #30D158,
+    /* Lighter Apple Green */ var(--apple-green),
+    /* Apple Green Base */ #28A745 /* Darker Apple Green */
   );
   background-size: 300% 100%;
   animation: warmBeigeFlow 4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px var(--shadow-accent);
+  box-shadow: inset 0 1px 3px rgba(52, 199, 89, 0.3);
 }
 
 .skills .col-lg-6:last-child .progress-bar::before {
@@ -2017,8 +2017,8 @@ html[dir="rtl"] .resume .resume-item::before {
 .services .service-item .icon {
   background: linear-gradient(
     135deg,
-    var(--primary),
-    var(--primary-600)
+    var(--apple-blue),
+    var(--apple-blue-dark)
   );
   display: flex;
   align-items: center;
@@ -2028,7 +2028,7 @@ html[dir="rtl"] .resume .resume-item::before {
   border-radius: 12px;
   transition: all 0.3s ease;
   margin-bottom: 12px;
-  box-shadow: 0 4px 12px var(--shadow-primary);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
   flex-shrink: 0;
 }
 
@@ -2299,7 +2299,7 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--accent);
+  background: var(--apple-blue);
   transform: scale(1.3);
 }
 
@@ -2411,30 +2411,30 @@ html[dir="rtl"] .resume .resume-item::before {
   color: var(--apple-white);
 }
 
-/* آیکون آدرس - سبز موفقیت */
+/* آیکون آدرس - سبز اپل */
 .contact .info-item i.bi-geo-alt {
-  color: var(--success);
-  background: rgba(22, 163, 74, 0.1);
-  border-color: rgba(22, 163, 74, 0.3);
+  color: var(--apple-green);
+  background: rgba(52, 199, 89, 0.1);
+  border-color: rgba(52, 199, 89, 0.3);
 }
 
 .contact .info-item:hover i.bi-geo-alt {
-  background: var(--success);
+  background: var(--apple-green);
   color: white;
-  border-color: var(--success);
+  border-color: var(--apple-green);
 }
 
-/* آیکون تلفن - آبی اطلاعات */
+/* آیکون تلفن - آبی اپل */
 .contact .info-item i.bi-telephone {
-  color: var(--info);
-  background: rgba(2, 132, 199, 0.1);
-  border-color: rgba(2, 132, 199, 0.3);
+  color: var(--apple-blue);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
 }
 
 .contact .info-item:hover i.bi-telephone {
-  background: var(--info);
+  background: var(--apple-blue);
   color: white;
-  border-color: var(--info);
+  border-color: var(--apple-blue);
 }
 
 /* آیکون واتساپ - سبز واتساپ */
@@ -2463,17 +2463,17 @@ html[dir="rtl"] .resume .resume-item::before {
   border-color: #0088cc;
 }
 
-/* آیکون ایمیل - قرمز خطر */
+/* آیکون ایمیل - قرمز اپل */
 .contact .info-item i.bi-envelope {
-  color: var(--danger);
-  background: rgba(220, 38, 38, 0.1);
-  border-color: rgba(220, 38, 38, 0.3);
+  color: var(--apple-red);
+  background: rgba(255, 59, 48, 0.1);
+  border-color: rgba(255, 59, 48, 0.3);
 }
 
 .contact .info-item:hover i.bi-envelope {
-  background: var(--danger);
+  background: var(--apple-red);
   color: white;
-  border-color: var(--danger);
+  border-color: var(--apple-red);
 }
 
 .contact .php-email-form {
