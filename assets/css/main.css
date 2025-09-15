@@ -20,98 +20,158 @@
   --persian-heading-font: "Estedad", "Vazirmatn", "Tahoma", "Arial", sans-serif;
 }
 
-/* Global Colors - New Professional Color Palette */
+/* Global Colors - Professional Color Palette */
 :root {
-  /* Primary Color Palette */
-  --scandinavian-blue: #0ea5e9; /* آبی اسکاندیناوی - رنگ اصلی */
-  --navy-blue: #1e3a8a; /* آبی نیوی - عمق و قدرت */
-  --cool-gray: #b0bec5; /* خاکستری سرد - تعادل و مدرنیته */
-  --pure-white: #ffffff; /* سفید خالص - فضا و تنفس */
-  --warm-beige: #d8c3a5; /* چوب روشن/بژ شنی - گرما و طبیعی بودن */
+  /* Primary Colors (اعتماد/امنیت) */
+  --primary: #0B3A5F; /* رنگ اصلی - اعتماد و امنیت */
+  --primary-600: #144E78; /* سایه تیره‌تر */
+  --primary-400: #2D6E9F; /* سایه روشن‌تر */
+  
+  /* Accent Colors (هایلایت/لینک) */
+  --accent: #14B8A6; /* رنگ هایلایت و لینک */
+  --accent-600: #0D9488; /* سایه تیره‌تر */
+  --accent-400: #2DD4BF; /* سایه روشن‌تر */
+  
+  /* Neutral Colors (روشن) */
+  --bg: #F8FAFC; /* پس‌زمینه اصلی */
+  --surface: #F1F5F9; /* سطح کارت‌ها */
+  --border: #CBD5E1; /* حاشیه‌ها */
+  --text: #0F172A; /* متن اصلی */
+  --muted: #475569; /* متن کم‌رنگ */
+  
+  /* Status Colors */
+  --success: #16A34A; /* موفقیت */
+  --warning: #F59E0B; /* هشدار */
+  --danger: #DC2626; /* خطر */
+  --info: #0284C7; /* اطلاعات */
 
-  /* Global Color Variables */
-  --pure-black: #000000; /* Pure black color */
-  --background-color: var(
-    --pure-white
-  ); /* Background color for the entire website */
-  --default-color: var(--pure-black); /* Default color for text content */
-  --heading-color: var(--navy-blue); /* Color for headings and titles */
-  --accent-color: var(
-    --scandinavian-blue
-  ); /* Accent color for buttons and highlights */
-  --surface-color: var(
-    --pure-white
-  ); /* Background for cards and boxed elements */
-  --contrast-color: var(--pure-white); /* Contrast color for text readability */
+  /* Global Color Variables - Professional Style */
+  --pure-black: var(--text); /* متن اصلی */
+  --background-color: var(--bg); /* پس‌زمینه اصلی */
+  --default-color: var(--text); /* متن پیش‌فرض */
+  --heading-color: var(--primary); /* رنگ عنوان‌ها */
+  --accent-color: var(--accent); /* رنگ هایلایت */
+  --surface-color: var(--surface); /* سطح کارت‌ها */
+  --contrast-color: #ffffff; /* سفید برای کنتراست */
 
-  /* Secondary Colors */
-  --secondary-color: var(--cool-gray);
-  --success-color: var(--scandinavian-blue);
-  --info-color: var(--scandinavian-blue);
-  --warning-color: var(--warm-beige);
-  --danger-color: #ef4444;
+  /* Secondary Colors - Professional Style */
+  --secondary-color: var(--muted);
+  --success-color: var(--success);
+  --info-color: var(--info);
+  --warning-color: var(--warning);
+  --danger-color: var(--danger);
 
-  /* Gradient Colors */
+  /* Gradient Colors - Professional Style */
   --gradient-primary: linear-gradient(
     135deg,
-    var(--scandinavian-blue),
-    var(--navy-blue)
+    var(--primary),
+    var(--primary-600)
   );
-  --gradient-accent: linear-gradient(135deg, var(--scandinavian-blue), #38bdf8);
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-400));
   --gradient-hero: linear-gradient(
     135deg,
-    var(--scandinavian-blue),
-    var(--navy-blue)
+    var(--primary),
+    var(--accent)
   );
-  --gradient-warm: linear-gradient(135deg, var(--warm-beige), #e8d5b7);
+  --gradient-surface: linear-gradient(135deg, var(--surface), var(--bg));
 
-  /* Shadow Colors */
-  --shadow-navy: rgba(30, 58, 138, 0.1);
-  --shadow-blue: rgba(14, 165, 233, 0.1);
-  --shadow-gray: rgba(176, 190, 197, 0.1);
-  --shadow-beige: rgba(216, 195, 165, 0.1);
+  /* Shadow Colors - Professional Style */
+  --shadow-primary: rgba(11, 58, 95, 0.1);
+  --shadow-primary-dark: rgba(20, 78, 120, 0.15);
+  --shadow-accent: rgba(20, 184, 166, 0.1);
+  --shadow-surface: rgba(0, 0, 0, 0.05);
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors - Professional Style */
 :root {
-  --nav-color: #6b7280; /* The default color of the main navmenu links */
-  --nav-hover-color: var(
-    --scandinavian-blue
-  ); /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: var(
-    --navy-blue
-  ); /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: var(
-    --navy-blue
-  ); /* Used as the background color for dropdown items */
-  --nav-dropdown-color: var(
-    --pure-white
-  ); /* Used for navigation links of the dropdown items */
-  --nav-dropdown-hover-color: var(
-    --warm-beige
-  ); /* Applied to dropdown navigation links when they are hovered over */
+  --nav-color: var(--muted); /* رنگ پیش‌فرض لینک‌های ناوبری */
+  --nav-hover-color: var(--accent); /* رنگ hover ناوبری */
+  --nav-mobile-background-color: var(--surface); /* پس‌زمینه ناوبری موبایل */
+  --nav-dropdown-background-color: var(--surface); /* پس‌زمینه dropdown */
+  --nav-dropdown-color: var(--text); /* رنگ متن dropdown */
+  --nav-dropdown-hover-color: var(--accent); /* رنگ hover dropdown */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
 
 .light-background {
-  --background-color: #f8fafc;
-  --surface-color: var(--pure-white);
-  --default-color: var(--pure-black);
+  --background-color: var(--bg);
+  --surface-color: var(--surface);
+  --default-color: var(--text);
 }
 
 .dark-background {
-  --background-color: var(--navy-blue);
-  --default-color: var(--pure-white);
-  --heading-color: var(--pure-white);
-  --accent-color: var(--scandinavian-blue);
-  --surface-color: #1e40af;
-  --contrast-color: var(--pure-white);
+  --background-color: #0B1220; /* پس‌زمینه تاریک */
+  --surface-color: #0F172A; /* سطح تاریک */
+  --border-color: #1F2937; /* حاشیه تاریک */
+  --default-color: #E5E7EB; /* متن تاریک */
+  --heading-color: #E5E7EB; /* عنوان تاریک */
+  --accent-color: var(--accent); /* هایلایت */
+  --muted-color: #94A3B8; /* متن کم‌رنگ تاریک */
+  --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* Professional Button Styles */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary-600);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-primary);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent-600);
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background: var(--accent-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-accent);
+}
+
+/* Professional Card Styles */
+.card {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-surface);
+}
+
+/* Professional Hero Styles */
+.hero {
+  background-image: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+}
+
+/* Professional Link Styles */
+a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-600);
 }
 
 /*--------------------------------------------------------------
@@ -279,8 +339,8 @@ h6 {
   color: var(--heading-color);
   background: linear-gradient(
     135deg,
-    var(--navy-blue),
-    var(--scandinavian-blue)
+    var(--primary),
+    var(--primary-600)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -290,7 +350,7 @@ h6 {
 
 .header .logo:hover h1 {
   transform: scale(1.05);
-  filter: drop-shadow(0 2px 8px rgba(14, 165, 233, 0.3));
+  filter: drop-shadow(0 2px 8px var(--shadow-primary));
 }
 
 .header .social-links {
@@ -356,7 +416,7 @@ h6 {
   color: var(--contrast-color);
   background: var(--accent-color);
   transform: translateY(-2px) scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 80, 160, 0.4);
+  box-shadow: 0 4px 15px var(--shadow-accent);
 }
 
 /* Social Media Brand Colors on Hover */
@@ -516,13 +576,13 @@ h6 {
   color: var(--nav-hover-color);
   background: linear-gradient(
     135deg,
-    rgba(14, 165, 233, 0.12),
-    rgba(30, 58, 138, 0.18),
-    rgba(14, 165, 233, 0.08)
+    rgba(20, 184, 166, 0.12),
+    rgba(13, 148, 136, 0.18),
+    rgba(20, 184, 166, 0.08)
   );
   border-radius: 12px;
   transform: translateX(6px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.25);
+  box-shadow: 0 6px 20px var(--shadow-accent);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -578,7 +638,7 @@ h6 {
 .navmenu .active:focus .navicon {
   color: var(--accent-color);
   transform: scale(1.15) rotate(5deg);
-  filter: drop-shadow(0 0 12px rgba(0, 80, 160, 0.6));
+  filter: drop-shadow(0 0 12px var(--shadow-accent));
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -802,7 +862,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: var(--navy-blue);
+  color: var(--apple-blue-dark);
 }
 
 .section-title h2:after {
@@ -811,7 +871,7 @@ section,
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
   border-radius: 2px;
   left: 0;
   bottom: 0;
@@ -1320,9 +1380,9 @@ html[dir="rtl"] .skills .progress .skill .val {
   transition: 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: linear-gradient(
     135deg,
-    var(--accent-color) 0%,
-    #38bdf8 50%,
-    #0ea5e9 100%
+    var(--accent) 0%,
+    var(--accent-400) 50%,
+    var(--accent-600) 100%
   );
   border-radius: 7px;
   position: relative;
@@ -1417,24 +1477,24 @@ html[dir="rtl"] .skills .progress .skill .val {
 /* Simple and clean percentage display */
 
 .skills .progress:hover .progress-bar-wrap {
-  border-color: var(--scandinavian-blue);
-  box-shadow: 0 2px 8px var(--shadow-gray);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px var(--shadow-accent);
 }
 
 /* Perfect Color Harmony Progress Bars */
 .skills .col-lg-6:first-child .progress-bar {
   background: linear-gradient(
     135deg,
-    #8fa4b3,
-    /* Cool Gray Base */ #a8b8c5,
-    /* Lighter Cool Gray */ #8fa4b3,
-    /* Cool Gray Base */ #6b7b8a /* Darker Cool Gray */
+    var(--primary),
+    /* Primary Base */ var(--primary-400),
+    /* Lighter Primary */ var(--primary),
+    /* Primary Base */ var(--primary-600) /* Darker Primary */
   );
   background-size: 300% 100%;
   animation: coolGrayFlow 4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(107, 123, 138, 0.3);
+  box-shadow: inset 0 1px 3px var(--shadow-primary);
 }
 
 .skills .col-lg-6:first-child .progress-bar::before {
@@ -1456,16 +1516,16 @@ html[dir="rtl"] .skills .progress .skill .val {
 .skills .col-lg-6:last-child .progress-bar {
   background: linear-gradient(
     135deg,
-    #c4a484,
-    /* Warm Beige Base */ #d4b494,
-    /* Lighter Warm Beige */ #c4a484,
-    /* Warm Beige Base */ #b49474 /* Darker Warm Beige */
+    var(--accent),
+    /* Accent Base */ var(--accent-400),
+    /* Lighter Accent */ var(--accent),
+    /* Accent Base */ var(--accent-600) /* Darker Accent */
   );
   background-size: 300% 100%;
   animation: warmBeigeFlow 4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(180, 148, 116, 0.3);
+  box-shadow: inset 0 1px 3px var(--shadow-accent);
 }
 
 .skills .col-lg-6:last-child .progress-bar::before {
@@ -1556,12 +1616,12 @@ html[dir="rtl"] .skills .progress .skill .val {
   height: 4px;
   background: linear-gradient(
     135deg,
-    var(--accent-color) 0%,
-    #38bdf8 50%,
-    #0ea5e9 100%
+    var(--apple-blue) 0%,
+    #5AC8FA 50%,
+    var(--apple-blue-dark) 100%
   );
   border-radius: 3px;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
 }
 
 html[dir="rtl"] .resume .resume-title::after {
@@ -1615,10 +1675,10 @@ html[dir="rtl"] .resume .resume-title::after {
 }
 
 .resume .resume-item:hover {
-  background: rgba(14, 165, 233, 0.05);
-  border-left-color: #38bdf8;
+  background: rgba(0, 122, 255, 0.05);
+  border-left-color: var(--apple-blue);
   transform: translateX(5px);
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.1);
 }
 
 html[dir="rtl"] .resume .resume-item {
@@ -1653,18 +1713,18 @@ html[dir="rtl"] .resume .resume-item:hover {
   display: inline-block;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
   color: white;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4),
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .resume .resume-item:hover h5 {
-  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, var(--apple-blue-dark) 0%, var(--apple-blue) 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.5),
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
@@ -1829,11 +1889,11 @@ html[dir="rtl"] .resume .resume-item::before {
   color: var(--accent-color);
   background: linear-gradient(
     135deg,
-    rgba(14, 165, 233, 0.1),
-    rgba(30, 58, 138, 0.15)
+    rgba(0, 122, 255, 0.1),
+    rgba(0, 81, 213, 0.15)
   );
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -1957,8 +2017,8 @@ html[dir="rtl"] .resume .resume-item::before {
 .services .service-item .icon {
   background: linear-gradient(
     135deg,
-    var(--scandinavian-blue),
-    var(--navy-blue)
+    var(--primary),
+    var(--primary-600)
   );
   display: flex;
   align-items: center;
@@ -1968,7 +2028,7 @@ html[dir="rtl"] .resume .resume-item::before {
   border-radius: 12px;
   transition: all 0.3s ease;
   margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 4px 12px var(--shadow-primary);
   flex-shrink: 0;
 }
 
@@ -1980,13 +2040,13 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .services .service-item:hover .icon {
-  background: linear-gradient(135deg, var(--warm-beige), #e8d5b7);
+  background: linear-gradient(135deg, var(--apple-green), #30D158);
   transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(216, 195, 165, 0.4);
+  box-shadow: 0 6px 20px rgba(52, 199, 89, 0.4);
 }
 
 .services .service-item:hover .icon i {
-  color: var(--navy-blue);
+  color: var(--apple-white);
   transform: scale(1.1);
   filter: brightness(1.2);
 }
@@ -2102,7 +2162,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .testimonials .testimonial-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-color: #0078d4;
+  border-color: var(--apple-blue);
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -2117,7 +2177,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .testimonials .testimonial-item:hover .testimonial-img {
   transform: scale(1.05);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  border-color: #0078d4;
+  border-color: var(--apple-blue);
 }
 
 .testimonials .testimonial-item h3 {
@@ -2130,7 +2190,7 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .testimonials .testimonial-item:hover h3 {
-  color: #0078d4;
+  color: var(--apple-blue);
 }
 
 .testimonials .testimonial-item h4 {
@@ -2157,7 +2217,7 @@ html[dir="rtl"] .resume .resume-item::before {
 
 .testimonials .testimonial-item:hover .quote-icon-left,
 .testimonials .testimonial-item:hover .quote-icon-right {
-  color: #0078d4;
+  color: var(--apple-blue);
   opacity: 1;
 }
 
@@ -2239,7 +2299,7 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background: #0078d4;
+  background: var(--apple-blue);
   transform: scale(1.3);
 }
 
@@ -2255,7 +2315,7 @@ html[dir="rtl"] .resume .resume-item::before {
 @media (max-width: 575px) {
   .contact .info-wrap {
     padding: 25px;
-    background: linear-gradient(135deg, var(--surface-color) 0%, #f8fafc 100%);
+    background: linear-gradient(135deg, var(--apple-white) 0%, var(--apple-gray-light) 100%);
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2274,11 +2334,11 @@ html[dir="rtl"] .resume .resume-item::before {
     height: 3px;
     background: linear-gradient(
       90deg,
-      #10b981,
-      #3b82f6,
-      #25d366,
-      #0088cc,
-      #ef4444
+      var(--apple-green),
+      var(--apple-blue),
+      var(--apple-green),
+      var(--apple-blue),
+      var(--apple-red)
     );
     border-radius: 15px 15px 0 0;
   }
@@ -2287,7 +2347,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .contact .info-item {
   margin-bottom: 20px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
@@ -2302,7 +2362,7 @@ html[dir="rtl"] .resume .resume-item::before {
 
 .contact .info-item i {
   font-size: 18px;
-  color: var(--accent-color);
+  color: var(--apple-blue);
   background: rgba(255, 255, 255, 0.9);
   width: 40px;
   height: 40px;
@@ -2336,45 +2396,45 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .contact .info-item p a {
-  color: var(--accent-color);
+  color: var(--apple-blue);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .contact .info-item p a:hover {
-  color: #004080;
+  color: var(--apple-blue-dark);
 }
 
 .contact .info-item:hover i {
-  background: var(--scandinavian-blue);
-  color: var(--pure-white);
+  background: var(--apple-blue);
+  color: var(--apple-white);
 }
 
-/* آیکون آدرس - سبز */
+/* آیکون آدرس - سبز اپل */
 .contact .info-item i.bi-geo-alt {
-  color: #10b981;
-  background: rgba(16, 185, 129, 0.1);
-  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--apple-green);
+  background: rgba(52, 199, 89, 0.1);
+  border-color: rgba(52, 199, 89, 0.3);
 }
 
 .contact .info-item:hover i.bi-geo-alt {
-  background: #10b981;
+  background: var(--apple-green);
   color: white;
-  border-color: #10b981;
+  border-color: var(--apple-green);
 }
 
-/* آیکون تلفن - آبی */
+/* آیکون تلفن - آبی اپل */
 .contact .info-item i.bi-telephone {
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.3);
+  color: var(--apple-blue);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
 }
 
 .contact .info-item:hover i.bi-telephone {
-  background: #3b82f6;
+  background: var(--apple-blue);
   color: white;
-  border-color: #3b82f6;
+  border-color: var(--apple-blue);
 }
 
 /* آیکون واتساپ - سبز واتساپ */
@@ -2403,21 +2463,21 @@ html[dir="rtl"] .resume .resume-item::before {
   border-color: #0088cc;
 }
 
-/* آیکون ایمیل - قرمز */
+/* آیکون ایمیل - قرمز اپل */
 .contact .info-item i.bi-envelope {
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.1);
-  border-color: rgba(239, 68, 68, 0.3);
+  color: var(--apple-red);
+  background: rgba(255, 59, 48, 0.1);
+  border-color: rgba(255, 59, 48, 0.3);
 }
 
 .contact .info-item:hover i.bi-envelope {
-  background: #ef4444;
+  background: var(--apple-red);
   color: white;
-  border-color: #ef4444;
+  border-color: var(--apple-red);
 }
 
 .contact .php-email-form {
-  background: linear-gradient(135deg, var(--surface-color) 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, var(--apple-white) 0%, var(--apple-gray-light) 100%);
   height: 100%;
   padding: 25px;
   border-radius: 15px;
@@ -2435,7 +2495,7 @@ html[dir="rtl"] .resume .resume-item::before {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), #38bdf8, #10b981);
+  background: linear-gradient(90deg, var(--apple-blue), var(--apple-green), var(--apple-orange));
   border-radius: 15px 15px 0 0;
 }
 
@@ -2471,16 +2531,16 @@ html[dir="rtl"] .resume .resume-item::before {
 .contact .php-email-form input[type="text"]:hover,
 .contact .php-email-form input[type="email"]:hover,
 .contact .php-email-form textarea:hover {
-  border-color: rgba(0, 80, 160, 0.3);
+  border-color: rgba(0, 122, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
 .contact .php-email-form input[type="text"]:focus,
 .contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: var(--apple-blue);
   background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 4px rgba(0, 80, 160, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
   outline: none;
   transform: translateY(-1px);
 }
@@ -2494,7 +2554,7 @@ html[dir="rtl"] .resume .resume-item::before {
 
 .contact .php-email-form label {
   font-weight: 600;
-  color: var(--heading-color);
+  color: var(--apple-blue-dark);
   margin-bottom: 6px;
   display: block;
   font-size: 13px;
@@ -2503,8 +2563,8 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .contact .php-email-form button[type="submit"] {
-  color: white;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #38bdf8 100%);
+  color: var(--apple-white);
+  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
   border: 0;
   padding: 12px 30px;
   font-size: 14px;
@@ -2513,7 +2573,7 @@ html[dir="rtl"] .resume .resume-item::before {
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 80, 160, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 122, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -2539,9 +2599,9 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: linear-gradient(135deg, #004080 0%, #2563eb 100%);
+  background: linear-gradient(135deg, var(--apple-blue-dark) 0%, var(--apple-blue) 100%);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(0, 80, 160, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 122, 255, 0.4);
 }
 
 .contact .php-email-form button[type="submit"]:active {
@@ -2734,7 +2794,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .stats .stats-item i {
   font-size: 44px;
   line-height: 1;
-  color: #22c55e;
+  color: var(--apple-green);
 }
 .stats .stats-item .purecounter {
   margin: 0;
@@ -2831,7 +2891,7 @@ html[dir="rtl"] .skills .progress .skill .val {
   height: 10px;
   width: 1%;
   transition: width 0.9s ease;
-  background: linear-gradient(90deg, var(--accent-color), #38bdf8);
+  background: linear-gradient(90deg, var(--apple-blue), var(--apple-blue-dark));
 }
 
 /* If using custom blocks (skills-info/skill-container/skill-percentage) */
@@ -2855,7 +2915,7 @@ html[dir="rtl"] .skills .progress .skill .val {
 }
 .skill-percentage {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-color), #38bdf8);
+  background: linear-gradient(90deg, var(--apple-blue), var(--apple-blue-dark));
   transition: width 1s ease;
 }
 /* Width mapping (Technical/Professional) */
@@ -2892,10 +2952,10 @@ html[dir="rtl"] .skills .progress .skill .val {
 
 /* 7) Header social networks – light background and brand hover */
 .header .social-links a {
-  background: rgba(15, 23, 42, 0.06);
+  background: rgba(0, 0, 0, 0.06);
 }
 .header .social-links a:hover {
-  background: var(--accent-color);
+  background: var(--apple-blue);
   color: var(--contrast-color);
 }
 
@@ -2982,10 +3042,10 @@ html[dir="rtl"] .skills .progress .skill .val {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-color);
+  background: var(--apple-blue);
   color: var(--contrast-color);
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 122, 255, 0.12);
   font-size: 20px;
   transition: all 0.3s ease;
   touch-action: manipulation;
@@ -2993,9 +3053,9 @@ html[dir="rtl"] .skills .progress .skill .val {
 }
 
 .menu-toggle:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  background: color-mix(in srgb, var(--apple-blue) 90%, white 10%);
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 80, 160, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
 }
 
 .menu-toggle:active {
@@ -3064,13 +3124,13 @@ html[dir="rtl"] .language-switcher {
 .lang-toggle-btn {
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    #f8f9fa 25%,
+    var(--apple-white) 0%,
+    var(--apple-gray-light) 25%,
     #e9ecef 50%,
     #dee2e6 75%,
-    #adb5bd 100%
+    var(--apple-gray) 100%
   );
-  color: #2c3e50;
+  color: var(--pure-black);
   border: none;
   border-radius: 50px !important;
   padding: 8px 16px;
@@ -3125,7 +3185,7 @@ html[dir="rtl"] .language-switcher {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #2c3e50;
+  color: var(--pure-black);
   font-weight: 600;
   font-size: 14px;
   position: relative;
@@ -3141,7 +3201,7 @@ html[dir="rtl"] .language-switcher {
 
 .lang-text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #2c3e50;
+  color: var(--pure-black);
   font-weight: 600;
   font-size: 14px;
   transition: all 0.2s ease;
@@ -3202,7 +3262,7 @@ html[dir="rtl"] .language-switcher {
 
 /* Focus states for accessibility */
 .lang-toggle-btn:focus {
-  outline: 2px solid var(--navy-blue);
+  outline: 2px solid var(--apple-blue);
   outline-offset: 2px;
 }
 
@@ -4014,7 +4074,7 @@ html[dir="rtl"] .related-content {
   left: -12px;
   right: -12px;
   bottom: -12px;
-  border: 4px solid var(--warm-beige);
+  border: 4px solid var(--apple-blue);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -4028,7 +4088,7 @@ html[dir="rtl"] .related-content {
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-color), transparent);
+  background: linear-gradient(135deg, var(--apple-blue), transparent);
   opacity: 0;
   transition: all 0.4s ease;
 }
@@ -4062,11 +4122,11 @@ html[dir="rtl"] .related-content {
   margin-bottom: 1.5rem;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    #f8f9fa 25%,
+    var(--apple-white) 0%,
+    var(--apple-gray-light) 25%,
     #e9ecef 50%,
     #dee2e6 75%,
-    #adb5bd 100%
+    var(--apple-gray) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4086,11 +4146,11 @@ html[dir="rtl"] .related-content {
   margin-bottom: 2rem;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    #f8f9fa 25%,
+    var(--apple-white) 0%,
+    var(--apple-gray-light) 25%,
     #e9ecef 50%,
     #dee2e6 75%,
-    #adb5bd 100%
+    var(--apple-gray) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4149,13 +4209,13 @@ html[dir="rtl"] .related-content {
 .hero-actions .btn-primary {
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    #f8f9fa 25%,
+    var(--apple-white) 0%,
+    var(--apple-gray-light) 25%,
     #e9ecef 50%,
     #dee2e6 75%,
-    #adb5bd 100%
+    var(--apple-gray) 100%
   );
-  color: #2c3e50;
+  color: var(--pure-black);
   position: relative;
 }
 
