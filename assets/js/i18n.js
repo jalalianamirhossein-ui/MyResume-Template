@@ -522,6 +522,14 @@
       `;
     }
 
+    // Ensure button content is visible immediately
+    const content = btn?.querySelector(".lang-content");
+    if (content) {
+      content.style.opacity = "1";
+      content.style.transform = "scale(1)";
+      content.classList.remove("transitioning-out", "transitioning-in");
+    }
+
     setLang(saved);
     stripAndBind();
   }

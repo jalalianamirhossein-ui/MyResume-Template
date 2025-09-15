@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- ===============================================
+    ==================== META TAGS ====================
+    =============================================== -->
     <meta charset="utf-8" />
     <meta
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       name="viewport"
     />
-    <title>Meet Aj</title>
+
+    <!-- Page Title & SEO Meta Tags -->
+    <title>Meet Aj - AmirHossein Jalalian Portfolio</title>
     <meta
       content="Professional portfolio of AmirHossein Jalalian - Network Expert, DevOps Engineer, and IT Infrastructure Specialist. Experienced in Cisco, MikroTik, VMware, Linux administration, and system optimization."
       name="description"
@@ -16,11 +21,15 @@
       name="keywords"
     />
 
-    <!-- Favicons -->
+    <!-- ===============================================
+    ==================== FAVICONS =====================
+    =============================================== -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- PWA Manifest -->
+    <!-- ===============================================
+    ==================== PWA CONFIG ====================
+    =============================================== -->
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#0050a0" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -30,7 +39,9 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <!-- Fonts - Optimized -->
+    <!-- ===============================================
+    ==================== FONTS =========================
+    =============================================== -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
@@ -38,24 +49,40 @@
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files - Optimized -->
+    <!-- ===============================================
+    ==================== VENDOR CSS ====================
+    =============================================== -->
+    <!-- Bootstrap CSS Framework -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap Icons -->
     <link
       href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
+
+    <!-- AOS Animation Library -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <!-- GLightbox Gallery Library -->
     <link
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
+
+    <!-- Swiper Slider Library -->
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Main CSS File - Optimized -->
+    <!-- ===============================================
+    ==================== MAIN CSS ======================
+    =============================================== -->
+    <!-- Main Stylesheet -->
     <link href="assets/css/main.css?v=999" rel="stylesheet" />
+
+    <!-- RTL Support Stylesheet -->
     <link
       id="rtl-style"
       href="assets/css/rtl.css?v=999"
@@ -63,7 +90,9 @@
       disabled
     />
 
-    <!-- Critical CSS for above-the-fold content -->
+    <!-- ===============================================
+    ==================== CRITICAL CSS ==================
+    =============================================== -->
     <style>
       /* Critical CSS for initial render */
       body {
@@ -105,10 +134,17 @@
     </style>
   </head>
 
+  <!-- ===============================================
+  ==================== BODY START ====================
+  =============================================== -->
   <body class="index-page">
+    <!-- ===============================================
+    ==================== HEADER SECTION ================
+    =============================================== -->
     <header id="header" class="header dark-background d-flex flex-column">
-      <!-- Menu toggle moved to proper button below -->
-
+      <!-- ===============================================
+      ==================== PROFILE IMAGE =================
+      =============================================== -->
       <div class="profile-img">
         <img
           src="assets/img/my-profile-img.jpg"
@@ -118,13 +154,19 @@
         />
       </div>
 
+      <!-- ===============================================
+      ==================== LOGO SECTION ==================
+      =============================================== -->
       <div
         class="logo-section d-flex align-items-center justify-content-between"
       >
+        <!-- Site Logo & Name -->
         <a href="#hero" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="Aj-Network" loading="lazy" />
           <h1 class="sitename">Meet AJ</h1>
         </a>
+
+        <!-- Language Switcher -->
         <div class="language-switcher">
           <button
             id="lang-toggle"
@@ -141,8 +183,11 @@
         </div>
       </div>
 
+      <!-- ===============================================
+      ==================== SOCIAL LINKS ===================
+      =============================================== -->
       <div class="social-links text-center">
-        <!-- ردیف اول: مهم‌ترین‌ها -->
+        <!-- Primary Social Links Row -->
         <div class="social-row social-row-main">
           <a
             href="https://linkedin.com/in/amirhussein-jalalian-050702188/"
@@ -153,7 +198,7 @@
             ><i class="bi bi-linkedin"></i
           ></a>
           <a
-            href="https://github.com/aj-mercury"
+            href="https://github.com/jalalianamirhossein-ui"
             class="github"
             target="_blank"
             rel="noopener"
@@ -198,7 +243,7 @@
             </svg>
           </a>
           <a
-            href="https://stackoverflow.com/users/amir-jalalian"
+            href="https://stackoverflow.com/users/24522280/amir-jalalian"
             class="stackoverflow"
             target="_blank"
             rel="noopener"
@@ -226,40 +271,53 @@
           ></a>
         </div>
       </div>
+
+      <!-- ===============================================
+      ==================== NAVIGATION MENU ================
+      =============================================== -->
       <nav id="navmenu" class="navmenu">
         <ul>
+          <!-- Home Section -->
           <li>
             <a href="#hero" class="active"
               ><i class="bi bi-house navicon"></i
               ><span data-en="Home" data-fa="صفحه اصلی">Home</span></a
             >
           </li>
+
+          <!-- About Section -->
           <li>
             <a href="#about"
               ><i class="bi bi-person navicon"></i
               ><span data-en="About" data-fa="درباره من">About</span></a
             >
           </li>
+
+          <!-- Resume Section -->
           <li>
             <a href="#resume"
               ><i class="bi bi-file-earmark-text navicon"></i
               ><span data-en="Resume" data-fa="رزومه کاری">Resume</span></a
             >
           </li>
+
+          <!-- Articles Section -->
           <li>
             <a href="#portfolio"
               ><i class="bi bi-images navicon"></i
-              ><span data-en="Portfolio" data-fa="نمونه کارها"
-                >Portfolio</span
-              ></a
+              ><span data-en="Articles" data-fa="مقالات">Articles</span></a
             >
           </li>
+
+          <!-- Services Section -->
           <li>
             <a href="#services"
               ><i class="bi bi-hdd-stack navicon"></i
               ><span data-en="Services" data-fa="خدمات">Services</span></a
             >
           </li>
+
+          <!-- Testimonials Section -->
           <li>
             <a href="#testimonials"
               ><i class="bi bi-menu-button navicon"></i
@@ -268,6 +326,8 @@
               ></a
             >
           </li>
+
+          <!-- Contact Section -->
           <li>
             <a href="#contact"
               ><i class="bi bi-envelope navicon"></i
@@ -277,6 +337,10 @@
         </ul>
       </nav>
     </header>
+
+    <!-- ===============================================
+    ==================== MOBILE MENU TOGGLE ==============
+    =============================================== -->
     <button
       id="menu-toggle"
       class="menu-toggle d-xl-none"
@@ -287,9 +351,15 @@
       <i class="bi bi-list"></i>
     </button>
 
+    <!-- ===============================================
+    ==================== MAIN CONTENT ====================
+    =============================================== -->
     <main class="main">
-      <!-- Hero Section -->
+      <!-- ===============================================
+      ==================== HERO SECTION ==================
+      =============================================== -->
       <section id="hero" class="hero section dark-background">
+        <!-- Hero Background Image -->
         <link rel="preload" as="image" href="assets/img/hero-bg.jpg" />
         <img
           src="assets/img/hero-bg.jpg"
@@ -300,7 +370,7 @@
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="hero-wrapper">
-            <!-- Profile Image -->
+            <!-- Hero Profile Image -->
             <div
               class="hero-profile-section"
               data-aos="fade-right"
@@ -333,11 +403,11 @@
                   AmirHossein Jalalian
                 </h1>
                 <p class="hero-subtitle">
-                  <span data-en="I'm" data-fa="من">I'm</span>
+                  <span data-en="I'm a" data-fa="من">I'm a</span>
                   <span
                     class="typed"
                     data-typed-items="Network Expert, DevOps Engineer, Freelancer, Systems Specialist, VMware Administrator"
-                    data-typed-items-fa="کارشناس شبکه, مهندس دواپس, فریلنسر, متخصص سیستم‌ها, مدیر VMware"
+                    data-typed-items-fa="کارشناس شبکه هستم, مهندس DevOps هستم, فریلنسر هستم, متخصص سیستم های رایانه ای هستم, طراح سیتم های مجازی سازی هستم"
                     >System Administrator</span
                   >
                 </p>
@@ -352,9 +422,9 @@
                   <a
                     href="#portfolio"
                     class="btn btn-outline-light"
-                    data-en="View Portfolio"
-                    data-fa="مشاهده نمونه کارها"
-                    >View Portfolio</a
+                    data-en="Articles"
+                    data-fa="مقالات"
+                    >Articles</a
                   >
                 </div>
               </div>
@@ -364,7 +434,9 @@
       </section>
       <!-- /Hero Section -->
 
-      <!-- About Section -->
+      <!-- ===============================================
+      ==================== ABOUT SECTION ==================
+      =============================================== -->
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -390,8 +462,12 @@
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== ABOUT CONTENT ===================
+        =============================================== -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
+            <!-- Profile Image -->
             <div class="col-lg-4">
               <img
                 src="assets/img/my-profile-img-2.jpg"
@@ -400,6 +476,8 @@
                 alt="Amir Hossein Jalalian"
               />
             </div>
+
+            <!-- About Content -->
             <div class="col-lg-8 content">
               <h2
                 data-en="Computer Networks & IT Infrastructure Specialist"
@@ -418,7 +496,9 @@
                 responsibility, precision, and teamwork.
               </p>
 
+              <!-- Personal Information -->
               <div class="row">
+                <!-- Left Column - Personal Details -->
                 <div class="col-lg-6">
                   <ul>
                     <li>
@@ -435,8 +515,11 @@
                       <strong data-en="Phone:" data-fa="شماره تماس:"
                         >Phone:</strong
                       >
-                      <span data-en="+989197276219" data-fa="09197276219"
-                        >+989197276219</span
+                      <a
+                        href="tel:+989197276219"
+                        data-en="+989197276219"
+                        data-fa="09197276219"
+                        >+989197276219</a
                       >
                     </li>
                     <li>
@@ -444,10 +527,14 @@
                       <strong data-en="Email:" data-fa="پست الکترونیکی:"
                         >Email:</strong
                       >
-                      <span>Jalalian.amirhossein@gmail.com</span>
+                      <a href="mailto:Jalalian.amirhossein@gmail.com"
+                        >Jalalian.amirhossein@gmail.com</a
+                      >
                     </li>
                   </ul>
                 </div>
+                
+                <!-- Right Column - Professional Details -->
                 <div class="col-lg-6">
                   <ul>
                     <li>
@@ -485,6 +572,7 @@
                 </div>
               </div>
 
+              <!-- Professional Philosophy -->
               <p
                 class="py-3"
                 data-en="I value integrity, discipline, patience, and accountability. I believe that respect for one's craft and adherence to core values are the true foundation of long-term success in the IT field."
@@ -495,6 +583,8 @@
                 values are the true foundation of long-term success in the IT
                 field.
               </p>
+              
+              <!-- Inspirational Quote -->
               <p class="bio-quote">
                 <em
                   data-en='"Success is born of sustained effort, continuous learning, and faith in the journey."'
@@ -506,13 +596,18 @@
             </div>
           </div>
         </div>
+        <!-- End About Content -->
       </section>
       <!-- /About Section -->
 
-      <!-- Stats Section -->
+      <!-- ===============================================
+      ==================== STATS SECTION ====================
+      =============================================== -->
       <section id="stats" class="stats section">
+        <!-- Stats Container -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
+            <!-- Happy Clients Stat -->
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
                 <i class="bi bi-emoji-smile"></i>
@@ -532,8 +627,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Stats Item -->
+            <!-- End Happy Clients Stat -->
 
+            <!-- Projects Stat -->
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
                 <i class="bi bi-journal-richtext"></i>
@@ -555,8 +651,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Stats Item -->
+            <!-- End Projects Stat -->
 
+            <!-- Support Hours Stat -->
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
                 <i class="bi bi-headset"></i>
@@ -578,8 +675,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Stats Item -->
+            <!-- End Support Hours Stat -->
 
+            <!-- Team Members Stat -->
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
                 <i class="bi bi-people"></i>
@@ -599,15 +697,21 @@
                 </p>
               </div>
             </div>
-            <!-- End Stats Item -->
+            <!-- End Team Members Stat -->
           </div>
         </div>
+        <!-- End Stats Container -->
       </section>
+      <!-- /Stats Section -->
       <!-- Stats Section -->
 
-      <!-- Skills Section -->
+      <!-- ===============================================
+      ==================== SKILLS SECTION ====================
+      =============================================== -->
       <section id="skills" class="skills section light-background">
-        <!-- Section Title -->
+        <!-- ===============================================
+        ==================== SECTION TITLE ==================
+        =============================================== -->
         <div class="container section-title" data-aos="fade-up">
           <h2 data-en="Skills" data-fa="مهارت‌ها">Skills</h2>
           <p
@@ -620,13 +724,56 @@
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== SKILLS CONTENT ==================
+        =============================================== -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row skills-content skills-animation">
-            <!-- Column 1: Technical Skills (10) -->
+            <!-- ===============================================
+            ==================== LEFT COLUMN ====================
+            =============================================== -->
             <div class="col-lg-6">
               <div class="progress">
                 <span class="skill"
-                  ><span>Network Design (Cisco, MikroTik)</span>
+                  ><span
+                    data-en="Network Design (Cisco, MikroTik)"
+                    data-fa="طراحی شبکه (سیسکو، میکروتیک)"
+                    >Network Design (Cisco, MikroTik)</span
+                  >
+                  <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Firewall & Security Rules (MikroTik, Cisco)"
+                    data-fa="فایروال و قوانین امنیتی (میکروتیک، سیسکو)"
+                    >Firewall & Security Rules (MikroTik, Cisco)</span
+                  >
+                  <i class="val">92%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="92"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Linux Administration (Ubuntu, CentOS)"
+                    data-fa="مدیریت لینوکس (اوبونتو، سنت‌اواس)"
+                    >Linux Administration (Ubuntu, CentOS)</span
+                  >
                   <i class="val">90%</i></span
                 >
                 <div class="progress-bar-wrap">
@@ -639,20 +786,152 @@
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Firewall & Security Rules (MikroTik, Cisco)</span>
-                  <i class="val">85%</i></span
+                  ><span
+                    data-en="Microsoft Services (AD, DNS, DFS, WDS, WSUS, NTP)"
+                    data-fa="خدمات مایکروسافت (AD، DNS، DFS، WDS، WSUS، NTP)"
+                    >Microsoft Services (AD, DNS, DFS, WDS, WSUS, NTP)</span
+                  >
+                  <i class="val">88%</i></span
                 >
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="85"
+                    aria-valuenow="88"
                   ></div>
                 </div>
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Linux Administration (Ubuntu, CentOS)</span>
+                  ><span
+                    data-en="Virtualization (VMware vSphere, KVM)"
+                    data-fa="مجازی‌سازی (VMware vSphere، KVM)"
+                    >Virtualization (VMware vSphere, KVM)</span
+                  >
+                  <i class="val">77%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="77"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="SQL Server (Clustering, HA, Monitoring)"
+                    data-fa="SQL Server (خوشه‌بندی، HA، نظارت)"
+                    >SQL Server (Clustering, HA, Monitoring)</span
+                  >
+                  <i class="val">66%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="66"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Backup Systems (Veeam Backup & NAS)"
+                    data-fa="سیستم‌های پشتیبان‌گیری (Veeam Backup & NAS)"
+                    >Backup Systems (Veeam Backup & NAS)</span
+                  >
+                  <i class="val">98%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="98"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Monitoring Tools (Zabbix, Cacti, Redgate)"
+                    data-fa="ابزارهای نظارت (Zabbix، Cacti، Redgate)"
+                    >Monitoring Tools (Zabbix, Cacti, Redgate)</span
+                  >
+                  <i class="val">94%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="94"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="VPN & Tunnel Configuration"
+                    data-fa="پیکربندی VPN و تانل"
+                    >VPN & Tunnel Configuration</span
+                  >
+                  <i class="val">96%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="96"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Cloud Platforms (AWS, Azure)"
+                    data-fa="پلتفرم‌های ابری (AWS، Azure)"
+                    >Cloud Platforms (AWS, Azure)</span
+                  >
+                  <i class="val">66%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="66"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <!-- End Left Column -->
+
+            <!-- ===============================================
+            ==================== RIGHT COLUMN ===================
+            =============================================== -->
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span data-en="Technical Documentation" data-fa="مستندات فنی"
+                    >Technical Documentation</span
+                  >
+                  <i class="val">88%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="88"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Diagram & Network Mapping"
+                    data-fa="نمودار و نقشه‌برداری شبکه"
+                    >Diagram & Network Mapping</span
+                  >
                   <i class="val">80%</i></span
                 >
                 <div class="progress-bar-wrap">
@@ -666,7 +945,43 @@
               <div class="progress">
                 <span class="skill"
                   ><span
-                    >Microsoft Services (AD, DNS, DFS, WDS, WSUS, NTP)</span
+                    data-en="System Analysis & Troubleshooting"
+                    data-fa="تحلیل سیستم و عیب‌یابی"
+                    >System Analysis & Troubleshooting</span
+                  >
+                  <i class="val">95%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Project Planning & IT Management"
+                    data-fa="برنامه‌ریزی پروژه و مدیریت IT"
+                    >Project Planning & IT Management</span
+                  >
+                  <i class="val">88%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="88"
+                  ></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span
+                    data-en="Team Collaboration & Communication"
+                    data-fa="همکاری تیمی و ارتباطات"
+                    >Team Collaboration & Communication</span
                   >
                   <i class="val">85%</i></span
                 >
@@ -680,115 +995,26 @@
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Virtualization (VMware vSphere, KVM)</span>
-                  <i class="val">75%</i></span
+                  ><span
+                    data-en="Problem Solving Under Pressure"
+                    data-fa="حل مسئله تحت فشار"
+                    >Problem Solving Under Pressure</span
+                  >
+                  <i class="val">92%</i></span
                 >
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="75"
+                    aria-valuenow="92"
                   ></div>
                 </div>
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>SQL Server (Clustering, HA, Monitoring)</span>
-                  <i class="val">70%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="70"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Backup Systems (Veeam Backup & NAS)</span>
-                  <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Monitoring Tools (Zabbix, Cacti, Redgate)</span>
-                  <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>VPN & Tunnel Configuration</span>
-                  <i class="val">75%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Cloud Platforms (AWS, Azure)</span>
-                  <i class="val">65%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="65"
-                  ></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Column 2: Professional Skills (10) -->
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>Technical Documentation</span>
-                  <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Diagram & Network Mapping</span>
-                  <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>System Analysis & Troubleshooting</span>
+                  ><span data-en="Security Awareness" data-fa="آگاهی امنیتی"
+                    >Security Awareness</span
+                  >
                   <i class="val">90%</i></span
                 >
                 <div class="progress-bar-wrap">
@@ -801,71 +1027,28 @@
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Project Planning & IT Management</span>
-                  <i class="val">80%</i></span
+                  ><span
+                    data-en="Adaptability & Continuous Learning"
+                    data-fa="انطباق‌پذیری و یادگیری مداوم"
+                    >Adaptability & Continuous Learning</span
+                  >
+                  <i class="val">100%</i></span
                 >
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="80"
+                    aria-valuenow="100"
                   ></div>
                 </div>
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Team Collaboration & Communication</span>
-                  <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Problem Solving Under Pressure</span>
-                  <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Security Awareness</span> <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Adaptability & Continuous Learning</span>
-                  <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill"
-                  ><span>Leadership & Mentoring</span>
+                  ><span
+                    data-en="Leadership & Mentoring"
+                    data-fa="رهبری و مربیگری"
+                    >Leadership & Mentoring</span
+                  >
                   <i class="val">75%</i></span
                 >
                 <div class="progress-bar-wrap">
@@ -878,7 +1061,11 @@
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>Client Communication & Reporting</span>
+                  ><span
+                    data-en="Client Communication & Reporting"
+                    data-fa="ارتباط با مشتری و گزارش‌دهی"
+                    >Client Communication & Reporting</span
+                  >
                   <i class="val">80%</i></span
                 >
                 <div class="progress-bar-wrap">
@@ -890,214 +1077,450 @@
                 </div>
               </div>
             </div>
+            <!-- End Right Column -->
           </div>
-          <!-- /.row -->
+          <!-- End Skills Row -->
         </div>
-        <!-- /.container -->
+        <!-- End Skills Container -->
       </section>
       <!-- /Skills Section -->
 
-      <!-- Resume Section -->
+      <!-- ===============================================
+      ==================== RESUME SECTION =================
+      =============================================== -->
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2 data-en="Resume" data-fa="رزومه">Resume</h2>
-          <p>
+          <p
+            data-en="My academic background and professional work experience in computer networks and IT infrastructure."
+            data-fa="پیشینه تحصیلی و تجربه کاری حرفه‌ای من در شبکه‌های کامپیوتری و زیرساخت IT."
+          >
             My academic background and professional work experience in computer
             networks and IT infrastructure.
           </p>
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== RESUME CONTENT ==================
+        =============================================== -->
         <div class="container">
           <div class="row">
-            <!-- Education -->
+            <!-- ===============================================
+            ==================== EDUCATION COLUMN ================
+            =============================================== -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Education</h3>
+              <h3 class="resume-title" data-en="Education" data-fa="تحصیلات">
+                Education
+              </h3>
               <div class="resume-item">
-                <h4>DevOps Engineering Program</h4>
+                <h4
+                  data-en="DevOps Engineering Program"
+                  data-fa="برنامه مهندسی DevOps"
+                >
+                  DevOps Engineering Program
+                </h4>
                 <h5>2024</h5>
-                <p><em>Sanat Training Center</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>LPIC-1</h4>
-                <h5>2023</h5>
                 <p>
                   <em
-                    >Arzhang Higher Education Institute (Networking, Security,
-                    Virtualization, Storage, Programming, Web)</em
+                    ><a
+                      href="https://sananetco.com/en/home/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Sanat Training Center"
+                      data-fa="مرکز آموزش سانانت"
+                      >Sanat Training Center</a
+                    ></em
                   >
                 </p>
               </div>
 
               <div class="resume-item">
-                <h4>LPIC-2</h4>
+                <h4 data-en="LPIC-1" data-fa="LPIC-1">LPIC-1</h4>
                 <h5>2023</h5>
                 <p>
                   <em
-                    >Arzhang Higher Education Institute (Networking, Security,
-                    Virtualization, Storage, Programming, Web)</em
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی،
+                      ذخیره‌سازی، برنامه‌نویسی، وب)</a
+                    ></em
                   >
                 </p>
               </div>
 
               <div class="resume-item">
-                <h4>
+                <h4 data-en="LPIC-2" data-fa="LPIC-2">LPIC-2</h4>
+                <h5>2023</h5>
+                <p>
+                  <em
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی،
+                      ذخیره‌سازی، برنامه‌نویسی، وب)</a
+                    ></em
+                  >
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4
+                  data-en="Comprehensive VMware vSphere: Install, Configure, Manage"
+                  data-fa="VMware vSphere جامع: نصب، پیکربندی، مدیریت"
+                >
                   Comprehensive VMware vSphere: Install, Configure, Manage
                 </h4>
                 <h5>2021</h5>
-                <p><em>Arzhang Higher Education Institute</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Bachelor’s in Computer Networks & Internet</h4>
-                <h5>2020 - 2022</h5>
                 <p>
                   <em
-                    >University of Applied Science and Technology (Iran
-                    Informatics Branch)</em
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ</a
+                    ></em
                   >
                 </p>
               </div>
 
               <div class="resume-item">
-                <h4>MCSA & Network Plus</h4>
-                <h5>2018</h5>
-                <p><em>Arzhang Higher Education Institute</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>CCNA 200-125</h4>
-                <h5>2018</h5>
-                <p><em>Arzhang Higher Education Institute</em></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Associate Degree in Software Engineering</h4>
-                <h5>2016 - 2018</h5>
+                <h4
+                  data-en="Bachelor's in Computer Networks & Internet"
+                  data-fa="کارشناسی شبکه‌های کامپیوتری و اینترنت"
+                >
+                  Bachelor's in Computer Networks & Internet
+                </h4>
+                <h5>2020 - 2022</h5>
                 <p>
-                  <em>Shahid Shamsipour Technical and Vocational University</em>
+                  <em
+                    ><a
+                      href="https://iii.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="University of Applied Science and Technology (Iran Informatics Branch)"
+                      data-fa="دانشگاه علمی و کاربردی (انفورماتیک ایران)"
+                      >University of Applied Science and Technology (Iran
+                      Informatics Branch)</a
+                    ></em
+                  >
                 </p>
               </div>
 
               <div class="resume-item">
-                <h4>Network Plus</h4>
-                <h5>2013</h5>
-                <p><em>Arzhang Higher Education Institute</em></p>
-              </div>
-            </div>
-
-            <!-- Professional Experience -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
-
-              <div class="resume-item">
-                <h4>DevOps & Network Infrastructure Specialist</h4>
-                <h5>Sep 2018 – Present</h5>
+                <h4 data-en="MCSA & Network Plus" data-fa="MCSA و Network Plus">
+                  MCSA & Network Plus
+                </h4>
+                <h5>2018</h5>
                 <p>
                   <em
-                    ><a href="https://newshadrinks.com"
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ</a
+                    ></em
+                  >
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4 data-en="CCNA 200-125" data-fa="CCNA 200-125">
+                  CCNA 200-125
+                </h4>
+                <h5>2018</h5>
+                <p>
+                  <em
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ</a
+                    ></em
+                  >
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4
+                  data-en="Associate Degree in Software Engineering"
+                  data-fa="کاردانی مهندسی نرم‌افزار"
+                >
+                  Associate Degree in Software Engineering
+                </h4>
+                <h5>2016 - 2018</h5>
+                <p>
+                  <em
+                    ><a
+                      href="https://shamsipour.nus.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Shahid Shamsipour Technical and Vocational University"
+                      data-fa="دانشگاه فنی و حرفه‌ای شهید شمس‌پور"
+                      >Shahid Shamsipour Technical and Vocational University</a
+                    ></em
+                  >
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4 data-en="Network Plus" data-fa="Network Plus">
+                  Network Plus
+                </h4>
+                <h5>2013</h5>
+                <p>
+                  <em
+                    ><a
+                      href="https://arjang.ac.ir/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Arzhang Higher Education Institute (Networking, Security, Virtualization, Storage, Programming, Web)"
+                      data-fa="مؤسسه آموزش عالی ارژنگ (شبکه، امنیت، مجازی‌سازی، ذخیره‌سازی، برنامه‌نویسی، وب)"
+                      >مؤسسه آموزش عالی ارژنگ</a
+                    ></em
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- End Education Column -->
+
+            <!-- ===============================================
+            ==================== EXPERIENCE COLUMN ==============
+            =============================================== -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3
+                class="resume-title"
+                data-en="Professional Experience"
+                data-fa="تجربه کاری"
+              >
+                Professional Experience
+              </h3>
+
+              <div class="resume-item">
+                <h4
+                  data-en="DevOps & Network Infrastructure Specialist"
+                  data-fa="متخصص DevOps و زیرساخت شبکه"
+                >
+                  DevOps & Network Infrastructure Specialist
+                </h4>
+                <h5 data-en="Sep 2018 – Present" data-fa="شهریور ۱۳۹۷ – تاکنون">
+                  Sep 2018 – Present
+                </h5>
+                <p>
+                  <em
+                    ><a
+                      href="https://newshadrinks.com"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="Newsha Drinks Co."
+                      data-fa=" شرکت کشت و صنعت نیوشاداریان "
                       >Newsha Drinks Co.</a
                     ></em
                   >
                 </p>
                 <ul>
-                  <li>
+                  <li
+                    data-en="Designed and implemented virtualization infrastructure for all enterprise servers"
+                    data-fa="طراحی و پیاده‌سازی زیرساخت مجازی‌سازی برای تمام سرورهای سازمانی"
+                  >
                     Designed and implemented virtualization infrastructure for
                     all enterprise servers
                   </li>
-                  <li>
+                  <li
+                    data-en="Deployed SQL Server cluster with High Availability and Redgate monitoring"
+                    data-fa="استقرار خوشه SQL Server با قابلیت دسترسی بالا و نظارت Redgate"
+                  >
                     Deployed SQL Server cluster with High Availability and
                     Redgate monitoring
                   </li>
-                  <li>
+                  <li
+                    data-en="Implemented core Windows infrastructure services: Active Directory, DNS, NTP, DFS, WDS, WSUS"
+                    data-fa="پیاده‌سازی سرویس‌های اصلی زیرساخت Windows: Active Directory، DNS، NTP، DFS، WDS، WSUS"
+                  >
                     Implemented core Windows infrastructure services: Active
                     Directory, DNS, NTP, DFS, WDS, WSUS
                   </li>
-                  <li>
+                  <li
+                    data-en="Deployed Nginx Proxy Manager for advanced HTTP/HTTPS traffic management and load balancing"
+                    data-fa="استقرار Nginx Proxy Manager برای مدیریت پیشرفته ترافیک HTTP/HTTPS و تعادل بار"
+                  >
                     Deployed Nginx Proxy Manager for advanced HTTP/HTTPS traffic
                     management and load balancing
                   </li>
-                  <li>
+                  <li
+                    data-en="Redesigned LAN structure with segmented VLANs and removed direct static IPs"
+                    data-fa="طراحی مجدد ساختار LAN با VLAN های مجزا و حذف IP های استاتیک مستقیم"
+                  >
                     Redesigned LAN structure with segmented VLANs and removed
                     direct static IPs
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured advanced Cisco switching (STP, VTP, VLAN, Port-Channel, Port Security)"
+                    data-fa="پیکربندی سوئیچ‌ینگ پیشرفته سیسکو (STP، VTP، VLAN، Port-Channel، Port Security)"
+                  >
                     Configured advanced Cisco switching (STP, VTP, VLAN,
                     Port-Channel, Port Security)
                   </li>
-                  <li>
+                  <li
+                    data-en="Implemented secure Site-to-Site VPN tunnels between Tehran offices"
+                    data-fa="پیاده‌سازی تونل‌های VPN امن Site-to-Site بین دفاتر تهران"
+                  >
                     Implemented secure Site-to-Site VPN tunnels between Tehran
                     offices
                   </li>
-                  <li>
+                  <li
+                    data-en="Optimized Internet performance with MikroTik firewall and security rules"
+                    data-fa="بهینه‌سازی عملکرد اینترنت با فایروال MikroTik و قوانین امنیتی"
+                  >
                     Optimized Internet performance with MikroTik firewall and
                     security rules
                   </li>
-                  <li>
+                  <li
+                    data-en="Installed Kaspersky Endpoint Security with centralized management console"
+                    data-fa="نصب Kaspersky Endpoint Security با کنسول مدیریت متمرکز"
+                  >
                     Installed Kaspersky Endpoint Security with centralized
                     management console
                   </li>
-                  <li>
+                  <li
+                    data-en="Upgraded Jira from version 6 to 9 with full documentation"
+                    data-fa="ارتقاء Jira از نسخه 6 به 9 با مستندات کامل"
+                  >
                     Upgraded Jira from version 6 to 8 with full documentation
                   </li>
-                  <li>
+                  <li
+                    data-en="Upgraded HQ infrastructure with fiber backbone and improved datacenter"
+                    data-fa="ارتقاء زیرساخت مرکز اصلی با ستون فقرات فیبرنوری و بهبود مرکز داده"
+                  >
                     Upgraded HQ infrastructure with fiber backbone and improved
                     datacenter
                   </li>
-                  <li>
+                  <li
+                    data-en="Integrated CCTV surveillance system with stable infrastructure"
+                    data-fa="یکپارچه‌سازی سیستم نظارت CCTV با زیرساخت پایدار"
+                  >
                     Integrated CCTV surveillance system with stable
                     infrastructure
                   </li>
-                  <li>
+                  <li
+                    data-en="Enhanced VoIP infrastructure for reliable internal telephony"
+                    data-fa="بهبود زیرساخت VoIP برای تلفن داخلی قابل اعتماد"
+                  >
                     Enhanced VoIP infrastructure for reliable internal telephony
                   </li>
-                  <li>Implemented Zabbix with Telegram API alerts</li>
-                  <li>
+                  <li
+                    data-en="Implemented Zabbix with Telegram API alerts"
+                    data-fa="پیاده‌سازی Zabbix با هشدارهای Telegram API"
+                  >
+                    Implemented Zabbix with Telegram API alerts
+                  </li>
+                  <li
+                    data-en="Integrated Zabbix with Grafana for real-time dashboards"
+                    data-fa="یکپارچه‌سازی Zabbix با Grafana برای داشبوردهای زمان واقعی"
+                  >
                     Integrated Zabbix with Grafana for real-time dashboards
                   </li>
-                  <li>
+                  <li
+                    data-en="Deployed Cacti for graphical network traffic monitoring"
+                    data-fa="استقرار Cacti برای نظارت گرافیکی ترافیک شبکه"
+                  >
                     Deployed Cacti for graphical network traffic monitoring
                   </li>
-                  <li>
+                  <li
+                    data-en="Implemented NAS and automated backups with Veeam Backup"
+                    data-fa="پیاده‌سازی NAS و پشتیبان‌گیری خودکار با Veeam Backup"
+                  >
                     Implemented NAS and automated backups with Veeam Backup
                   </li>
-                  <li>
+                  <li
+                    data-en="Created technical diagrams, documentation, and asset inventory"
+                    data-fa="ایجاد نمودارهای فنی، مستندات و فهرست دارایی‌ها"
+                  >
                     Created technical diagrams, documentation, and asset
                     inventory
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured CDN for improved website performance and security"
+                    data-fa="پیکربندی CDN برای بهبود عملکرد و امنیت وب‌سایت"
+                  >
                     Configured CDN for improved website performance and security
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured ArvanCloud with CDN, caching, and access security policies"
+                    data-fa="پیکربندی ArvanCloud با CDN، کش و سیاست‌های امنیت دسترسی"
+                  >
                     Configured ArvanCloud with CDN, caching, and access security
                     policies
                   </li>
-                  <li>Deployed MongoDB for internal NoSQL services</li>
-                  <li>
+                  <li
+                    data-en="Deployed MongoDB for internal NoSQL services"
+                    data-fa="استقرار MongoDB برای سرویس‌های داخلی NoSQL"
+                  >
+                    Deployed MongoDB for internal NoSQL services
+                  </li>
+                  <li
+                    data-en="Implemented ABS NG for user behavior analytics and reporting"
+                    data-fa="پیاده‌سازی ABS NG برای تحلیل رفتار کاربر و گزارش‌گیری"
+                  >
                     Implemented ABS NG for user behavior analytics and reporting
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured Xray for traffic control, tunneling, and bypassing restrictions"
+                    data-fa="پیکربندی Xray برای کنترل ترافیک، تونل‌زنی و دور زدن محدودیت‌ها"
+                  >
                     Configured Xray for traffic control, tunneling, and
                     bypassing restrictions
                   </li>
-                  <li>
+                  <li
+                    data-en="Deployed Docker for isolated environments and faster service delivery"
+                    data-fa="استقرار Docker برای محیط‌های مجزا و تحویل سریع‌تر سرویس"
+                  >
                     Deployed Docker for isolated environments and faster service
                     delivery
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured Apache Maven for Java project build automation"
+                    data-fa="پیکربندی Apache Maven برای اتوماسیون بیلد پروژه‌های Java"
+                  >
                     Configured Apache Maven for Java project build automation
                   </li>
-                  <li>Installed n8n for workflow automation</li>
-                  <li>
+                  <li
+                    data-en="Installed n8n for workflow automation"
+                    data-fa="نصب n8n برای اتوماسیون گردش کار"
+                  >
+                    Installed n8n for workflow automation
+                  </li>
+                  <li
+                    data-en="Developed Bash scripts for automation and server management"
+                    data-fa="توسعه اسکریپت‌های Bash برای اتوماسیون و مدیریت سرور"
+                  >
                     Developed Bash scripts for automation and server management
                   </li>
-                  <li>
+                  <li
+                    data-en="Migrated Windows web servers to Linux for performance and cost optimization"
+                    data-fa="مهاجرت وب‌سرورهای Windows به Linux برای بهینه‌سازی عملکرد و هزینه"
+                  >
                     Migrated Windows web servers to Linux for performance and
                     cost optimization
                   </li>
-                  <li>
+                  <li
+                    data-en="Configured load balancing across 5 Internet connections for stability"
+                    data-fa="پیکربندی تعادل بار بین 5 اتصال اینترنت برای پایداری"
+                  >
                     Configured load balancing across 5 Internet connections for
                     stability
                   </li>
@@ -1105,52 +1528,100 @@
               </div>
 
               <div class="resume-item">
-                <h4>Network Administrator</h4>
-                <h5>Jul 2017 – Aug 2018</h5>
+                <h4 data-en="Network Administrator" data-fa="ادمین شبکه">
+                  Network Administrator
+                </h4>
+                <h5
+                  data-en="Jul 2017 – Aug 2018"
+                  data-fa="تیر ۱۳۹۶ – مرداد ۱۳۹۷"
+                >
+                  Jul 2017 – Aug 2018
+                </h5>
                 <p>
                   <em
-                    ><a href="https://uast48ac.ir/fa/"
+                    ><a
+                      href="https://uast48ac.ir/fa/"
+                      target="_blank"
+                      rel="noopener"
+                      data-en="University of Applied Science & Technology – Culture & Arts Unit 48"
+                      data-fa="دانشگاه علمی و کاربردی – واحد فرهنگ و هنر ۴۸"
                       >University of Applied Science & Technology – Culture &
                       Arts Unit 48</a
                     ></em
                   >
                 </p>
                 <ul>
-                  <li>
+                  <li
+                    data-en="Installed, configured, and maintained network equipment (switches, routers, servers)"
+                    data-fa="نصب، پیکربندی و نگهداری تجهیزات شبکه (سوئیچ، روتر، سرور)"
+                  >
                     Installed, configured, and maintained network equipment
                     (switches, routers, servers)
                   </li>
-                  <li>
+                  <li
+                    data-en="Performed passive networking tasks including cabling, termination, and rack installation"
+                    data-fa="انجام وظایف شبکه‌سازی غیرفعال شامل کابل‌کشی، ترمینیشن و نصب رک"
+                  >
                     Performed passive networking tasks including cabling,
                     termination, and rack installation
                   </li>
-                  <li>Troubleshot LAN/WAN/Internet connectivity issues</li>
-                  <li>Installed software and hardware for end-users</li>
-                  <li>Implemented CCTV surveillance systems</li>
-                  <li>Applied security policies and kept systems updated</li>
+                  <li
+                    data-en="Troubleshot LAN/WAN/Internet connectivity issues"
+                    data-fa="عیب‌یابی مشکلات اتصال LAN/WAN/اینترنت"
+                  >
+                    Troubleshot LAN/WAN/Internet connectivity issues
+                  </li>
+                  <li
+                    data-en="Installed software and hardware for end-users"
+                    data-fa="نصب نرم‌افزار و سخت‌افزار برای کاربران نهایی"
+                  >
+                    Installed software and hardware for end-users
+                  </li>
+                  <li
+                    data-en="Implemented CCTV surveillance systems"
+                    data-fa="پیاده‌سازی سیستم‌های نظارت CCTV"
+                  >
+                    Implemented CCTV surveillance systems
+                  </li>
+                  <li
+                    data-en="Applied security policies and kept systems updated"
+                    data-fa="اعمال سیاست‌های امنیتی و به‌روزرسانی سیستم‌ها"
+                  >
+                    Applied security policies and kept systems updated
+                  </li>
                 </ul>
               </div>
             </div>
+            <!-- End Experience Column -->
           </div>
+          <!-- End Resume Row -->
         </div>
+        <!-- End Resume Container -->
       </section>
       <!-- /Resume Section -->
 
-      <!-- Portfolio Section -->
+      <!-- ===============================================
+      ==================== ARTICLES SECTION ===============
+      =============================================== -->
       <section id="portfolio" class="portfolio section light-background">
-        <!-- Section Title -->
+        <!-- ===============================================
+        ==================== SECTION TITLE ==================
+        =============================================== -->
         <div class="container section-title" data-aos="fade-up">
-          <h2 data-en="Portfolio" data-fa="نمونه کارها">Portfolio</h2>
+          <h2 data-en="Articles" data-fa="مقالات">Articles</h2>
           <p
-            data-en="A showcase of my technical projects and implementations in network infrastructure, system administration, and DevOps solutions."
-            data-fa="نمایشی از پروژه‌های فنی و پیاده‌سازی‌های من در زیرساخت شبکه، مدیریت سیستم و راهکارهای DevOps."
+            data-en="A collection of my technical articles and insights on network infrastructure, system administration, and DevOps solutions."
+            data-fa="مجموعه‌ای از مقالات فنی و بینش‌های من در زمینه زیرساخت شبکه، مدیریت سیستم و راهکارهای DevOps."
           >
-            A showcase of my technical projects and implementations in network
+            A collection of my technical articles and insights on network
             infrastructure, system administration, and DevOps solutions.
           </p>
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== ARTICLES CONTAINER ==============
+        =============================================== -->
         <div class="container">
           <div
             class="isotope-layout"
@@ -1158,19 +1629,25 @@
             data-layout="masonry"
             data-sort="original-order"
           >
+            <!-- ===============================================
+            ==================== FILTER BUTTONS =================
+            =============================================== -->
             <ul
               class="portfolio-filters isotope-filters"
               data-aos="fade-up"
               data-aos-delay="100"
             >
+              <!-- All Articles Filter -->
               <li
                 data-filter="*"
                 class="filter-active"
-                data-en="All"
-                data-fa="همه"
+                data-en="All Articles"
+                data-fa="همه مقالات"
               >
-                All
+                All Articles
               </li>
+
+              <!-- Microsoft Articles Filter -->
               <li
                 data-filter=".filter-microsoft"
                 data-en="Microsoft"
@@ -1178,9 +1655,17 @@
               >
                 Microsoft
               </li>
-              <li data-filter=".filter-linux" data-en="Linux" data-fa="لینوکس">
-                Linux
+
+              <!-- Linux Articles Filter -->
+              <li
+                data-filter=".filter-linux"
+                data-en="Linux Articles"
+                data-fa="لینوکس"
+              >
+                Linux Articles
               </li>
+
+              <!-- MikroTik Articles Filter -->
               <li
                 data-filter=".filter-mikrotik"
                 data-en="MikroTik"
@@ -1188,37 +1673,56 @@
               >
                 MikroTik
               </li>
+
+              <!-- VMware Articles Filter -->
               <li
                 data-filter=".filter-vmware"
                 data-en="Vmware"
-                data-fa="وی‌ام‌ویر"
+                data-fa="مجازی‌سازی"
               >
                 Vmware
               </li>
-              <li data-filter=".filter-others" data-en="Others" data-fa="سایر">
-                Others
+
+              <!-- Other Articles Filter -->
+              <li
+                data-filter=".filter-others"
+                data-en="Other Articles"
+                data-fa="سایر مقالات"
+              >
+                Other Articles
               </li>
             </ul>
-            <!-- End Portfolio Filters -->
+            <!-- End Filter Buttons -->
 
+            <!-- ===============================================
+            ==================== ARTICLES GRID ==================
+            =============================================== -->
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
               data-aos-delay="200"
             >
+              <!-- ===============================================
+              ==================== ARTICLE 1: LINUX ===============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="MikroTik RouterOS Configuration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>MikroTik RouterOS Configuration</h4>
                     <p>Advanced firewall and routing setup</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-1.png"
                       title="App 1"
@@ -1226,6 +1730,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1235,21 +1741,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 1 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 2: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Windows Server Infrastructure"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Windows Server Infrastructure</h4>
                     <p>Active Directory and DNS implementation</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-1.png"
                       title="Product 1"
@@ -1257,6 +1771,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1266,21 +1782,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 2 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 3: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Cisco Network Design"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Cisco Network Design</h4>
                     <p>Enterprise switching and VLAN configuration</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-1.png"
                       title="Branding 1"
@@ -1288,6 +1812,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1297,21 +1823,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 3 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 4: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Linux Server Administration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Linux Server Administration</h4>
                     <p>Ubuntu and CentOS server management</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-2.png"
                       title="Linux Server Administration"
@@ -1319,6 +1853,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1328,21 +1864,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 4 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 5: LINUX ===============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="VPN Tunnel Implementation"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>VPN Tunnel Implementation</h4>
                     <p>Site-to-site secure connections</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-2.png"
                       title="App 2"
@@ -1350,6 +1894,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1359,21 +1905,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 5 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 6: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="SQL Server Clustering"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>SQL Server Clustering</h4>
                     <p>High availability database setup</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-2.png"
                       title="Product 2"
@@ -1381,6 +1935,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1390,21 +1946,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 6 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 7: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="microsoft vSphere Deployment"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>VMware vSphere Deployment</h4>
                     <p>Virtualization infrastructure design</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-3.png"
                       title="microsoft vSphere Deployment"
@@ -1412,6 +1976,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1421,21 +1987,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 7 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 8: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Monitoring with Zabbix"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Monitoring with Zabbix</h4>
                     <p>Network and system monitoring setup</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-3.png"
                       title="Monitoring with Zabbix"
@@ -1443,6 +2017,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1452,21 +2028,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 8 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 9: LINUX ===============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Docker Containerization"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Docker Containerization</h4>
                     <p>Application deployment and management</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-3.png"
                       title="App 3"
@@ -1474,6 +2058,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1483,21 +2069,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 9 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 10: LINUX ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-4.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Backup & Recovery System"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Backup & Recovery System</h4>
                     <p>Veeam backup implementation</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-4.png"
                       title="Backup & Recovery System"
@@ -1505,6 +2099,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1514,21 +2110,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 10 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 11: OTHERS =============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/other-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Load Balancing Configuration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Load Balancing Configuration</h4>
                     <p>Multi-connection internet optimization</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/other-2.png"
                       title="Branding 2"
@@ -1536,6 +2140,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1545,21 +2151,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 11 -->
 
+              <!-- ===============================================
+              ==================== ARTICLE 12: VMWARE ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vmware"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/vmware-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="VMware vSphere Management"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>VMware vSphere Management</h4>
                     <p>Virtualization platform administration</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/vmware-1.png"
                       title="Portfolio Item"
@@ -1567,6 +2181,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1576,20 +2192,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 12 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 13: VMWARE ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vmware"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/vmware-2.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Network Monitoring Setup"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Network Monitoring Setup</h4>
                     <p>Advanced monitoring and alerting system</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/vmware-2.png"
                       title="Portfolio Item"
@@ -1597,6 +2222,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1606,20 +2233,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 13 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 14: LINUX ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-5.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Database Clustering"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Database Clustering</h4>
                     <p>High availability database configuration</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-5.png"
                       title="Portfolio Item"
@@ -1627,6 +2263,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1636,20 +2274,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 14 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 15: OTHERS =============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/other-1.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Cloud Infrastructure"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Cloud Infrastructure</h4>
                     <p>Multi-cloud deployment and management</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/other-1.png"
                       title="Portfolio Item"
@@ -1657,6 +2304,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1666,20 +2315,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 15 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 16: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-4.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Network Security"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Network Security</h4>
                     <p>Firewall and security policy implementation</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-4.png"
                       title="Portfolio Item"
@@ -1687,6 +2345,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1696,20 +2356,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 16 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 17: OTHERS =============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-others"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/other-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Automation Solutions"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Automation Solutions</h4>
                     <p>Workflow automation and scripting</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/other-3.png"
                       title="Portfolio Item"
@@ -1717,6 +2386,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1726,20 +2397,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 17 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 18: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-4.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Windows Server Management"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Windows Server Management</h4>
                     <p>Active Directory and enterprise services</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-4.png"
                       title="Portfolio Item"
@@ -1747,6 +2427,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1756,20 +2438,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 18 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 19: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-5.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Router Configuration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Router Configuration</h4>
                     <p>Advanced routing and traffic management</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-5.png"
                       title="Portfolio Item"
@@ -1777,6 +2468,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1786,20 +2479,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 19 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 20: VMWARE ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vmware"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/vmware-3.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Virtualization Infrastructure"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Virtualization Infrastructure</h4>
                     <p>Enterprise virtualization solutions</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/vmware-3.png"
                       title="Portfolio Item"
@@ -1807,6 +2509,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1816,20 +2520,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 20 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 21: LINUX ==============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-linux"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/linux-6.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Linux Administration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Linux Administration</h4>
                     <p>Server management and optimization</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/linux-6.png"
                       title="Portfolio Item"
@@ -1837,6 +2550,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1846,20 +2561,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 21 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 22: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-5.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Enterprise Services"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Enterprise Services</h4>
                     <p>DNS, DFS, WSUS and enterprise solutions</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-5.png"
                       title="Portfolio Item"
@@ -1867,6 +2591,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1876,20 +2602,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 22 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 23: MIKROTIK ============
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mikrotik"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/mikrotik-6.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="Network Optimization"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>Network Optimization</h4>
                     <p>Performance tuning and traffic shaping</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/mikrotik-6.png"
                       title="Portfolio Item"
@@ -1897,6 +2632,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1906,20 +2643,29 @@
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Article 23 -->
+
+              <!-- ===============================================
+              ==================== ARTICLE 24: MICROSOFT ===========
+              =============================================== -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-microsoft"
               >
                 <div class="portfolio-content h-100">
+                  <!-- Article Thumbnail -->
                   <img
                     src="assets/img/portfolio/windows-6.png"
                     loading="lazy"
                     class="img-fluid"
                     alt="System Integration"
                   />
+
+                  <!-- Article Info Overlay -->
                   <div class="portfolio-info">
                     <h4>System Integration</h4>
                     <p>Enterprise system integration and migration</p>
+
+                    <!-- Preview Link -->
                     <a
                       href="assets/img/portfolio/windows-6.png"
                       title="Portfolio Item"
@@ -1927,6 +2673,8 @@
                       class="glightbox preview-link"
                       ><i class="bi bi-zoom-in"></i
                     ></a>
+
+                    <!-- Details Link -->
                     <a
                       href="portfolio-details.html"
                       title="More Details"
@@ -1936,15 +2684,20 @@
                   </div>
                 </div>
               </div>
+              <!-- End Article 24 -->
               <!-- End Portfolio Item -->
             </div>
-            <!-- End Portfolio Container -->
+            <!-- End Articles Grid -->
           </div>
+          <!-- End Articles Container -->
         </div>
+        <!-- End Main Container -->
       </section>
-      <!-- /Portfolio Section -->
+      <!-- End Articles Section -->
 
-      <!-- Services Section -->
+      <!-- ===============================================
+      ==================== SERVICES SECTION ===============
+      =============================================== -->
       <section id="services" class="services section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -1959,8 +2712,12 @@
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== SERVICES CONTENT ================
+        =============================================== -->
         <div class="container">
           <div class="row gy-4">
+            <!-- Service 1: Network Design -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -1990,8 +2747,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 1 -->
 
+            <!-- Service 2: System Administration -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -2021,8 +2779,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 2 -->
 
+            <!-- Service 3: DevOps & Automation -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -2052,8 +2811,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 3 -->
 
+            <!-- Service 4: Monitoring & Security -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -2083,8 +2843,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 4 -->
 
+            <!-- Service 5: Virtualization Solutions -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -2113,8 +2874,9 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 5 -->
 
+            <!-- Service 6: Technical Consulting -->
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
@@ -2141,13 +2903,17 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
+            <!-- End Service 6 -->
           </div>
+          <!-- End Services Row -->
         </div>
+        <!-- End Services Container -->
       </section>
       <!-- /Services Section -->
 
-      <!-- Testimonials Section -->
+      <!-- ===============================================
+      ==================== TESTIMONIALS SECTION ============
+      =============================================== -->
       <section id="testimonials" class="testimonials section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -2162,7 +2928,11 @@
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== TESTIMONIALS CONTENT =============
+        =============================================== -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Swiper Configuration -->
           <div class="swiper init-swiper">
             <script type="application/json" class="swiper-config">
               {
@@ -2189,7 +2959,10 @@
                 }
               }
             </script>
+            
+            <!-- Testimonials Slider -->
             <div class="swiper-wrapper">
+              <!-- Testimonial 1 -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -2221,8 +2994,9 @@
                   </h4>
                 </div>
               </div>
-              <!-- End testimonial item -->
+              <!-- End Testimonial 1 -->
 
+              <!-- Testimonial 2 -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -2254,8 +3028,9 @@
                   </h4>
                 </div>
               </div>
-              <!-- End testimonial item -->
+              <!-- End Testimonial 2 -->
 
+              <!-- Testimonial 3 -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -2287,8 +3062,9 @@
                   </h4>
                 </div>
               </div>
-              <!-- End testimonial item -->
+              <!-- End Testimonial 3 -->
 
+              <!-- Testimonial 4 -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -2318,8 +3094,9 @@
                   </h4>
                 </div>
               </div>
-              <!-- End testimonial item -->
+              <!-- End Testimonial 4 -->
 
+              <!-- Testimonial 5 -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -2349,15 +3126,22 @@
                   </h4>
                 </div>
               </div>
-              <!-- End testimonial item -->
+              <!-- End Testimonial 5 -->
             </div>
+            <!-- End Testimonials Slider -->
+            
+            <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
           </div>
+          <!-- End Swiper Container -->
         </div>
+        <!-- End Testimonials Container -->
       </section>
       <!-- /Testimonials Section -->
 
-      <!-- Contact Section -->
+      <!-- ===============================================
+      ==================== CONTACT SECTION ================
+      =============================================== -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -2372,11 +3156,17 @@
         </div>
         <!-- End Section Title -->
 
+        <!-- ===============================================
+        ==================== CONTACT CONTENT ================
+        =============================================== -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
+            <!-- ===============================================
+            ==================== CONTACT INFO ==================
+            =============================================== -->
             <div class="col-lg-5">
               <div class="info-wrap">
-                <!-- آدرس -->
+                <!-- Address Info -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2392,7 +3182,7 @@
                 </div>
                 <!-- End Info Item -->
 
-                <!-- تلفن -->
+                <!-- Phone Info -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2413,7 +3203,7 @@
                 </div>
                 <!-- End Info Item -->
 
-                <!-- واتساپ -->
+                <!-- WhatsApp Info -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2436,7 +3226,7 @@
                 </div>
                 <!-- End Info Item -->
 
-                <!-- تلگرام -->
+                <!-- Telegram Info -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2457,7 +3247,7 @@
                 </div>
                 <!-- End Info Item -->
 
-                <!-- ایمیل -->
+                <!-- Email Info -->
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -2475,6 +3265,7 @@
                 </div>
                 <!-- End Info Item -->
 
+                <!-- Google Maps -->
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1145.5099796149461!2d51.40510627035861!3d35.701826831163324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e010c2bbc0853%3A0xd7ec3a4d591a3242!2sReza%20Computer%20Center!5e0!3m2!1sen!2sde!4v1756209223815!5m2!1sen!2sde"
                   frameborder="0"
@@ -2485,7 +3276,11 @@
                 ></iframe>
               </div>
             </div>
+            <!-- End Contact Info -->
 
+            <!-- ===============================================
+            ==================== CONTACT FORM ==================
+            =============================================== -->
             <div class="col-lg-7">
               <form
                 action="forms/contact.php"
@@ -2600,13 +3395,19 @@
             </div>
             <!-- End Contact Form -->
           </div>
+          <!-- End Contact Row -->
         </div>
+        <!-- End Contact Container -->
       </section>
       <!-- /Contact Section -->
     </main>
 
+    <!-- ===============================================
+    ==================== FOOTER SECTION ==================
+    =============================================== -->
     <footer id="footer" class="footer position-relative light-background">
       <div class="container">
+        <!-- Copyright -->
         <div class="copyright text-center">
           <p>
             © <span>2025</span>
@@ -2621,10 +3422,15 @@
             >
           </p>
         </div>
+        <!-- End Copyright -->
       </div>
+      <!-- End Footer Container -->
     </footer>
+    <!-- End Footer Section -->
 
-    <!-- Scroll Top -->
+    <!-- ===============================================
+    ==================== SCROLL TO TOP ===================
+    =============================================== -->
     <a
       href="#hero"
       id="scroll-top"
@@ -2633,43 +3439,73 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <!-- Preloader -->
+    <!-- ===============================================
+    ==================== PRELOADER =======================
+    =============================================== -->
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
+    <!-- ===============================================
+    ==================== VENDOR JAVASCRIPT ===============
+    =============================================== -->
+    <!-- Bootstrap JavaScript Bundle -->
     <script
       src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
       defer
     ></script>
+
+    <!-- PHP Email Form Validation -->
     <script src="assets/vendor/php-email-form/validate.js" defer></script>
+
+    <!-- AOS Animation Library -->
     <script src="assets/vendor/aos/aos.js" defer></script>
+
+    <!-- Typed.js Text Animation -->
     <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+
+    <!-- PureCounter Counter Animation -->
     <script
       src="assets/vendor/purecounter/purecounter_vanilla.js"
       defer
     ></script>
+
+    <!-- Waypoints Scroll Triggers -->
     <script
       src="assets/vendor/waypoints/noframework.waypoints.js"
       defer
     ></script>
+
+    <!-- GLightbox Gallery -->
     <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+
+    <!-- ImagesLoaded Plugin -->
     <script
       src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"
       defer
     ></script>
+
+    <!-- Isotope Layout Plugin -->
     <script
       src="assets/vendor/isotope-layout/isotope.pkgd.min.js"
       defer
     ></script>
+
+    <!-- Swiper Slider -->
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
-    <!-- Main JS File - Optimized -->
+    <!-- ===============================================
+    ==================== MAIN JAVASCRIPT =================
+    =============================================== -->
+    <!-- Main Application JavaScript -->
     <script src="assets/js/main.js?v=999" defer></script>
+
+    <!-- Internationalization (i18n) Support -->
     <script src="assets/js/i18n.js?v=999" defer></script>
 
-    <!-- Performance optimization -->
+    <!-- ===============================================
+    ==================== PERFORMANCE OPTIMIZATION ========
+    =============================================== -->
     <script>
-      // Preload critical resources
+      // Preload critical resources for better performance
       if ("requestIdleCallback" in window) {
         requestIdleCallback(() => {
           // Preload images that will be needed soon
@@ -2704,8 +3540,11 @@
       window.addEventListener("scroll", requestTick, { passive: true });
     </script>
 
-    <!-- PWA Service Worker -->
+    <!-- ===============================================
+    ==================== PWA SERVICE WORKER ================
+    =============================================== -->
     <script>
+      // Register Service Worker for PWA functionality
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
           navigator.serviceWorker
@@ -2720,6 +3559,9 @@
       }
     </script>
 
-    <!-- Language switching is handled by i18n.js -->
+    <!-- ===============================================
+    ==================== END OF DOCUMENT ==================
+    =============================================== -->
+    <!-- Language switching functionality is handled by i18n.js -->
   </body>
 </html>

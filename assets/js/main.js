@@ -8,7 +8,7 @@
   const headerToggleBtn = document.querySelector("#menu-toggle");
   const header = document.querySelector("#header");
 
-  // ایجاد overlay برای موبایل
+  // Create overlay for mobile
   let overlay = document.getElementById("menu-overlay");
   if (!overlay) {
     overlay = document.createElement("div");
@@ -28,11 +28,9 @@
           icon.classList.add("bi-x");
         }
       }
-      // بهبود عملکرد موبایل - جلوگیری از scroll
+      // Improve mobile performance - prevent scroll without changing position
       document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
-      document.body.style.top = `-${window.scrollY}px`;
+      // Remove position: fixed and top to prevent page position change
     }
   }
 
@@ -48,15 +46,9 @@
           icon.classList.remove("bi-x");
         }
       }
-      // بازگرداندن scroll position
-      const scrollY = document.body.style.top;
+      // Restore scroll position - without changing page position
       document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
-      document.body.style.top = "";
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
-      }
+      // Remove position: fixed and top to prevent page position change
     }
   }
 
@@ -77,42 +69,39 @@
     overlay.addEventListener("click", closeMenu);
   }
 
-  // بستن منو بعد از کلیک روی لینک‌های منو در موبایل
+  // Close menu after clicking menu links on mobile
   document.querySelectorAll("#navmenu a").forEach((navmenu) => {
-    navmenu.addEventListener("click", () => {
+    navmenu.addEventListener("click", (e) => {
       if (
         window.innerWidth < 1200 &&
         header &&
         header.classList.contains("header-show")
       ) {
         closeMenu();
+        // If link is Home and we're elsewhere, prevent going to Hero
+        if (navmenu.getAttribute("href") === "#hero" && window.scrollY > 200) {
+          e.preventDefault();
+          // Just close menu, don't change page position
+        }
       }
     });
   });
 
-  // بستن منو وقتی سایز صفحه تغییر می‌کند
-  // این event listener در انتهای فایل اضافه می‌شود
+  // Close menu when page size changes
+  // This event listener is added at the end of the file
 
-  // بهبود عملکرد موبایل - جلوگیری از scroll body وقتی منو باز است
+  // Improve mobile performance - prevent body scroll when menu is open
   function preventBodyScroll() {
     if (header && header.classList.contains("header-show")) {
       document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
-      document.body.style.top = `-${window.scrollY}px`;
+      // Remove position: fixed and top to prevent page position change
     } else {
-      const scrollY = document.body.style.top;
       document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
-      document.body.style.top = "";
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
-      }
+      // Remove position: fixed and top to prevent page position change
     }
   }
 
-  // اضافه کردن event listener برای تغییر وضعیت منو
+  // Add event listener for menu state change
   const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (
@@ -128,9 +117,9 @@
     observer.observe(header, { attributes: true });
   }
 
-  // بهبود عملکرد touch events در موبایل
+  // Improve touch events performance on mobile
   if ("ontouchstart" in window) {
-    // اضافه کردن touch support برای منو
+    // Add touch support for menu
     if (headerToggleBtn) {
       headerToggleBtn.addEventListener(
         "touchstart",
@@ -142,10 +131,10 @@
       );
     }
 
-    // بهبود عملکرد لینک‌های منو در موبایل
+    // Improve menu links performance on mobile
     document.querySelectorAll("#navmenu a").forEach((link) => {
       link.addEventListener("touchstart", function (e) {
-        // اضافه کردن کمی delay برای بهبود UX
+        // Add small delay for better UX
         setTimeout(() => {
           if (
             window.innerWidth < 1200 &&
@@ -158,7 +147,7 @@
       });
     });
 
-    // بهبود عملکرد overlay در موبایل
+    // Improve overlay performance on mobile
     if (overlay) {
       overlay.addEventListener(
         "touchstart",
@@ -171,7 +160,7 @@
     }
   }
 
-  // بهبود عملکرد keyboard navigation
+  // Improve keyboard navigation performance
   document.addEventListener("keydown", function (e) {
     if (
       e.key === "Escape" &&
@@ -182,11 +171,11 @@
     }
   });
 
-  // scroll top در انتهای فایل مدیریت می‌شود
+  // scroll top is managed at the end of the file
 
   function aosInit() {
     if (window.AOS) {
-      // بهبود تنظیمات موبایل برای AOS
+      // Improve mobile settings for AOS
       let config = {
         duration: 600,
         easing: "ease-in-out",
@@ -195,8 +184,8 @@
       };
 
       if (window.innerWidth <= 768) {
-        config.duration = 400; // کاهش duration برای موبایل
-        config.offset = 50; // کاهش offset برای موبایل
+        config.duration = 400; // Reduce duration for mobile
+        config.offset = 50; // Reduce offset for mobile
       }
 
       AOS.init(config);
@@ -207,14 +196,14 @@
   // NOTE: Typed.js init is handled in i18n.js (reinitTyped).
 
   if (window.PureCounter) {
-    // بهبود تنظیمات موبایل برای PureCounter
+    // Improve mobile settings for PureCounter
     let config = {
       duration: 2000,
       delay: 10,
     };
 
     if (window.innerWidth <= 768) {
-      config.duration = 1500; // کاهش duration برای موبایل
+      config.duration = 1500; // Reduce duration for mobile
       config.delay = 5;
     }
 
@@ -224,10 +213,10 @@
   let skillsAnimation = document.querySelectorAll(".skills-animation");
   if (skillsAnimation.length > 0 && window.Waypoint) {
     skillsAnimation.forEach((item) => {
-      // بهبود تنظیمات موبایل برای Waypoint
+      // Improve mobile settings for Waypoint
       let offset = "80%";
       if (window.innerWidth <= 768) {
-        offset = "60%"; // کاهش offset برای موبایل
+        offset = "60%"; // Reduce offset for mobile
       }
 
       new Waypoint({
@@ -238,7 +227,7 @@
           progress.forEach((el) => {
             const value = el.getAttribute("aria-valuenow");
             if (value) {
-              // بهبود انیمیشن برای موبایل
+              // Improve animation for mobile
               let duration = "0.9s";
               if (window.innerWidth <= 768) {
                 duration = "0.6s";
@@ -253,7 +242,7 @@
   }
 
   if (window.GLightbox) {
-    // بهبود تنظیمات موبایل برای GLightbox
+    // Improve mobile settings for GLightbox
     let config = {
       selector: ".glightbox",
       touchNavigation: true,
@@ -263,7 +252,7 @@
 
     if (window.innerWidth <= 768) {
       config.touchNavigation = true;
-      config.keyboardNavigation = false; // غیرفعال کردن keyboard navigation در موبایل
+      config.keyboardNavigation = false; // Disable keyboard navigation on mobile
     }
 
     const glightbox = GLightbox(config);
@@ -281,12 +270,12 @@
         const container = isotopeItem.querySelector(".isotope-container");
 
         if (container && window.imagesLoaded && window.Isotope) {
-          // اطمینان از آماده بودن تصاویر
+          // Ensure images are ready
           imagesLoaded(container, function () {
-            // بهبود تنظیمات موبایل برای Isotope
+            // Improve mobile settings for Isotope
             let transitionDuration = "0.6s";
             if (window.innerWidth <= 768) {
-              transitionDuration = "0.4s"; // کاهش duration برای موبایل
+              transitionDuration = "0.4s"; // Reduce duration for mobile
             }
 
             initIsotope = new Isotope(container, {
@@ -297,13 +286,13 @@
               transitionDuration: transitionDuration,
             });
 
-            // بعد از اینیشیال Isotope، AOS را ریفرش کن
+            // After initializing Isotope, refresh AOS
             if (typeof aosInit === "function") {
               setTimeout(aosInit, 100);
             }
           });
 
-          // Event listeners برای فیلترها
+          // Event listeners for filters
           isotopeItem
             .querySelectorAll(".isotope-filters li")
             .forEach(function (filters) {
@@ -321,7 +310,7 @@
                     initIsotope.arrange({
                       filter: this.getAttribute("data-filter"),
                     });
-                    // بعد از فیلتر کردن هم AOS را ریفرش کن
+                    // After filtering, refresh AOS too
                     setTimeout(function () {
                       if (typeof aosInit === "function") aosInit();
                     }, 200);
@@ -330,7 +319,7 @@
                 false
               );
 
-              // بهبود عملکرد touch events برای فیلترها در موبایل
+              // Improve touch events performance for filters on mobile
               if ("ontouchstart" in window) {
                 filters.addEventListener(
                   "touchstart",
@@ -343,24 +332,24 @@
               }
             });
         } else {
-          // اگر Isotope یا imagesLoaded لود نشده، دوباره تلاش کن
+          // If Isotope or imagesLoaded not loaded, try again
           setTimeout(initPortfolio, 100);
         }
       });
   }
 
-  // Portfolio را بعد از load کامل DOM اجرا کن
+  // Run Portfolio after complete DOM load
   window.addEventListener("load", initPortfolio);
 
-  // بهبود عملکرد موبایل برای portfolio
+  // Improve mobile performance for portfolio
   function initPortfolioMobile() {
     if (window.innerWidth <= 768) {
-      // تنظیمات خاص موبایل برای portfolio
+      // Specific mobile settings for portfolio
       document.querySelectorAll(".portfolio-content").forEach((item) => {
         item.style.minHeight = "200px";
       });
 
-      // بهبود عملکرد touch events برای portfolio
+      // Improve touch events performance for portfolio
       document.querySelectorAll(".portfolio-content").forEach((item) => {
         item.addEventListener("touchstart", function (e) {
           this.style.transform = "scale(0.98)";
@@ -373,11 +362,11 @@
     }
   }
 
-  // اجرای تنظیمات موبایل برای portfolio
+  // Execute mobile settings for portfolio
   window.addEventListener("load", initPortfolioMobile);
   window.addEventListener("resize", initPortfolioMobile);
 
-  // بهبود عملکرد موبایل برای portfolio filters
+  // Improve mobile performance for portfolio filters
   function initPortfolioFiltersMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-filters li").forEach((filter) => {
@@ -391,7 +380,7 @@
   window.addEventListener("load", initPortfolioFiltersMobile);
   window.addEventListener("resize", initPortfolioFiltersMobile);
 
-  // بهبود عملکرد موبایل برای portfolio items
+  // Improve mobile performance for portfolio items
   function initPortfolioItemsMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-item").forEach((item) => {
@@ -403,7 +392,7 @@
   window.addEventListener("load", initPortfolioItemsMobile);
   window.addEventListener("resize", initPortfolioItemsMobile);
 
-  // بهبود عملکرد موبایل برای portfolio content
+  // Improve mobile performance for portfolio content
   function initPortfolioContentMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-content").forEach((content) => {
@@ -417,7 +406,7 @@
   window.addEventListener("load", initPortfolioContentMobile);
   window.addEventListener("resize", initPortfolioContentMobile);
 
-  // بهبود عملکرد موبایل برای portfolio info
+  // Improve mobile performance for portfolio info
   function initPortfolioInfoMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-info").forEach((info) => {
@@ -430,7 +419,7 @@
   window.addEventListener("load", initPortfolioInfoMobile);
   window.addEventListener("resize", initPortfolioInfoMobile);
 
-  // بهبود عملکرد موبایل برای portfolio links
+  // Improve mobile performance for portfolio links
   function initPortfolioLinksMobile() {
     if (window.innerWidth <= 768) {
       document
@@ -453,7 +442,7 @@
   window.addEventListener("load", initPortfolioLinksMobile);
   window.addEventListener("resize", initPortfolioLinksMobile);
 
-  // بهبود عملکرد موبایل برای portfolio images
+  // Improve mobile performance for portfolio images
   function initPortfolioImagesMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-content img").forEach((img) => {
@@ -467,7 +456,7 @@
   window.addEventListener("load", initPortfolioImagesMobile);
   window.addEventListener("resize", initPortfolioImagesMobile);
 
-  // بهبود عملکرد موبایل برای portfolio titles
+  // Improve mobile performance for portfolio titles
   function initPortfolioTitlesMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-info h4").forEach((title) => {
@@ -481,7 +470,7 @@
   window.addEventListener("load", initPortfolioTitlesMobile);
   window.addEventListener("resize", initPortfolioTitlesMobile);
 
-  // بهبود عملکرد موبایل برای portfolio descriptions
+  // Improve mobile performance for portfolio descriptions
   function initPortfolioDescriptionsMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio-info p").forEach((desc) => {
@@ -495,7 +484,7 @@
   window.addEventListener("load", initPortfolioDescriptionsMobile);
   window.addEventListener("resize", initPortfolioDescriptionsMobile);
 
-  // بهبود عملکرد موبایل برای portfolio container
+  // Improve mobile performance for portfolio container
   function initPortfolioContainerMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".isotope-container").forEach((container) => {
@@ -507,7 +496,7 @@
   window.addEventListener("load", initPortfolioContainerMobile);
   window.addEventListener("resize", initPortfolioContainerMobile);
 
-  // بهبود عملکرد موبایل برای portfolio layout
+  // Improve mobile performance for portfolio layout
   function initPortfolioLayoutMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".isotope-layout").forEach((layout) => {
@@ -519,7 +508,7 @@
   window.addEventListener("load", initPortfolioLayoutMobile);
   window.addEventListener("resize", initPortfolioLayoutMobile);
 
-  // بهبود عملکرد موبایل برای portfolio section
+  // Improve mobile performance for portfolio section
   function initPortfolioSectionMobile() {
     if (window.innerWidth <= 768) {
       document.querySelectorAll(".portfolio.section").forEach((section) => {
@@ -531,7 +520,7 @@
   window.addEventListener("load", initPortfolioSectionMobile);
   window.addEventListener("resize", initPortfolioSectionMobile);
 
-  // بهبود عملکرد موبایل برای portfolio title
+  // Improve mobile performance for portfolio title
   function initPortfolioTitleMobile() {
     if (window.innerWidth <= 768) {
       document
@@ -556,7 +545,7 @@
             try {
               let config = JSON.parse(configElement.innerHTML.trim());
 
-              // بهبود تنظیمات موبایل برای Swiper
+              // Improve mobile settings for Swiper
               if (window.innerWidth <= 768) {
                 config.slidesPerView = 1;
                 config.spaceBetween = 20;
@@ -589,9 +578,9 @@
         let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
         let offset = parseInt(scrollMarginTop) || 0;
 
-        // بهبود عملکرد موبایل برای scroll
+        // Improve mobile performance for scroll
         if (window.innerWidth <= 768) {
-          offset += 20; // اضافه کردن margin بیشتر برای موبایل
+          offset += 20; // Add more margin for mobile
         }
 
         window.scrollTo({
@@ -609,10 +598,10 @@
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
 
-      // بهبود عملکرد موبایل برای scrollspy
+      // Improve mobile performance for scrollspy
       let offset = 200;
       if (window.innerWidth <= 768) {
-        offset = 100; // کاهش offset برای موبایل
+        offset = 100; // Reduce offset for mobile
       }
 
       let position = window.scrollY + offset;
@@ -632,7 +621,7 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 
-  // بهبود عملکرد موبایل برای scroll events
+  // Improve mobile performance for scroll events
   let scrollTimeout;
   function throttledScroll() {
     if (!scrollTimeout) {
@@ -643,18 +632,18 @@
     }
   }
 
-  // استفاده از throttled scroll برای بهبود عملکرد
+  // Use throttled scroll for better performance
   document.addEventListener("scroll", throttledScroll);
 
-  // حذف event listener قدیمی scroll
+  // Remove old scroll event listener
   document.removeEventListener("scroll", navmenuScrollspy);
 
-  // بهبود عملکرد موبایل برای resize events
+  // Improve mobile performance for resize events
   let resizeTimeout;
   function throttledResize() {
     if (!resizeTimeout) {
       resizeTimeout = setTimeout(function () {
-        // اجرای مجدد تنظیمات موبایل
+        // Re-execute mobile settings
         initPortfolioMobile();
         initSwiper();
         resizeTimeout = null;
@@ -664,7 +653,7 @@
 
   window.addEventListener("resize", throttledResize);
 
-  // اضافه کردن event listener جدید resize
+  // Add new resize event listener
   window.addEventListener("resize", function () {
     if (
       window.innerWidth >= 1200 &&
@@ -675,7 +664,7 @@
     }
   });
 
-  // بهبود عملکرد موبایل برای preloader
+  // Improve mobile performance for preloader
   const preloader = document.querySelector("#preloader");
   if (preloader) {
     window.addEventListener("load", () => {
@@ -688,13 +677,13 @@
     });
   }
 
-  // بهبود عملکرد موبایل برای scroll top
+  // Improve mobile performance for scroll top
   let scrollTop = document.querySelector(".scroll-top");
   function toggleScrollTop() {
     if (!scrollTop) return;
     let threshold = 100;
     if (window.innerWidth <= 768) {
-      threshold = 50; // کاهش threshold برای موبایل
+      threshold = 50; // Reduce threshold for mobile
     }
 
     window.scrollY > threshold
