@@ -1889,11 +1889,11 @@ html[dir="rtl"] .resume .resume-item::before {
   color: var(--accent-color);
   background: linear-gradient(
     135deg,
-    rgba(0, 122, 255, 0.1),
-    rgba(0, 81, 213, 0.15)
+    rgba(20, 184, 166, 0.1),
+    rgba(13, 148, 136, 0.15)
   );
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+  box-shadow: 0 4px 12px var(--shadow-accent);
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -2040,13 +2040,13 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .services .service-item:hover .icon {
-  background: linear-gradient(135deg, var(--apple-green), #30D158);
+  background: linear-gradient(135deg, var(--accent), var(--accent-400));
   transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(52, 199, 89, 0.4);
+  box-shadow: 0 6px 20px var(--shadow-accent);
 }
 
 .services .service-item:hover .icon i {
-  color: var(--apple-white);
+  color: #ffffff;
   transform: scale(1.1);
   filter: brightness(1.2);
 }
@@ -2162,7 +2162,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .testimonials .testimonial-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-color: var(--apple-blue);
+  border-color: var(--accent);
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -2177,7 +2177,7 @@ html[dir="rtl"] .resume .resume-item::before {
 .testimonials .testimonial-item:hover .testimonial-img {
   transform: scale(1.05);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  border-color: var(--apple-blue);
+  border-color: var(--accent);
 }
 
 .testimonials .testimonial-item h3 {
@@ -2190,7 +2190,7 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .testimonials .testimonial-item:hover h3 {
-  color: var(--apple-blue);
+  color: var(--accent);
 }
 
 .testimonials .testimonial-item h4 {
@@ -2217,7 +2217,7 @@ html[dir="rtl"] .resume .resume-item::before {
 
 .testimonials .testimonial-item:hover .quote-icon-left,
 .testimonials .testimonial-item:hover .quote-icon-right {
-  color: var(--apple-blue);
+  color: var(--accent);
   opacity: 1;
 }
 
@@ -2299,7 +2299,7 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--apple-blue);
+  background: var(--accent);
   transform: scale(1.3);
 }
 
@@ -2411,30 +2411,30 @@ html[dir="rtl"] .resume .resume-item::before {
   color: var(--apple-white);
 }
 
-/* آیکون آدرس - سبز اپل */
+/* آیکون آدرس - سبز موفقیت */
 .contact .info-item i.bi-geo-alt {
-  color: var(--apple-green);
-  background: rgba(52, 199, 89, 0.1);
-  border-color: rgba(52, 199, 89, 0.3);
+  color: var(--success);
+  background: rgba(22, 163, 74, 0.1);
+  border-color: rgba(22, 163, 74, 0.3);
 }
 
 .contact .info-item:hover i.bi-geo-alt {
-  background: var(--apple-green);
+  background: var(--success);
   color: white;
-  border-color: var(--apple-green);
+  border-color: var(--success);
 }
 
-/* آیکون تلفن - آبی اپل */
+/* آیکون تلفن - آبی اطلاعات */
 .contact .info-item i.bi-telephone {
-  color: var(--apple-blue);
-  background: rgba(0, 122, 255, 0.1);
-  border-color: rgba(0, 122, 255, 0.3);
+  color: var(--info);
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.3);
 }
 
 .contact .info-item:hover i.bi-telephone {
-  background: var(--apple-blue);
+  background: var(--info);
   color: white;
-  border-color: var(--apple-blue);
+  border-color: var(--info);
 }
 
 /* آیکون واتساپ - سبز واتساپ */
@@ -2463,17 +2463,17 @@ html[dir="rtl"] .resume .resume-item::before {
   border-color: #0088cc;
 }
 
-/* آیکون ایمیل - قرمز اپل */
+/* آیکون ایمیل - قرمز خطر */
 .contact .info-item i.bi-envelope {
-  color: var(--apple-red);
-  background: rgba(255, 59, 48, 0.1);
-  border-color: rgba(255, 59, 48, 0.3);
+  color: var(--danger);
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .contact .info-item:hover i.bi-envelope {
-  background: var(--apple-red);
+  background: var(--danger);
   color: white;
-  border-color: var(--apple-red);
+  border-color: var(--danger);
 }
 
 .contact .php-email-form {
