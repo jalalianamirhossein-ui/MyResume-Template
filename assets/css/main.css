@@ -23,27 +23,27 @@
 /* Global Colors - Professional Color Palette */
 :root {
   /* Primary Colors (اعتماد/امنیت) */
-  --primary: #0B3A5F; /* رنگ اصلی - اعتماد و امنیت */
-  --primary-600: #144E78; /* سایه تیره‌تر */
-  --primary-400: #2D6E9F; /* سایه روشن‌تر */
-  
+  --primary: #0b3a5f; /* رنگ اصلی - اعتماد و امنیت */
+  --primary-600: #144e78; /* سایه تیره‌تر */
+  --primary-400: #2d6e9f; /* سایه روشن‌تر */
+
   /* Accent Colors (هایلایت/لینک) */
-  --accent: #14B8A6; /* رنگ هایلایت و لینک */
-  --accent-600: #0D9488; /* سایه تیره‌تر */
-  --accent-400: #2DD4BF; /* سایه روشن‌تر */
-  
+  --accent: #14b8a6; /* رنگ هایلایت و لینک */
+  --accent-600: #0d9488; /* سایه تیره‌تر */
+  --accent-400: #2dd4bf; /* سایه روشن‌تر */
+
   /* Neutral Colors (روشن) */
-  --bg: #F8FAFC; /* پس‌زمینه اصلی */
-  --surface: #F1F5F9; /* سطح کارت‌ها */
-  --border: #CBD5E1; /* حاشیه‌ها */
-  --text: #0F172A; /* متن اصلی */
+  --bg: #f8fafc; /* پس‌زمینه اصلی */
+  --surface: #f1f5f9; /* سطح کارت‌ها */
+  --border: #cbd5e1; /* حاشیه‌ها */
+  --text: #0f172a; /* متن اصلی */
   --muted: #475569; /* متن کم‌رنگ */
-  
+
   /* Status Colors */
-  --success: #16A34A; /* موفقیت */
-  --warning: #F59E0B; /* هشدار */
-  --danger: #DC2626; /* خطر */
-  --info: #0284C7; /* اطلاعات */
+  --success: #16a34a; /* موفقیت */
+  --warning: #f59e0b; /* هشدار */
+  --danger: #dc2626; /* خطر */
+  --info: #0284c7; /* اطلاعات */
 
   /* Global Color Variables - Professional Style */
   --pure-black: var(--text); /* متن اصلی */
@@ -68,11 +68,7 @@
     var(--primary-600)
   );
   --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-400));
-  --gradient-hero: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--accent)
-  );
+  --gradient-hero: linear-gradient(135deg, var(--primary), var(--accent));
   --gradient-surface: linear-gradient(135deg, var(--surface), var(--bg));
 
   /* Shadow Colors - Professional Style */
@@ -101,13 +97,13 @@
 }
 
 .dark-background {
-  --background-color: #0B1220; /* پس‌زمینه تاریک */
-  --surface-color: #0F172A; /* سطح تاریک */
-  --border-color: #1F2937; /* حاشیه تاریک */
-  --default-color: #E5E7EB; /* متن تاریک */
-  --heading-color: #E5E7EB; /* عنوان تاریک */
+  --background-color: #0b1220; /* پس‌زمینه تاریک */
+  --surface-color: #0f172a; /* سطح تاریک */
+  --border-color: #1f2937; /* حاشیه تاریک */
+  --default-color: #e5e7eb; /* متن تاریک */
+  --heading-color: #e5e7eb; /* عنوان تاریک */
   --accent-color: var(--accent); /* هایلایت */
-  --muted-color: #94A3B8; /* متن کم‌رنگ تاریک */
+  --muted-color: #94a3b8; /* متن کم‌رنگ تاریک */
   --contrast-color: #ffffff;
 }
 
@@ -337,11 +333,7 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary-600)
-  );
+  background: linear-gradient(135deg, var(--primary), var(--primary-600));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -871,7 +863,11 @@ section,
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-blue) 0%,
+    var(--apple-blue-dark) 100%
+  );
   border-radius: 2px;
   left: 0;
   bottom: 0;
@@ -982,7 +978,7 @@ html[dir="rtl"] .section-title p {
     justify-content: center;
     padding-top: 70vh;
   }
-  
+
   /* دکمه‌های کوچک‌تر و کنار هم در موبایل */
   .hero .social-links {
     display: flex;
@@ -990,7 +986,7 @@ html[dir="rtl"] .section-title p {
     gap: 0.5rem;
     justify-content: center;
   }
-  
+
   .hero .social-links a {
     font-size: 18px;
     margin-right: 0;
@@ -1517,9 +1513,9 @@ html[dir="rtl"] .skills .progress .skill .val {
   background: linear-gradient(
     135deg,
     var(--apple-green),
-    /* Apple Green Base */ #30D158,
+    /* Apple Green Base */ #30d158,
     /* Lighter Apple Green */ var(--apple-green),
-    /* Apple Green Base */ #28A745 /* Darker Apple Green */
+    /* Apple Green Base */ #28a745 /* Darker Apple Green */
   );
   background-size: 300% 100%;
   animation: warmBeigeFlow 4s ease-in-out infinite;
@@ -1617,7 +1613,7 @@ html[dir="rtl"] .skills .progress .skill .val {
   background: linear-gradient(
     135deg,
     var(--apple-blue) 0%,
-    #5AC8FA 50%,
+    #5ac8fa 50%,
     var(--apple-blue-dark) 100%
   );
   border-radius: 3px;
@@ -1713,7 +1709,11 @@ html[dir="rtl"] .resume .resume-item:hover {
   display: inline-block;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-blue) 0%,
+    var(--apple-blue-dark) 100%
+  );
   color: white;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4),
@@ -1722,7 +1722,11 @@ html[dir="rtl"] .resume .resume-item:hover {
 }
 
 .resume .resume-item:hover h5 {
-  background: linear-gradient(135deg, var(--apple-blue-dark) 0%, var(--apple-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-blue-dark) 0%,
+    var(--apple-blue) 100%
+  );
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 122, 255, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -2315,7 +2319,11 @@ html[dir="rtl"] .resume .resume-item::before {
 @media (max-width: 575px) {
   .contact .info-wrap {
     padding: 25px;
-    background: linear-gradient(135deg, var(--apple-white) 0%, var(--apple-gray-light) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--apple-white) 0%,
+      var(--apple-gray-light) 100%
+    );
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2477,7 +2485,11 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .contact .php-email-form {
-  background: linear-gradient(135deg, var(--apple-white) 0%, var(--apple-gray-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-white) 0%,
+    var(--apple-gray-light) 100%
+  );
   height: 100%;
   padding: 25px;
   border-radius: 15px;
@@ -2495,7 +2507,12 @@ html[dir="rtl"] .resume .resume-item::before {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--apple-blue), var(--apple-green), var(--apple-orange));
+  background: linear-gradient(
+    90deg,
+    var(--apple-blue),
+    var(--apple-green),
+    var(--apple-orange)
+  );
   border-radius: 15px 15px 0 0;
 }
 
@@ -2564,7 +2581,11 @@ html[dir="rtl"] .resume .resume-item::before {
 
 .contact .php-email-form button[type="submit"] {
   color: var(--apple-white);
-  background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-blue) 0%,
+    var(--apple-blue-dark) 100%
+  );
   border: 0;
   padding: 12px 30px;
   font-size: 14px;
@@ -2599,7 +2620,11 @@ html[dir="rtl"] .resume .resume-item::before {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: linear-gradient(135deg, var(--apple-blue-dark) 0%, var(--apple-blue) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--apple-blue-dark) 0%,
+    var(--apple-blue) 100%
+  );
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 35px rgba(0, 122, 255, 0.4);
 }
@@ -3301,7 +3326,11 @@ html[dir="rtl"] .language-switcher {
 /* Article page uses the same header structure as main page */
 
 .article-header {
-  background: linear-gradient(135deg, var(--scandinavian-blue), var(--navy-blue));
+  background: linear-gradient(
+    135deg,
+    var(--scandinavian-blue),
+    var(--navy-blue)
+  );
   color: var(--pure-white);
   padding: 120px 0 80px 0;
   position: relative;
@@ -3427,7 +3456,8 @@ html[dir="rtl"] .language-switcher {
   color: var(--default-color);
 }
 
-.article-section ul, .article-section ol {
+.article-section ul,
+.article-section ol {
   margin: 20px 0;
   padding-left: 30px;
 }
@@ -3467,7 +3497,11 @@ html[dir="rtl"] .language-switcher {
 }
 
 .highlight-box {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(30, 58, 138, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.1),
+    rgba(30, 58, 138, 0.05)
+  );
   border: 1px solid var(--accent-color);
   border-radius: 12px;
   padding: 25px;
@@ -3506,7 +3540,7 @@ html[dir="rtl"] .language-switcher {
 .code-block pre {
   margin: 0;
   color: #d4d4d4;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -3516,7 +3550,11 @@ html[dir="rtl"] .language-switcher {
 }
 
 .info-box {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(5, 150, 105, 0.05)
+  );
   border: 1px solid #10b981;
   border-radius: 12px;
   padding: 25px;
@@ -3580,7 +3618,11 @@ html[dir="rtl"] .language-switcher {
 }
 
 .security-checklist {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1),
+    rgba(220, 38, 38, 0.05)
+  );
   border: 1px solid #ef4444;
   border-radius: 12px;
   padding: 25px;
@@ -3838,49 +3880,49 @@ html[dir="rtl"] .related-content {
   .article-title {
     font-size: 2.2rem;
   }
-  
+
   .article-excerpt {
     font-size: 1.1rem;
   }
-  
+
   .article-section h2 {
     font-size: 2rem;
   }
-  
+
   .article-section h3 {
     font-size: 1.5rem;
   }
-  
+
   .article-section h4 {
     font-size: 1.2rem;
   }
-  
+
   .article-section p {
     font-size: 1rem;
   }
-  
+
   .tools-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .author-card {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .author-photo {
     width: 80px;
     height: 80px;
   }
-  
+
   .related-articles h2 {
     font-size: 2rem;
   }
-  
+
   .related-content h3 {
     font-size: 1.2rem;
   }
@@ -3890,35 +3932,35 @@ html[dir="rtl"] .related-content {
   .article-header {
     padding: 100px 0 60px 0;
   }
-  
+
   .article-title {
     font-size: 1.8rem;
   }
-  
+
   .article-excerpt {
     font-size: 1rem;
   }
-  
+
   .article-content {
     padding: 60px 0;
   }
-  
+
   .article-section h2 {
     font-size: 1.8rem;
   }
-  
+
   .article-section h3 {
     font-size: 1.4rem;
   }
-  
+
   .metrics-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .related-articles {
     padding: 60px 0;
   }
-  
+
   .related-articles h2 {
     font-size: 1.8rem;
   }
@@ -4356,14 +4398,14 @@ html[dir="rtl"] .related-content {
     justify-content: center;
     padding-top: 70vh;
   }
-  
+
   /* دکمه‌های کوچک‌تر و کنار هم در موبایل */
   .hero-actions {
     flex-direction: row !important;
     gap: 0.5rem !important;
     justify-content: center;
   }
-  
+
   .hero-actions .btn {
     padding: 8px 16px !important;
     font-size: 0.8rem !important;
