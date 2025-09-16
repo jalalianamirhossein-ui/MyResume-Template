@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <!-- ===============================================
     MEET AJ PORTFOLIO - PORTFOLIO DETAILS PAGE
@@ -9,7 +9,7 @@
     and technical articles by AmirHossein Jalalian
     
     =============================================== -->
-    
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>مقاله: راهکارهای پیشرفته DevOps و زیرساخت شبکه - Meet AJ</title>
@@ -51,8 +51,13 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-    <link href="assets/css/rtl.css" rel="stylesheet" />
+    <link href="assets/css/main.css?v=999" rel="stylesheet" />
+    <link
+      id="rtl-style"
+      href="assets/css/rtl.css?v=999"
+      rel="stylesheet"
+      disabled
+    />
 
     <!-- =======================================================
   * Template Name: iPortfolio
@@ -80,7 +85,7 @@
     <!-- ===============================================
     ==================== HEADER SECTION ================
     =============================================== -->
-    <header id="header" class="header dark-background d-flex flex-column">
+    <header id="header" class="header d-flex flex-column">
       <!-- ===============================================
       ==================== PROFILE IMAGE =================
       =============================================== -->
@@ -115,8 +120,9 @@
             title="کلیک کنید تا زبان را تغییر دهید / Click to switch language"
           >
             <div class="lang-content">
-              <span class="lang-text">FA</span>
-              <div class="lang-flag">🇮🇷</div>
+              <span class="lang-text" data-en="فارسی" data-fa="English"
+                >English</span
+              >
             </div>
           </button>
         </div>
@@ -300,11 +306,11 @@
     <!-- Main Content -->
     <main class="main">
       <!-- Article Header -->
-      <section class="article-header">
+      <section class="article-header hero">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="article-meta">
+            <div class="col-lg-8 mx-auto text-center">
+              <div class="article-meta" data-aos="fade-up" data-aos-delay="100">
                 <span
                   class="article-category"
                   data-en="DevOps & Infrastructure"
@@ -321,7 +327,9 @@
               </div>
 
               <h1
-                class="article-title"
+                class="article-title hero-title"
+                data-aos="fade-up" 
+                data-aos-delay="200"
                 data-en="Advanced DevOps Solutions and Network Infrastructure Best Practices"
                 data-fa="راهکارهای پیشرفته DevOps و بهترین روش‌های زیرساخت شبکه"
               >
@@ -330,7 +338,9 @@
               </h1>
 
               <p
-                class="article-excerpt"
+                class="article-excerpt hero-subtitle"
+                data-aos="fade-up" 
+                data-aos-delay="300"
                 data-en="A comprehensive guide to implementing modern DevOps practices, containerization strategies, and network infrastructure optimization for enterprise environments."
                 data-fa="راهنمای جامع پیاده‌سازی روش‌های مدرن DevOps، استراتژی‌های کانتینری‌سازی و بهینه‌سازی زیرساخت شبکه برای محیط‌های سازمانی"
               >
@@ -339,11 +349,11 @@
                 optimization for enterprise environments.
               </p>
 
-              <div class="article-author">
+              <div class="article-author" data-aos="fade-up" data-aos-delay="400">
                 <img
                   src="assets/img/my-profile-img.jpg"
                   alt="Author"
-                  class="author-avatar"
+                  class="author-avatar hero-img"
                 />
                 <div class="author-info">
                   <span
@@ -1052,8 +1062,8 @@ CMD ["npm", "start"]</code></pre>
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
     <!-- Main JS Files -->
-    <script src="assets/js/i18n.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=999" defer></script>
+    <script src="assets/js/i18n.js?v=999" defer></script>
 
     <!-- Article Page Specific JavaScript -->
     <script>
