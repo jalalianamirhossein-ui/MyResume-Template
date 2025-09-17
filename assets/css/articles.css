@@ -1361,10 +1361,24 @@
   background: linear-gradient(135deg, #FBC02D, #FFC107);
 }
 
-/* ECMP Article Category */
-.article-ecmp .article-category {
-  background: linear-gradient(135deg, #0D47A1, #0288D1);
-  color: white;
+/* SSH Linux Article Theme - Professional Green Gradient */
+.article-ssh {
+  --article-primary: #1B5E20; /* سبز تیره - اصلی */
+  --article-primary-hover: #0D4A16;
+  --article-accent: #4CAF50; /* سبز روشن - هایلایت */
+  --article-secondary: #E8F5E8; /* سبز روشن - پس‌زمینه */
+  --article-success: #2E7D32; /* سبز زمردی - موفقیت */
+  --article-warning: #FF9800; /* نارنجی - هشدار */
+  --article-error: #D32F2F; /* قرمز - خطا */
+  --article-text-dark: #1B5E20; /* سبز تیره - متن اصلی */
+  --article-shadow: rgba(27, 94, 32, 0.2);
+  --article-gradient: linear-gradient(135deg, #1B5E20, #4CAF50, #E8F5E8);
+  --article-text-light: rgba(255, 255, 255, 0.95);
+  --article-text-medium: rgba(255, 255, 255, 0.85);
+  --article-bg-light: rgba(27, 94, 32, 0.05);
+  --article-bg-medium: rgba(27, 94, 32, 0.08);
+  --article-glass: rgba(255, 255, 255, 0.1);
+  --article-glass-border: rgba(255, 255, 255, 0.2);
 }
 
 /* Breadcrumbs Styling */
@@ -1404,6 +1418,427 @@
   content: "›";
   color: #0288D1;
   font-weight: bold;
+}
+
+/* SSH Article Specific Styles */
+.article-ssh .header .logo h1 {
+  color: #1B5E20 !important;
+  background: linear-gradient(135deg, #1B5E20, #4CAF50, #66BB6A) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease-in-out infinite;
+}
+
+.article-ssh {
+  --pcd-accent: var(--article-primary);
+  --pcd-border: rgba(46, 125, 50, 0.2);
+  --pcd-btn: rgba(46, 125, 50, 0.1);
+}
+
+.article-ssh .article-banner .banner-card {
+  background: var(--article-gradient);
+  box-shadow: 0 8px 32px var(--article-shadow);
+}
+
+.article-ssh .code-block {
+  background: linear-gradient(135deg, 
+    rgba(27, 94, 32, 0.9) 0%, 
+    rgba(76, 175, 80, 0.8) 50%, 
+    rgba(27, 94, 32, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(27, 94, 32, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .code-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.article-ssh .code-block .code-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.article-ssh .code-block .code-lang {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.article-ssh .code-block .copy-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .code-block .copy-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.article-ssh .code-block .copy-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+}
+
+.article-ssh .code-block .copy-btn:hover::before {
+  left: 100%;
+}
+
+.article-ssh .code-block pre {
+  color: #ECEFF1;
+}
+
+.article-ssh .method-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(232, 245, 232, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border-left: 6px solid #1B5E20;
+  box-shadow: 
+    0 8px 32px rgba(27, 94, 32, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.article-ssh .method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(27, 94, 32, 0.02) 0%, 
+    rgba(76, 175, 80, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article-ssh .method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 40px rgba(27, 94, 32, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-left-color: #4CAF50;
+}
+
+.article-ssh .method-card:hover::before {
+  opacity: 1;
+}
+
+.article-ssh .method-card .method-number-badge {
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .method-card .method-number-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 50%;
+}
+
+.article-ssh .method-card .method-title {
+  color: #1B5E20;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.article-ssh .method-card .method-icon {
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  color: white;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .method-card .method-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 12px;
+}
+
+.article-ssh .btn-primary {
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  box-shadow: 
+    0 4px 15px rgba(27, 94, 32, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.article-ssh .btn-primary:hover {
+  background: linear-gradient(135deg, #0D4A16, #2E7D32);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(27, 94, 32, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.article-ssh .btn-primary:hover::before {
+  left: 100%;
+}
+
+.article-ssh .btn-outline-secondary {
+  border: 2px solid #4CAF50;
+  color: #1B5E20;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .btn-outline-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article-ssh .btn-outline-secondary:hover {
+  color: white;
+  border-color: #1B5E20;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 94, 32, 0.3);
+}
+
+.article-ssh .btn-outline-secondary:hover::before {
+  opacity: 1;
+}
+
+.article-ssh .stat-item .stat-icon {
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .stat-item .stat-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 16px;
+}
+
+.article-ssh .stat-item:nth-child(2) .stat-icon {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+}
+
+.article-ssh .stat-item:nth-child(3) .stat-icon {
+  background: linear-gradient(135deg, #FF9800, #FFC107);
+}
+
+.article-ssh .article-category {
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-ssh .article-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 20px;
+}
+
+/* SSH Article Responsive Design */
+@media (max-width: 768px) {
+  .article-ssh .method-card {
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .article-ssh .method-card .method-number-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .article-ssh .method-card .method-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .article-ssh .code-block {
+    border-radius: 12px;
+    margin: 1rem 0;
+  }
+  
+  .article-ssh .btn-primary,
+  .article-ssh .btn-outline-secondary {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-ssh .method-card {
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .article-ssh .method-card .method-number-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .article-ssh .method-card .method-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  .article-ssh .code-block {
+    border-radius: 8px;
+  }
+  
+  .article-ssh .code-block .code-header {
+    padding: 0.5rem;
+  }
+  
+  .article-ssh .code-block .code-lang {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .article-ssh .btn-primary,
+  .article-ssh .btn-outline-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+  }
 }
 
 /* Nginx Article Specific Styles */
