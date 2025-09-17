@@ -48,6 +48,14 @@
   background-clip: text !important;
 }
 
+.article-ecmp .header .logo h1 {
+  color: #0D47A1 !important;
+  background: linear-gradient(135deg, #0D47A1, #0288D1) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
 /* ===============================================
  * ARTICLE HEADER - COMPLETE REDESIGN
  * ===============================================
@@ -824,6 +832,12 @@
   --pcd-btn: rgba(208, 67, 56, 0.1);
 }
 
+.article-ecmp {
+  --pcd-accent: var(--article-primary);
+  --pcd-border: rgba(13, 71, 161, 0.2);
+  --pcd-btn: rgba(13, 71, 161, 0.1);
+}
+
 /* Professional Code Block Container */
 .code-block {
   margin: 24px auto;
@@ -1149,6 +1163,24 @@
   --article-bg-medium: rgba(63, 149, 188, 0.05);
 }
 
+/* MikroTik ECMP Article Theme - Professional Blue Gradient */
+.article-ecmp {
+  --article-primary: #0D47A1; /* آبی تیره - اصلی */
+  --article-primary-hover: #0a3a8a;
+  --article-accent: #0288D1; /* آبی فیروزه‌ای - هایلایت */
+  --article-secondary: #ECEFF1; /* خاکستری روشن - پس‌زمینه */
+  --article-success: #388E3C; /* سبز لاجوردی - موفقیت */
+  --article-warning: #FBC02D; /* زرد کهربایی - هشدار */
+  --article-error: #C62828; /* قرمز تیره - خطا */
+  --article-text-dark: #263238; /* خاکستری تیره - متن اصلی */
+  --article-shadow: rgba(13, 71, 161, 0.15);
+  --article-gradient: linear-gradient(135deg, #0D47A1, #0288D1, #ECEFF1);
+  --article-text-light: rgba(255, 255, 255, 0.95);
+  --article-text-medium: rgba(255, 255, 255, 0.85);
+  --article-bg-light: rgba(13, 71, 161, 0.03);
+  --article-bg-medium: rgba(13, 71, 161, 0.05);
+}
+
 /* Article Banner Styles */
 .article-openvpn .article-banner .banner-card {
   background: var(--article-gradient);
@@ -1163,6 +1195,215 @@
 .article-nginx .article-banner .banner-card {
   background: var(--article-gradient);
   box-shadow: 0 8px 32px var(--article-shadow);
+}
+
+.article-ecmp .article-banner .banner-card {
+  background: var(--article-gradient);
+  box-shadow: 0 8px 32px var(--article-shadow);
+}
+
+/* ECMP Article Specific Styles */
+.article-ecmp .code-block {
+  background: linear-gradient(135deg, #0D47A1 0%, #0288D1 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px -5px rgba(13, 71, 161, 0.3);
+  border: 1px solid rgba(2, 136, 209, 0.2);
+}
+
+.article-ecmp .code-block .code-header {
+  background: rgba(13, 71, 161, 0.1);
+  border-bottom: 1px solid rgba(2, 136, 209, 0.2);
+}
+
+.article-ecmp .code-block .code-lang {
+  color: #ECEFF1;
+  background: rgba(2, 136, 209, 0.2);
+}
+
+.article-ecmp .code-block .copy-btn {
+  background: rgba(2, 136, 209, 0.2);
+  color: #ECEFF1;
+  border: 1px solid rgba(2, 136, 209, 0.3);
+}
+
+.article-ecmp .code-block .copy-btn:hover {
+  background: rgba(2, 136, 209, 0.4);
+  color: white;
+}
+
+.article-ecmp .code-block pre {
+  color: #ECEFF1;
+}
+
+/* ECMP Article Method Cards */
+.article-ecmp .method-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  border-left: 6px solid #0D47A1;
+  box-shadow: 0 8px 25px -5px rgba(13, 71, 161, 0.1);
+}
+
+.article-ecmp .method-card .method-number-badge {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+}
+
+.article-ecmp .method-card .method-title {
+  color: #0D47A1;
+}
+
+.article-ecmp .method-card .method-icon {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+}
+
+/* ECMP Article Tables */
+.article-ecmp .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(13, 71, 161, 0.03);
+}
+
+.article-ecmp .table-striped tbody tr:hover {
+  background-color: rgba(2, 136, 209, 0.1);
+}
+
+.article-ecmp .table thead th {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+  border: none;
+}
+
+.article-ecmp .table tbody td {
+  border-color: rgba(2, 136, 209, 0.2);
+}
+
+/* ECMP Article FAQ Items */
+.article-ecmp .faq-item {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border-left: 4px solid #0288D1;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px -5px rgba(13, 71, 161, 0.1);
+}
+
+.article-ecmp .faq-item h4 {
+  color: #0D47A1;
+  margin-bottom: 0.75rem;
+}
+
+.article-ecmp .faq-item p {
+  color: #263238;
+  margin: 0;
+}
+
+/* ECMP Article Author Bio */
+.article-ecmp .author-bio .author-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  border-left: 6px solid #0D47A1;
+  box-shadow: 0 8px 25px -5px rgba(13, 71, 161, 0.1);
+}
+
+.article-ecmp .author-bio .expert-badge {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+}
+
+.article-ecmp .author-bio .author-social a {
+  background: rgba(13, 71, 161, 0.1);
+  color: #0D47A1;
+  border: 1px solid rgba(2, 136, 209, 0.2);
+}
+
+.article-ecmp .author-bio .author-social a:hover {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ECMP Article Buttons */
+.article-ecmp .btn-primary {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 15px -5px rgba(13, 71, 161, 0.3);
+}
+
+.article-ecmp .btn-primary:hover {
+  background: linear-gradient(135deg, #0a3a8a, #0277bd);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -5px rgba(13, 71, 161, 0.4);
+}
+
+.article-ecmp .btn-outline-secondary {
+  border: 2px solid #0288D1;
+  color: #0D47A1;
+  background: transparent;
+}
+
+.article-ecmp .btn-outline-secondary:hover {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+  border-color: #0D47A1;
+}
+
+/* ECMP Article Stats */
+.article-ecmp .stat-item .stat-icon {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+}
+
+.article-ecmp .stat-item:nth-child(2) .stat-icon {
+  background: linear-gradient(135deg, #388E3C, #4CAF50);
+}
+
+.article-ecmp .stat-item:nth-child(3) .stat-icon {
+  background: linear-gradient(135deg, #FBC02D, #FFC107);
+}
+
+/* ECMP Article Category */
+.article-ecmp .article-category {
+  background: linear-gradient(135deg, #0D47A1, #0288D1);
+  color: white;
+}
+
+/* Breadcrumbs Styling */
+.breadcrumb-nav {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(2, 136, 209, 0.1);
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+  color: #263238;
+}
+
+.breadcrumb-item a {
+  color: #0D47A1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #0288D1;
+}
+
+.breadcrumb-item.active {
+  color: #0288D1;
+  font-weight: 500;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: #0288D1;
+  font-weight: bold;
 }
 
 /* Nginx Article Specific Styles */
