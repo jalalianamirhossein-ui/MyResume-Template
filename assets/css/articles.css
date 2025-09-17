@@ -3094,6 +3094,165 @@ body[data-page="windows-cmd-common-network-commands"] .hero-background h6 {
   }
 }
 
+/* ===============================================
+ * RELATED ARTICLES SECTION
+ * ===============================================
+ * Modern related articles section with card design
+ */
+
+.related-articles {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.related-articles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+}
+
+.related-articles .container {
+  position: relative;
+  z-index: 2;
+}
+
+.related-articles h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.related-articles h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--article-primary), var(--article-accent));
+  border-radius: 2px;
+}
+
+.related-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.related-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-image img {
+  transform: scale(1.05);
+}
+
+.related-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.related-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--article-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more:hover {
+  color: var(--article-accent);
+  transform: translateX(5px);
+}
+
+.read-more::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .related-articles {
+    padding: 3rem 0;
+  }
+  
+  .related-articles h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .related-content {
+    padding: 1rem;
+  }
+  
+  .related-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
 /* Progress Indicator */
 .setup-progress {
   margin: 4rem 0;
@@ -3488,6 +3647,20 @@ body[data-page="windows-cmd-common-network-commands"] .hero-background h6 {
 }
 
 /* Windows CMD Author Bio - Enhanced design with new colors */
+.article-cmd .author-bio {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 24px !important;
+  padding: 0 !important;
+  margin: 4rem 0 !important;
+  box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.15), 0 8px 25px -4px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
 .article-cmd .author-bio .author-card {
   background: linear-gradient(
     135deg,
@@ -3500,18 +3673,44 @@ body[data-page="windows-cmd-common-network-commands"] .hero-background h6 {
   border-radius: 20px !important;
   padding: 2rem !important;
   margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+.article-cmd .author-bio .author-details {
+  flex: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .article-cmd .author-bio .author-details h3 {
   color: #2c5aa0 !important;
   font-weight: 600 !important;
   background: transparent !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .article-cmd .author-bio .author-details h4 {
   color: #2c5aa0 !important;
   font-weight: 600 !important;
   background: transparent !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 1rem !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.article-cmd .author-bio .author-details p {
+  color: #4a5568 !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1.5rem !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .article-cmd .author-bio .expert-badge {
@@ -3526,20 +3725,328 @@ body[data-page="windows-cmd-common-network-commands"] .hero-background h6 {
   box-shadow: 0 4px 15px -5px rgba(44, 90, 160, 0.4) !important;
 }
 
+.article-cmd .author-bio .author-social {
+  display: flex !important;
+  gap: 1rem !important;
+  margin-top: 1rem !important;
+}
+
 .article-cmd .author-bio .author-social a {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   color: #2c5aa0 !important;
-  transition: color 0.3s ease !important;
-  background: transparent !important;
+  transition: all 0.3s ease !important;
+  background: rgba(44, 90, 160, 0.1) !important;
+  text-decoration: none !important;
 }
 
 .article-cmd .author-bio .author-social a:hover {
-  color: #4a90e2 !important;
+  color: white !important;
+  background: #2c5aa0 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px -5px rgba(44, 90, 160, 0.3) !important;
+}
+
+.article-cmd .author-bio .author-photo {
+  flex-shrink: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .article-cmd .author-bio .author-photo img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
   border: 4px solid #2c5aa0 !important;
   box-shadow: 0 8px 25px -5px rgba(44, 90, 160, 0.3) !important;
   background: transparent !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.article-cmd .author-bio .author-photo img:hover {
+  transform: scale(1.05) !important;
+  border-color: #4a90e2 !important;
+}
+
+/* Responsive Design for Windows CMD Author Bio */
+@media (max-width: 768px) {
+  .article-cmd .author-bio .author-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .article-cmd .author-bio .author-photo img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .article-cmd .author-bio .author-details h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  .article-cmd .author-bio .author-details h4 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ===============================================
+   RESPONSIVE DESIGN FOR ALL ARTICLES
+   =============================================== */
+
+/* Mobile First - Article Header */
+@media (max-width: 768px) {
+  .article-header {
+    padding: 100px 0 60px 0;
+    min-height: 80vh;
+  }
+  
+  .article-header .article-title,
+  .article-header .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .article-header .article-excerpt,
+  .article-header .hero-subtitle {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .article-header .article-stats {
+    margin-bottom: 2rem !important;
+  }
+  
+  .article-header .article-stats .stats-container {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .article-header .article-stats .stat-item {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+  }
+  
+  .article-header .article-banner {
+    margin-top: 2rem !important;
+  }
+  
+  .article-header .article-banner .banner-card {
+    padding: 1.5rem !important;
+  }
+  
+  .article-header .article-banner .banner-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .article-header .article-banner .banner-subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .article-header {
+    padding: 80px 0 40px 0;
+    min-height: 70vh;
+  }
+  
+  .article-header .article-title,
+  .article-header .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .article-header .article-excerpt,
+  .article-header .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .article-header .article-banner .banner-card {
+    padding: 1rem !important;
+  }
+  
+  .article-header .article-banner .banner-title {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Article Content Responsive */
+@media (max-width: 768px) {
+  .article-content {
+    padding: 3rem 0 !important;
+  }
+  
+  .article-content .container {
+    padding: 0 15px !important;
+  }
+  
+  .article-content .article-body {
+    padding: 0 !important;
+  }
+  
+  .article-content .article-section {
+    margin-bottom: 3rem !important;
+  }
+  
+  .article-content .article-section h2 {
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .article-content .article-section h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .article-content .article-section h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .article-content .article-section p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Method Cards Responsive */
+@media (max-width: 768px) {
+  .method-card {
+    padding: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .method-card .method-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+  
+  .method-card .method-icon {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 20px !important;
+  }
+  
+  .method-card .method-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .method-card .method-description {
+    font-size: 1rem !important;
+  }
+  
+  .method-card .method-pros-cons {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Code Blocks Responsive */
+@media (max-width: 768px) {
+  .code-block {
+    margin: 1.5rem 0 !important;
+    border-radius: 8px !important;
+  }
+  
+  .code-block .code-header {
+    padding: 0.75rem 1rem !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .code-block .code-lang {
+    font-size: 0.8rem !important;
+  }
+  
+  .code-block .copy-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .code-block pre {
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+    overflow-x: auto !important;
+  }
+}
+
+/* Author Bio Responsive */
+@media (max-width: 768px) {
+  .author-bio {
+    margin: 2rem 0 !important;
+  }
+  
+  .author-bio .author-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    padding: 1.5rem !important;
+  }
+  
+  .author-bio .author-photo img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .author-bio .author-details h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  .author-bio .author-details h4 {
+    font-size: 1.1rem !important;
+  }
+  
+  .author-bio .author-social {
+    justify-content: center !important;
+  }
+}
+
+/* Table of Contents Responsive */
+@media (max-width: 768px) {
+  .toc {
+    padding: 1rem !important;
+  }
+  
+  .toc ul {
+    padding-left: 1rem !important;
+  }
+  
+  .toc li {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .toc a {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* FAQ Responsive */
+@media (max-width: 768px) {
+  .faq-item {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .faq-item h4 {
+    font-size: 1.1rem !important;
+  }
+  
+  .faq-item p {
+    font-size: 0.9rem !important;
+  }
 }
 
 .author-bio:hover {
@@ -4564,6 +5071,165 @@ body[data-page="windows-cmd-common-network-commands"] .hero-background h6 {
   50% {
     transform: translateY(-20px) rotate(180deg);
     opacity: 0.8;
+  }
+}
+
+/* ===============================================
+ * RELATED ARTICLES SECTION
+ * ===============================================
+ * Modern related articles section with card design
+ */
+
+.related-articles {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.related-articles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+}
+
+.related-articles .container {
+  position: relative;
+  z-index: 2;
+}
+
+.related-articles h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.related-articles h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--article-primary), var(--article-accent));
+  border-radius: 2px;
+}
+
+.related-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.related-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-image img {
+  transform: scale(1.05);
+}
+
+.related-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.related-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--article-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more:hover {
+  color: var(--article-accent);
+  transform: translateX(5px);
+}
+
+.read-more::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .related-articles {
+    padding: 3rem 0;
+  }
+  
+  .related-articles h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .related-content {
+    padding: 1rem;
+  }
+  
+  .related-content h3 {
+    font-size: 1.1rem;
   }
 }
 

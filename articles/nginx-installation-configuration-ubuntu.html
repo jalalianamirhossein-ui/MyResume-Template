@@ -52,7 +52,6 @@
     <meta name="author" content="AmirHossein Jalalian" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="fa, en" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#00bf73" />
     <meta name="msapplication-TileColor" content="#00bf73" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -102,7 +101,11 @@
       property="og:description"
       content="راهنمای کامل نصب و پیکربندی وب‌سرور Nginx در اوبونتو شامل Virtual Host، SSL، HTTP/2، فایروال و بهینه‌سازی عملکرد. آموزش گام به گام نصب Nginx، تنظیم SSL رایگان، پیکربندی HTTP/2 و بهینه‌سازی سرعت."
     />
-    <meta property="og:image" content="../assets/img/my-profile-img.jpg" />
+    <meta property="og:image" content="../assets/img/portfolio/linux-1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Nginx Ubuntu Installation Guide - Web Server Configuration" />
     <meta
       property="og:url"
       content="https://meetaj.ir/articles/nginx-installation-configuration-ubuntu.html"
@@ -119,7 +122,8 @@
       property="twitter:description"
       content="راهنمای کامل نصب و پیکربندی وب‌سرور Nginx در اوبونتو شامل Virtual Host، SSL، HTTP/2، فایروال و بهینه‌سازی عملکرد. آموزش گام به گام نصب Nginx، تنظیم SSL رایگان، پیکربندی HTTP/2 و بهینه‌سازی سرعت."
     />
-    <meta property="twitter:image" content="../assets/img/my-profile-img.jpg" />
+    <meta property="twitter:image" content="../assets/img/portfolio/linux-1.png" />
+    <meta property="twitter:image:alt" content="Nginx Ubuntu Installation Guide - Web Server Configuration" />
 
     <!-- Article Specific Meta Tags -->
     <meta property="article:author" content="AmirHossein Jalalian" />
@@ -325,6 +329,21 @@
         >Skip to main content</span
       >
     </a>
+
+    <!-- ===============================================
+    ==================== MOBILE MENU TOGGLE ==============
+    =============================================== -->
+    <button
+      id="menu-toggle"
+      class="menu-toggle d-xl-none"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="header"
+      type="button"
+    >
+      <i class="bi bi-list" aria-hidden="true"></i>
+      <span class="sr-only" data-en="Menu" data-fa="منو">Menu</span>
+    </button>
 
     <!-- ===============================================
     ==================== MOBILE MENU TOGGLE ==============
@@ -1562,16 +1581,17 @@ gzip_types text/plain text/css application/json application/javascript applicati
                 </div>
                 <div class="related-content">
                   <h3
-                    data-en="Apache Web Server Configuration"
-                    data-fa="پیکربندی وب‌سرور Apache"
+                    data-en="MikroTik RouterOS Advanced Configuration"
+                    data-fa="پیکربندی پیشرفته MikroTik RouterOS"
                   >
-                    پیکربندی وب‌سرور Apache
+                    پیکربندی پیشرفته MikroTik RouterOS
                   </h3>
                   <p
-                    data-en="Complete guide to Apache web server installation and configuration on Ubuntu"
-                    data-fa="راهنمای کامل نصب و پیکربندی وب‌سرور Apache در Ubuntu"
+                    data-en="Advanced techniques for configuring MikroTik routers in enterprise environments"
+                    data-fa="تکنیک‌های پیشرفته برای پیکربندی روترهای میکروتیک در محیط‌های سازمانی"
                   >
-                    راهنمای کامل نصب و پیکربندی وب‌سرور Apache در Ubuntu
+                    تکنیک‌های پیشرفته برای پیکربندی روترهای میکروتیک در محیط‌های
+                    سازمانی
                   </p>
                   <a
                     href="#"
@@ -1588,22 +1608,22 @@ gzip_types text/plain text/css application/json application/javascript applicati
                 <div class="related-image">
                   <img
                     src="../assets/img/portfolio/vmware-1.png"
-                    alt="Docker Configuration"
+                    alt="VMware Virtualization"
                     loading="lazy"
                   />
                 </div>
                 <div class="related-content">
                   <h3
-                    data-en="Docker Container Management"
-                    data-fa="مدیریت کانتینرهای Docker"
+                    data-en="Network Security Fundamentals"
+                    data-fa="اصول پایه امنیت شبکه"
                   >
-                    مدیریت کانتینرهای Docker
+                    اصول پایه امنیت شبکه
                   </h3>
                   <p
-                    data-en="Advanced Docker container management and orchestration techniques"
-                    data-fa="تکنیک‌های پیشرفته مدیریت و ارکستراسیون کانتینرهای Docker"
+                    data-en="Comprehensive guide to network security principles and implementation"
+                    data-fa="راهنمای جامع اصول امنیت شبکه و پیاده‌سازی"
                   >
-                    تکنیک‌های پیشرفته مدیریت و ارکستراسیون کانتینرهای Docker
+                    راهنمای جامع اصول امنیت شبکه و پیاده‌سازی
                   </p>
                   <a
                     href="#"
@@ -1620,22 +1640,22 @@ gzip_types text/plain text/css application/json application/javascript applicati
                 <div class="related-image">
                   <img
                     src="../assets/img/portfolio/mikrotik-1.png"
-                    alt="SSL Configuration"
+                    alt="Network Security"
                     loading="lazy"
                   />
                 </div>
                 <div class="related-content">
                   <h3
-                    data-en="SSL Certificate Management"
-                    data-fa="مدیریت گواهی‌های SSL"
+                    data-en="VPN Technologies Comparison"
+                    data-fa="مقایسه تکنولوژی‌های VPN"
                   >
-                    مدیریت گواهی‌های SSL
+                    مقایسه تکنولوژی‌های VPN
                   </h3>
                   <p
-                    data-en="Complete guide to SSL certificate installation and management for web servers"
-                    data-fa="راهنمای کامل نصب و مدیریت گواهی‌های SSL برای وب‌سرورها"
+                    data-en="Detailed comparison of different VPN technologies and their use cases"
+                    data-fa="مقایسه تفصیلی تکنولوژی‌های مختلف VPN و موارد استفاده آنها"
                   >
-                    راهنمای کامل نصب و مدیریت گواهی‌های SSL برای وب‌سرورها
+                    مقایسه تفصیلی تکنولوژی‌های مختلف VPN و موارد استفاده آنها
                   </p>
                   <a
                     href="#"
