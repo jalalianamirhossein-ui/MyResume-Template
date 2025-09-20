@@ -41,7 +41,7 @@
       },
       about: {
         title: "About",
-        p1: "I am Amir Hossein Jalalian, a specialist in computer networks and IT infrastructure with solid experience in system administration, network design, and troubleshooting. My focus is on creating reliable and secure IT solutions that empower organizations to perform at their best.",
+        p1: "I am Amirhossein Jalalian, a Network and IT Infrastructure Specialist with extensive experience in designing, managing, and optimizing enterprise systems. My mission is to deliver reliable, secure, and scalable solutions that enhance organizational efficiency while minimizing risks.",
         heading: "Computer Networks & IT Infrastructure Specialist",
         italic:
           "My expertise covers Microsoft Windows Server, Cisco, MikroTik, virtualization, and other IT-infrastructure technologies. With a results-oriented mindset, I approach every project with responsibility, precision, and teamwork.",
@@ -182,7 +182,7 @@
       },
       about: {
         title: "درباره من",
-        p1: "من امیرحسین جلالیان هستم، متخصص شبکه‌های کامپیوتری و زیرساخت فناوری اطلاعات با تجربه در مدیریت سیستم، طراحی شبکه و رفع اشکال. تمرکزم بر ایجاد راهکارهای مطمئن و امن است که عملکرد سازمان را توانمند می‌کند.",
+        p1: "من امیرحسین جلالیان هستم، متخصص شبکه و زیرساخت فناوری اطلاعات با تجربه گسترده در طراحی، مدیریت و بهینه‌سازی سیستم‌های سازمانی. مأموریت من، ایجاد راهکارهای پایدار، امن و مقیاس‌پذیر است که بهره‌وری سازمان‌ها را افزایش داده و ریسک‌ها را کاهش می‌دهد.",
         heading: "متخصص شبکه‌های کامپیوتری و زیرساخت IT",
         italic:
           "تجربه من شامل Windows Server، سیسکو، میکروتیک، مجازی‌سازی و سایر فناوری‌های زیرساختی است. با رویکرد نتیجه‌محور، هر پروژه را با مسئولیت‌پذیری، دقت و کار تیمی پیش می‌برم.",

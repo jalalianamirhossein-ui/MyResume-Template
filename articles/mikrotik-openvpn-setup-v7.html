@@ -215,6 +215,16 @@
     <link rel="preload" href="../assets/css/main.css?v=999" as="style" />
     <link rel="preload" href="../assets/css/articles.css?v=999" as="style" />
     <link rel="preload" href="../assets/img/my-profile-img.jpg" as="image" />
+    
+    <!-- Preload critical fonts for better typography -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
+    
+    <!-- Resource hints for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
       href="../assets/img/portfolio/mikrotik-4.png"
@@ -552,6 +562,25 @@
     <!-- Main Content -->
     <main id="main-content" class="main" role="main">
       <!-- ===============================================
+      ==================== BREADCRUMBS ===================
+      =============================================== -->
+      <nav class="breadcrumbs" role="region" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <a href="../index.html">صفحه اصلی</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <a href="../index.html#articles">مقالات</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <span aria-current="page">راهنمای OpenVPN در MikroTik v7</span>
+          </li>
+        </ol>
+      </nav>
+        
+      <!-- ===============================================
       ==================== ARTICLE HEADER ================
       =============================================== -->
       <!-- 
@@ -729,11 +758,10 @@
           </div>
         </div>
 
-        <!-- Background Elements -->
+        <!-- Hero Background -->
         <div class="hero-background">
-          <div class="bg-shape bg-shape-1"></div>
-          <div class="bg-shape bg-shape-2"></div>
-          <div class="bg-shape bg-shape-3"></div>
+          <h1>راهنمای کامل راه‌اندازی OpenVPN در MikroTik v7</h1>
+          <p>آموزش گام به گام پیکربندی OpenVPN Server در MikroTik RouterOS v7 با تنظیمات امنیتی پیشرفته</p>
         </div>
       </section>
 

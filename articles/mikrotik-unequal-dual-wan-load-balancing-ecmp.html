@@ -227,6 +227,16 @@
     <link rel="preload" href="../assets/css/main.css?v=999" as="style" />
     <link rel="preload" href="../assets/css/articles.css?v=999" as="style" />
     <link rel="preload" href="../assets/img/my-profile-img.jpg" as="image" />
+    
+    <!-- Preload critical fonts for better typography -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
+    
+    <!-- Resource hints for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -623,27 +633,20 @@
       <!-- ===============================================
       ==================== BREADCRUMBS ===================
       =============================================== -->
-      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-        <div class="container">
-          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="../index.html" itemprop="item">
-                <span itemprop="name" data-en="Home" data-fa="صفحه اصلی">صفحه اصلی</span>
-              </a>
-              <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="../index.html#articles" itemprop="item">
-                <span itemprop="name" data-en="Articles" data-fa="مقالات">مقالات</span>
-              </a>
-              <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
-              <span itemprop="name" data-en="MikroTik ECMP Configuration" data-fa="پیکربندی ECMP میکروتیک">پیکربندی ECMP میکروتیک</span>
-              <meta itemprop="position" content="3" />
-            </li>
-          </ol>
-        </div>
+      <nav class="breadcrumbs" role="region" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <a href="../index.html">صفحه اصلی</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <a href="../index.html#articles">مقالات</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <span aria-current="page">پیکربندی ECMP میکروتیک</span>
+          </li>
+        </ol>
       </nav>
         
       <!-- ===============================================
@@ -810,11 +813,10 @@
           </div>
         </div>
 
-        <!-- Background Elements -->
+        <!-- Hero Background -->
         <div class="hero-background">
-            <div class="bg-shape bg-shape-1"></div>
-            <div class="bg-shape bg-shape-2"></div>
-            <div class="bg-shape bg-shape-3"></div>
+          <h1>راهنمای کامل تعادل بار دوگانه WAN در MikroTik</h1>
+          <p>آموزش جامع پیکربندی ECMP و Load Balancing برای دو اتصال WAN نابرابر در MikroTik RouterOS</p>
         </div>
       </section>
         

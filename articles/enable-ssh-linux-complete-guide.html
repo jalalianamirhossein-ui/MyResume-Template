@@ -225,6 +225,16 @@
     <link rel="preload" href="../assets/css/main.css?v=999" as="style" />
     <link rel="preload" href="../assets/css/articles.css?v=999" as="style" />
     <link rel="preload" href="../assets/img/my-profile-img.jpg" as="image" />
+    
+    <!-- Preload critical fonts for better typography -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
+    
+    <!-- Resource hints for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -397,6 +407,9 @@
           loading="lazy"
           alt="AmirHossein Jalalian - Linux & Security Expert Profile Picture"
           class="img-fluid rounded-circle"
+          width="150"
+          height="150"
+          decoding="async"
         />
       </div>
 
@@ -408,7 +421,14 @@
       >
         <!-- Site Logo & Name -->
         <a href="../index.html#hero" class="logo d-flex align-items-center">
-          <img src="../assets/img/logo.png" alt="Meet AJ - Linux Security and Technical Articles" loading="lazy" />
+          <img 
+            src="../assets/img/logo.png" 
+            alt="Meet AJ - Linux Security and Technical Articles" 
+            loading="lazy"
+            width="40"
+            height="40"
+            decoding="async"
+          />
           <h1 class="sitename">Meet AJ</h1>
         </a>
 
@@ -612,27 +632,20 @@
       <!-- ===============================================
       ==================== BREADCRUMBS ===================
       =============================================== -->
-      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-        <div class="container">
-          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="../index.html" itemprop="item">
-                <span itemprop="name" data-en="Home" data-fa="صفحه اصلی">صفحه اصلی</span>
-              </a>
-              <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <a href="../index.html#articles" itemprop="item">
-                <span itemprop="name" data-en="Articles" data-fa="مقالات">مقالات</span>
-              </a>
-              <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
-              <span itemprop="name" data-en="SSH Linux Configuration" data-fa="پیکربندی SSH لینوکس">پیکربندی SSH لینوکس</span>
-              <meta itemprop="position" content="3" />
-            </li>
-          </ol>
-        </div>
+      <nav class="breadcrumbs" role="region" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <a href="../index.html">صفحه اصلی</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <a href="../index.html#articles">مقالات</a>
+          </li>
+          <li class="separator" aria-hidden="true"></li>
+          <li>
+            <span aria-current="page">پیکربندی SSH لینوکس</span>
+          </li>
+        </ol>
       </nav>
         
       <!-- ===============================================
@@ -799,11 +812,10 @@
           </div>
         </div>
 
-        <!-- Background Elements -->
+        <!-- Hero Background -->
         <div class="hero-background">
-            <div class="bg-shape bg-shape-1"></div>
-            <div class="bg-shape bg-shape-2"></div>
-            <div class="bg-shape bg-shape-3"></div>
+          <h1>راهنمای جامع فعال‌سازی و پیکربندی SSH در لینوکس</h1>
+          <p>آموزش کامل نصب، فعال‌سازی، پیکربندی و ایمن‌سازی SSH در لینوکس با بهترین روش‌های امنیتی</p>
         </div>
       </section>
         
@@ -1699,6 +1711,9 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
                         src="../assets/img/my-profile-img.jpg"
                         alt="AmirHossein Jalalian - Linux & Security Expert"
                         loading="lazy"
+                        width="120"
+                        height="120"
+                        decoding="async"
                       />
                                 </div>
                                     <div class="author-details">
@@ -1768,41 +1783,65 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
+    <!-- Vendor JS Files - Optimized Loading -->
     <script
       src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
       defer
+      crossorigin="anonymous"
     ></script>
-    <script src="../assets/vendor/aos/aos.js" defer></script>
-    <script src="../assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <script 
+      src="../assets/vendor/aos/aos.js" 
+      defer
+      crossorigin="anonymous"
+    ></script>
+    <script 
+      src="../assets/vendor/swiper/swiper-bundle.min.js" 
+      defer
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- Main JS Files -->
-    <script src="../assets/js/main.js?v=999" defer></script>
-    <script src="../assets/js/i18n.js?v=999" defer></script>
+    <!-- Main JS Files - Optimized Loading -->
+    <script 
+      src="../assets/js/main.js?v=999" 
+      defer
+      crossorigin="anonymous"
+    ></script>
+    <script 
+      src="../assets/js/i18n.js?v=999" 
+      defer
+      crossorigin="anonymous"
+    ></script>
 
     <!-- ===============================================
     ==================== JAVASCRIPT FUNCTIONS ============
     =============================================== -->
     <script>
       /**
-       * COPY CODE FUNCTIONALITY
-       * =======================
-       * Handles copying code blocks to clipboard with visual feedback
+       * ENHANCED COPY CODE FUNCTIONALITY
+       * =================================
+       * Optimized clipboard functionality with better error handling
+       * and performance improvements
        */
       function copyCode(button) {
+        // Prevent multiple rapid clicks
+        if (button.disabled) return;
+        button.disabled = true;
+        
         const codeBlock = button.closest(".code-block");
         if (!codeBlock) {
           console.error("Code block not found");
+          button.disabled = false;
           return;
         }
 
         const codeElement = codeBlock.querySelector("code");
         if (!codeElement) {
           console.error("Code element not found");
+          button.disabled = false;
           return;
         }
 
-        const text = codeElement.textContent;
+        const text = codeElement.textContent.trim();
 
         // Try modern Clipboard API first
         if (navigator.clipboard && window.isSecureContext) {
@@ -1810,6 +1849,7 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
             .writeText(text)
             .then(function () {
               showCopySuccess(button);
+              button.disabled = false;
             })
             .catch(function (err) {
               console.error("Clipboard API failed: ", err);
@@ -1867,37 +1907,67 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
       }
 
       /**
-       * DOM CONTENT LOADED EVENT LISTENER
-       * ==================================
-       * Initializes all page functionality when DOM is ready
+       * ENHANCED DOM CONTENT LOADED EVENT LISTENER
+       * ==========================================
+       * Optimized initialization with performance improvements
+       * and better error handling
        */
       document.addEventListener("DOMContentLoaded", function () {
-        // Smooth scrolling for anchor links
+        // Performance optimization: Use requestAnimationFrame for smooth scrolling
+        const smoothScrollTo = (target) => {
+          const startPosition = window.pageYOffset;
+          const targetPosition = target.offsetTop - 80; // Account for header
+          const distance = targetPosition - startPosition;
+          const duration = Math.min(Math.abs(distance) / 2, 1000); // Max 1 second
+          let start = null;
+
+          const animation = (currentTime) => {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const ease = progress < 0.5 
+              ? 2 * progress * progress 
+              : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            
+            window.scrollTo(0, startPosition + distance * ease);
+            
+            if (timeElapsed < duration) {
+              requestAnimationFrame(animation);
+            }
+          };
+          
+          requestAnimationFrame(animation);
+        };
+
+        // Enhanced smooth scrolling for anchor links
         const anchorLinks = document.querySelectorAll('a[href^="#"]');
         anchorLinks.forEach((link) => {
           link.addEventListener("click", function (e) {
             const href = this.getAttribute("href");
-            if (href === "#") return;
+            if (href === "#" || href === "#top") return;
 
             const target = document.querySelector(href);
             if (target) {
               e.preventDefault();
-              target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
+              smoothScrollTo(target);
+              
+              // Update URL without triggering scroll
+              history.pushState(null, null, href);
             }
-                });
-            });
+          });
+        });
 
-        // Initialize AOS (Animate On Scroll)
+        // Initialize AOS (Animate On Scroll) with performance optimizations
         if (typeof AOS !== "undefined") {
           try {
             AOS.init({
-              duration: 800,
-              easing: "ease-in-out",
+              duration: 600,
+              easing: "ease-out-cubic",
               once: true,
-              offset: 100,
+              offset: 50,
+              disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches
             });
           } catch (error) {
             console.error("AOS initialization failed:", error);
@@ -1905,7 +1975,25 @@ chmod 600 ~/.ssh/authorized_keys</code></pre>
         } else {
           console.warn("AOS library not loaded");
         }
-        });
+
+        // Lazy loading optimization for images
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+              }
+            });
+          });
+
+          document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+          });
+        }
+      });
     </script>
 </body>
 </html>
